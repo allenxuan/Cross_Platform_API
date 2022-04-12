@@ -265,6 +265,9 @@ namespace Swig {
 #include "callback.h"
 
 
+#include "CrossPlatformApi_proxy.h"
+
+
 #include <stdint.h>		// Use the C99 official header
 
 
@@ -349,7 +352,6 @@ struct SWIG_null_deleter {
 
 #include <objc/runtime.h>
 #include "CrossPlatformApi_wrap.h"
-#include "CrossPlatformApi_proxy.h"
 
 SwigDirector_ModelCallback::SwigDirector_ModelCallback() : cross_platform_common::ModelCallback(), Swig::Director() {
 }
@@ -364,7 +366,7 @@ void SwigDirector_ModelCallback::onModelChangedPtr(cross_platform_external::Mode
   ::id swigjobj = swig_get_self();
   BOOL swigmethodoverridden = NO;
   if (swigjobj) {
-    swigmethodoverridden = [swigjobj methodForSelector:@selector(onModelChangedPtr:)] != [ModelCallback instanceMethodForSelector:@selector(onModelChangedPtr:)];
+    swigmethodoverridden = [swigjobj methodForSelector:@selector(onModelChangedPtr:)] != [ModelCallback_OC instanceMethodForSelector:@selector(onModelChangedPtr:)];
   }
   if (!swigmethodoverridden) {
     SWIG_ObjcThrowException(SWIG_ObjcDirectorPureVirtual, "Attempted to invoke pure virtual method cross_platform_common::ModelCallback::onModelChangedPtr.");
@@ -372,7 +374,7 @@ void SwigDirector_ModelCallback::onModelChangedPtr(cross_platform_external::Mode
   }
   if (swigjobj) {
     jmodel_ptr = (cross_platform_external::Model *) &model_ptr; 
-    [swigjobj onModelChangedPtr: [[Model alloc] initWithCptr:jmodel_ptr swigOwnCObject:NO]];
+    [swigjobj onModelChangedPtr: [[Model_OC alloc] initWithCptr:jmodel_ptr swigOwnCObject:NO]];
   } else {
     SWIG_ObjcThrowException(SWIG_ObjcRuntimeException, "null upcall object");
   }
@@ -384,15 +386,15 @@ void SwigDirector_ModelCallback::onModelChangedSharedPtr(std::shared_ptr< cross_
   ::id swigjobj = swig_get_self();
   BOOL swigmethodoverridden = NO;
   if (swigjobj) {
-    swigmethodoverridden = [swigjobj methodForSelector:@selector(onModelChangedSharedPtr:)] != [ModelCallback instanceMethodForSelector:@selector(onModelChangedSharedPtr:)];
+    swigmethodoverridden = [swigjobj methodForSelector:@selector(onModelChangedSharedPtr:)] != [ModelCallback_OC instanceMethodForSelector:@selector(onModelChangedSharedPtr:)];
   }
   if (!swigmethodoverridden) {
     SWIG_ObjcThrowException(SWIG_ObjcDirectorPureVirtual, "Attempted to invoke pure virtual method cross_platform_common::ModelCallback::onModelChangedSharedPtr.");
     return;
   }
   if (swigjobj) {
-    *(std::shared_ptr< cross_platform_external::Model > *)&jmodel_shared_ptr = new std::shared_ptr< cross_platform_external::Model >(*model_shared_ptr); 
-    [swigjobj onModelChangedSharedPtr: [[Model alloc] initWithCptr:jmodel_shared_ptr swigOwnCObject:YES]];
+    jmodel_shared_ptr = new std::shared_ptr< cross_platform_external::Model >(model_shared_ptr); 
+    [swigjobj onModelChangedSharedPtr: [[Model_OC alloc] initWithCptr:jmodel_shared_ptr swigOwnCObject:YES]];
   } else {
     SWIG_ObjcThrowException(SWIG_ObjcRuntimeException, "null upcall object");
   }
@@ -549,126 +551,6 @@ void Objc_CrossPlatformApi_delete_StrVec(void * imarg1)
   
   arg1 = (std::vector< std::string > *)imarg1; 
   delete arg1;
-}
-
-void * Objc_CrossPlatformApi_new_ApiCenter()
-{
-  void * imresult = 0 ;
-  cross_platform_external::ApiCenter *result = 0 ;
-  
-  result = (cross_platform_external::ApiCenter *)new cross_platform_external::ApiCenter();
-  imresult = (void *)result; 
-  return imresult;
-}
-
-void Objc_CrossPlatformApi_delete_ApiCenter(void * imarg1)
-{
-  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
-  
-  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
-  delete arg1;
-}
-
-void Objc_CrossPlatformApi_ApiCenter_registerModelCallback(void * imarg1, void* imarg2)
-{
-  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
-  std::shared_ptr< cross_platform_common::ModelCallback > *arg2 = 0 ;
-  std::shared_ptr< cross_platform_common::ModelCallback > tempnull2 ;
-  
-  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
-  arg2 = imarg2 ? (std::shared_ptr< cross_platform_common::ModelCallback > *)imarg2 : &tempnull2; 
-  (arg1)->registerModelCallback((std::shared_ptr< cross_platform_common::ModelCallback > const &)*arg2);
-}
-
-void Objc_CrossPlatformApi_ApiCenter_unRegisterModelCallback(void * imarg1, void* imarg2)
-{
-  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
-  std::shared_ptr< cross_platform_common::ModelCallback > *arg2 = 0 ;
-  std::shared_ptr< cross_platform_common::ModelCallback > tempnull2 ;
-  
-  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
-  arg2 = imarg2 ? (std::shared_ptr< cross_platform_common::ModelCallback > *)imarg2 : &tempnull2; 
-  (arg1)->unRegisterModelCallback((std::shared_ptr< cross_platform_common::ModelCallback > const &)*arg2);
-}
-
-void * Objc_CrossPlatformApi_ApiCenter_getModelPtr(void * imarg1)
-{
-  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
-  void * imresult = 0 ;
-  cross_platform_external::Model *result = 0 ;
-  
-  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
-  result = (cross_platform_external::Model *) &(arg1)->getModelPtr();
-  imresult = new std::shared_ptr<  cross_platform_external::Model >(result SWIG_NO_NULL_DELETER_0); 
-  return imresult;
-}
-
-void* Objc_CrossPlatformApi_ApiCenter_getModelSharedPtr(void * imarg1)
-{
-  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
-  void* imresult = 0 ;
-  std::shared_ptr< cross_platform_external::Model > result;
-  
-  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
-  result = (arg1)->getModelSharedPtr();
-  imresult = result ? new std::shared_ptr< cross_platform_external::Model >(result) : 0; 
-  return imresult;
-}
-
-float Objc_CrossPlatformApi_ApiCenter_sumIntAndFloat(void * imarg1)
-{
-  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
-  float imresult = 0 ;
-  float result;
-  
-  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
-  result = (float)(arg1)->sumIntAndFloat();
-  imresult = (float)result; 
-  return imresult;
-}
-
-NSString* Objc_CrossPlatformApi_ApiCenter_getString(void * imarg1)
-{
-  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
-  NSString* imresult = 0 ;
-  std::string result;
-  
-  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
-  result = (arg1)->getString();
-  imresult = [NSString stringWithUTF8String: (&result)->c_str()]; 
-  return imresult;
-}
-
-void Objc_CrossPlatformApi_ApiCenter_setString(void * imarg1, NSString* imarg2)
-{
-  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
-  std::string *arg2 = 0 ;
-  
-  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
-  
-  std::string arg2_str;
-  if(!imarg2) {
-    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "null string reference");
-  } else {
-    arg2_str.assign([imarg2 UTF8String]);
-    arg2 = &arg2_str;
-  }
-  
-  (arg1)->setString((std::string const &)*arg2);
-}
-
-void Objc_CrossPlatformApi_ApiCenter_setVector(void * imarg1, void * imarg2)
-{
-  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
-  std::vector< std::string > *arg2 = 0 ;
-  
-  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
-  arg2 = (std::vector< std::string > *)imarg2;
-  if (!arg2) {
-    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "std::vector< std::string > const & reference is null");
-    return ;
-  } 
-  (arg1)->setVector((std::vector< std::string > const &)*arg2);
 }
 
 void Objc_CrossPlatformApi_Model_a_uint64_set(void * imarg1, unsigned long long imarg2)
@@ -886,6 +768,126 @@ void Objc_CrossPlatformApi_swigDirectorDisconnect(void* objarg) {
   if (director) {
     director->swig_disconnect_director();
   }
+}
+
+void * Objc_CrossPlatformApi_new_ApiCenter()
+{
+  void * imresult = 0 ;
+  cross_platform_external::ApiCenter *result = 0 ;
+  
+  result = (cross_platform_external::ApiCenter *)new cross_platform_external::ApiCenter();
+  imresult = (void *)result; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_delete_ApiCenter(void * imarg1)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  delete arg1;
+}
+
+void Objc_CrossPlatformApi_ApiCenter_registerModelCallback(void * imarg1, void* imarg2)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  std::shared_ptr< cross_platform_common::ModelCallback > *arg2 = 0 ;
+  std::shared_ptr< cross_platform_common::ModelCallback > tempnull2 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  arg2 = imarg2 ? (std::shared_ptr< cross_platform_common::ModelCallback > *)imarg2 : &tempnull2; 
+  (arg1)->registerModelCallback((std::shared_ptr< cross_platform_common::ModelCallback > const &)*arg2);
+}
+
+void Objc_CrossPlatformApi_ApiCenter_unRegisterModelCallback(void * imarg1, void* imarg2)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  std::shared_ptr< cross_platform_common::ModelCallback > *arg2 = 0 ;
+  std::shared_ptr< cross_platform_common::ModelCallback > tempnull2 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  arg2 = imarg2 ? (std::shared_ptr< cross_platform_common::ModelCallback > *)imarg2 : &tempnull2; 
+  (arg1)->unRegisterModelCallback((std::shared_ptr< cross_platform_common::ModelCallback > const &)*arg2);
+}
+
+void * Objc_CrossPlatformApi_ApiCenter_getModelPtr(void * imarg1)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  void * imresult = 0 ;
+  cross_platform_external::Model *result = 0 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  result = (cross_platform_external::Model *) &(arg1)->getModelPtr();
+  imresult = new std::shared_ptr<  cross_platform_external::Model >(result SWIG_NO_NULL_DELETER_0); 
+  return imresult;
+}
+
+void* Objc_CrossPlatformApi_ApiCenter_getModelSharedPtr(void * imarg1)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  void* imresult = 0 ;
+  std::shared_ptr< cross_platform_external::Model > result;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  result = (arg1)->getModelSharedPtr();
+  imresult = result ? new std::shared_ptr< cross_platform_external::Model >(result) : 0; 
+  return imresult;
+}
+
+float Objc_CrossPlatformApi_ApiCenter_sumIntAndFloat(void * imarg1)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  float imresult = 0 ;
+  float result;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  result = (float)(arg1)->sumIntAndFloat();
+  imresult = (float)result; 
+  return imresult;
+}
+
+NSString* Objc_CrossPlatformApi_ApiCenter_getString(void * imarg1)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  NSString* imresult = 0 ;
+  std::string result;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  result = (arg1)->getString();
+  imresult = [NSString stringWithUTF8String: (&result)->c_str()]; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_ApiCenter_setString(void * imarg1, NSString* imarg2)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  std::string *arg2 = 0 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  
+  std::string arg2_str;
+  if(!imarg2) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "null string reference");
+  } else {
+    arg2_str.assign([imarg2 UTF8String]);
+    arg2 = &arg2_str;
+  }
+  
+  (arg1)->setString((std::string const &)*arg2);
+}
+
+void Objc_CrossPlatformApi_ApiCenter_setVector(void * imarg1, void * imarg2)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  std::vector< std::string > *arg2 = 0 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  arg2 = (std::vector< std::string > *)imarg2;
+  if (!arg2) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "std::vector< std::string > const & reference is null");
+    return ;
+  } 
+  (arg1)->setVector((std::vector< std::string > const &)*arg2);
 }
 
 

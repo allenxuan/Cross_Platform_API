@@ -18,8 +18,8 @@
 		2BE66754280404CB00007C29 /* cross_platform_api_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE66753280404CB00007C29 /* cross_platform_api_iosUITests.m */; };
 		2BE66756280404CB00007C29 /* cross_platform_api_iosUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE66755280404CB00007C29 /* cross_platform_api_iosUITestsLaunchTests.m */; };
 		2BE667722804135E00007C29 /* test_model.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2BE667702804135E00007C29 /* test_model.cc */; };
-		2BE667CA2804911300007C29 /* CrossPlatformApi_wrap.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BE667C52804911300007C29 /* CrossPlatformApi_wrap.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		2BE667CB2804911300007C29 /* CrossPlatformApi_proxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BE667C72804911300007C29 /* CrossPlatformApi_proxy.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2BE667CA2804911300007C29 /* CrossPlatformApi_wrap.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BE667C52804911300007C29 /* CrossPlatformApi_wrap.mm */; };
+		2BE667CB2804911300007C29 /* CrossPlatformApi_proxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BE667C72804911300007C29 /* CrossPlatformApi_proxy.mm */; };
 		2BE667CC2804911300007C29 /* swig_gen_ios.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2BE667C82804911300007C29 /* swig_gen_ios.sh */; };
 /* End PBXBuildFile section */
 

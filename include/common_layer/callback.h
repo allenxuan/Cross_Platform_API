@@ -8,7 +8,7 @@
 #include <external_layer/model_external.h>
 
 namespace cross_platform_common {
-    class ModelCallback1 {
+    class ModelCallback {
     public:
         ModelCallback() = default;
 

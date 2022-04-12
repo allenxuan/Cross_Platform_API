@@ -11,7 +11,7 @@
 #include "CrossPlatformApi_wrap.mm"
 
 
-@implementation StrVec
+@implementation StrVec_OC
 -(void*)getCptr
 {
 	return swigCPtr;
@@ -91,92 +91,7 @@
 @end
 
 
-@implementation ApiCenter
--(void*)getCptr
-{
-	return swigCPtr;
-}
-
--(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject 
-{
-	swigCPtr = cptr;
-	swigCMemOwn = ownCObject;
-	self = [super init];
-	return self;
-}
-
--(id)init
-{
- 	self = [self initWithCptr:Objc_CrossPlatformApi_new_ApiCenter() swigOwnCObject:YES]; 
-	;
-	return self;
-
-}
-
--(void)registerModelCallback: (ModelCallback*)callback
-{
-    Objc_CrossPlatformApi_ApiCenter_registerModelCallback([self getCptr], [callback getCptr]);
-}
-
--(void)unRegisterModelCallback: (ModelCallback*)callback
-{
-    Objc_CrossPlatformApi_ApiCenter_unRegisterModelCallback([self getCptr], [callback getCptr]);
-}
-
--(Model*)getModelPtr
-{
- #error "typemaps for cross_platform_external::Model & not available" 
-}
-
--(Model*)getModelSharedPtr
-{
-    void* cPtr = Objc_CrossPlatformApi_ApiCenter_getModelSharedPtr([self getCptr]);
-	Model* ret = nil;
-	if(cPtr) {
-		ret = [[Model alloc] initWithCptr:cPtr swigOwnCObject:YES];
-	}
-	return ret; 
-}
-
--(float)sumIntAndFloat
-{
-    return Objc_CrossPlatformApi_ApiCenter_sumIntAndFloat([self getCptr]); 
-}
-
--(NSString*)getString
-{
-    return Objc_CrossPlatformApi_ApiCenter_getString([self getCptr]); 
-}
-
--(void)setString: (NSString*)string
-{
-    Objc_CrossPlatformApi_ApiCenter_setString([self getCptr], string);
-}
-
--(void)setVector: (StrVec*)vector
-{
-    Objc_CrossPlatformApi_ApiCenter_setVector([self getCptr], [vector getCptr]);
-}
-
-
--(void)dealloc{
-      if (swigCPtr != NULL) 
-	{
-		;
-
-		if (swigCMemOwn) 
-		{
-			Objc_CrossPlatformApi_delete_ApiCenter((void*)swigCPtr);
-			swigCMemOwn = NO;
-		}
-		swigCPtr = NULL;
-	} 
-}
-
-@end
-
-
-@implementation Model
+@implementation Model_OC
 -(void*)getCptr
 {
 	return swigCPtr;
@@ -220,17 +135,17 @@
     return Objc_CrossPlatformApi_Model_a_string_get([self getCptr]); 
 }
 
--(void)setA_vector: (StrVec*)value
+-(void)setA_vector: (StrVec_OC*)value
 {
     Objc_CrossPlatformApi_Model_a_vector_set([self getCptr], [value getCptr]);
 }
 
--(StrVec*)getA_vector
+-(StrVec_OC*)getA_vector
 {
     void* cPtr = Objc_CrossPlatformApi_Model_a_vector_get([self getCptr]);
-	StrVec* ret = nil;
+	StrVec_OC* ret = nil;
 	if(cPtr) {
-	ret = [[StrVec alloc] initWithCptr:cPtr swigOwnCObject:NO];
+	ret = [[StrVec_OC alloc] initWithCptr:cPtr swigOwnCObject:NO];
 	}
 	return ret; 
 }
@@ -259,7 +174,7 @@
 @end
 
 
-@implementation ModelCallback
+@implementation ModelCallback_OC
 -(void*)getCptr
 {
 	return swigCPtr;
@@ -281,12 +196,12 @@
 
 }
 
--(void)onModelChangedPtr: (Model*)model_ptr
+-(void)onModelChangedPtr: (Model_OC*)model_ptr
 {
     Objc_CrossPlatformApi_ModelCallback_onModelChangedPtr([self getCptr], [model_ptr getCptr]);
 }
 
--(void)onModelChangedSharedPtr: (Model*)model_shared_ptr
+-(void)onModelChangedSharedPtr: (Model_OC*)model_shared_ptr
 {
     Objc_CrossPlatformApi_ModelCallback_onModelChangedSharedPtr([self getCptr], [model_shared_ptr getCptr]);
 }
@@ -298,6 +213,96 @@
 
 		if (swigCMemOwn) {
 			Objc_CrossPlatformApi_delete_ModelCallback((void*)swigCPtr);
+			swigCMemOwn = NO;
+		}
+		swigCPtr = NULL;
+	} 
+}
+
+@end
+
+
+@implementation ApiCenter_OC
+-(void*)getCptr
+{
+	return swigCPtr;
+}
+
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject 
+{
+	swigCPtr = cptr;
+	swigCMemOwn = ownCObject;
+	self = [super init];
+	return self;
+}
+
+-(id)init
+{
+ 	self = [self initWithCptr:Objc_CrossPlatformApi_new_ApiCenter() swigOwnCObject:YES]; 
+	;
+	return self;
+
+}
+
+-(void)registerModelCallback: (ModelCallback_OC*)callback
+{
+    Objc_CrossPlatformApi_ApiCenter_registerModelCallback([self getCptr], [callback getCptr]);
+}
+
+-(void)unRegisterModelCallback: (ModelCallback_OC*)callback
+{
+    Objc_CrossPlatformApi_ApiCenter_unRegisterModelCallback([self getCptr], [callback getCptr]);
+}
+
+-(Model_OC*)getModelPtr
+{
+    void* cPtr = Objc_CrossPlatformApi_ApiCenter_getModelPtr([self getCptr]);
+    Model_OC* ret = nil;
+    if(cPtr) {
+        ret = [[Model_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
+    }
+    return ret; 
+}
+
+-(Model_OC*)getModelSharedPtr
+{
+    void* cPtr = Objc_CrossPlatformApi_ApiCenter_getModelSharedPtr([self getCptr]);
+	Model_OC* ret = nil;
+	if(cPtr) {
+		ret = [[Model_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
+	}
+	return ret; 
+}
+
+-(float)sumIntAndFloat
+{
+    return Objc_CrossPlatformApi_ApiCenter_sumIntAndFloat([self getCptr]); 
+}
+
+-(NSString*)getString
+{
+    return Objc_CrossPlatformApi_ApiCenter_getString([self getCptr]); 
+}
+
+-(void)setString: (NSString*)string
+{
+    Objc_CrossPlatformApi_ApiCenter_setString([self getCptr], string);
+}
+
+-(void)setVector: (StrVec_OC*)vector
+{
+    Objc_CrossPlatformApi_ApiCenter_setVector([self getCptr], [vector getCptr]);
+}
+
+
+-(void)dealloc{
+      if (swigCPtr != NULL) 
+	{
+		;
+
+		if (swigCMemOwn) 
+		{
+			Objc_CrossPlatformApi_delete_ApiCenter((void*)swigCPtr);
 			swigCMemOwn = NO;
 		}
 		swigCPtr = NULL;

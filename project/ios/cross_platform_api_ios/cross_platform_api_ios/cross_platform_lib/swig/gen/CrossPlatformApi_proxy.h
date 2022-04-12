@@ -15,7 +15,7 @@
 extern "C" {
 #endif
 
-__attribute__ ((visibility("default"))) @interface StrVec : NSObject
+__attribute__ ((visibility("default"))) @interface StrVec_OC : NSObject
 {
 	void *swigCPtr;
 	BOOL swigCMemOwn;
@@ -36,28 +36,7 @@ __attribute__ ((visibility("default"))) @interface StrVec : NSObject
 
 @end
 
-__attribute__ ((visibility("default"))) @interface ApiCenter : NSObject
-{
-	void *swigCPtr;
-	BOOL swigCMemOwn;
-}
--(void*)getCptr;
--(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
--(id)init;
--(void)registerModelCallback: (ModelCallback*)callback;
--(void)unRegisterModelCallback: (ModelCallback*)callback;
--(Model*)getModelPtr;
--(Model*)getModelSharedPtr;
--(float)sumIntAndFloat;
--(NSString*)getString;
--(void)setString: (NSString*)string;
--(void)setVector: (StrVec*)vector;
-
--(void)dealloc;
-
-@end
-
-__attribute__ ((visibility("default"))) @interface Model : NSObject
+__attribute__ ((visibility("default"))) @interface Model_OC : NSObject
 {
 	void *swigCPtr;
 	BOOL swigCMemOwn;
@@ -70,15 +49,15 @@ __attribute__ ((visibility("default"))) @interface Model : NSObject
 -(float)getA_float;
 -(void)setA_string: (NSString*)value;
 -(NSString*)getA_string;
--(void)setA_vector: (StrVec*)value;
--(StrVec*)getA_vector;
+-(void)setA_vector: (StrVec_OC*)value;
+-(StrVec_OC*)getA_vector;
 -(id)init;
 
 -(void)dealloc;
 
 @end
 
-__attribute__ ((visibility("default"))) @interface ModelCallbackOC : NSObject
+__attribute__ ((visibility("default"))) @interface ModelCallback_OC : NSObject
 {
 	void *swigCPtr;
 	BOOL swigCMemOwn;
@@ -86,8 +65,29 @@ __attribute__ ((visibility("default"))) @interface ModelCallbackOC : NSObject
 -(void*)getCptr;
 -(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
 -(id)init;
--(void)onModelChangedPtr: (Model*)model_ptr;
--(void)onModelChangedSharedPtr: (Model*)model_shared_ptr;
+-(void)onModelChangedPtr: (Model_OC*)model_ptr;
+-(void)onModelChangedSharedPtr: (Model_OC*)model_shared_ptr;
+
+-(void)dealloc;
+
+@end
+
+__attribute__ ((visibility("default"))) @interface ApiCenter_OC : NSObject
+{
+	void *swigCPtr;
+	BOOL swigCMemOwn;
+}
+-(void*)getCptr;
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
+-(id)init;
+-(void)registerModelCallback: (ModelCallback_OC*)callback;
+-(void)unRegisterModelCallback: (ModelCallback_OC*)callback;
+-(Model_OC*)getModelPtr;
+-(Model_OC*)getModelSharedPtr;
+-(float)sumIntAndFloat;
+-(NSString*)getString;
+-(void)setString: (NSString*)string;
+-(void)setVector: (StrVec_OC*)vector;
 
 -(void)dealloc;
 

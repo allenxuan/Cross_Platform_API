@@ -4,6 +4,9 @@
 #include "cross_platform_api.h"
 #include "model_external.h"
 #include "callback.h"
+
+
+#include "CrossPlatformApi_proxy.h"
 %}
 
 // Java specific constants and enums support.
@@ -40,7 +43,11 @@
 //director(callback) support.
 %feature("director") cross_platform_common::ModelCallback;
 
+//ignore classes, methods, fields.
+//%ignore cross_platform_common::ModelCallback
+//%ignore nleimage_api::NLEImage::replaceEmbeddedResources(const std::vector<std::pair<std::string, nleimage::Resource>> &replaceInfo);
+
 //api headers.
-%include "external_layer/cross_platform_api.h"
 %include "external_layer/model_external.h"
 %include "common_layer/callback.h"
+%include "external_layer/cross_platform_api.h"
