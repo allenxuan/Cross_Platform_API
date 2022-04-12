@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.allenxuan.xuanyihuang.cross_platform_api_android.MainActivity">
+
+    <TextView
+        android:id="@+id/sumIntAndFloatTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sumIntAndFloat = "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/sumIntAndFloatValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toTopOf="@id/sumIntAndFloatTitle"
+        app:layout_constraintBottom_toBottomOf="@id/sumIntAndFloatTitle"
+        app:layout_constraintStart_toEndOf="@id/sumIntAndFloatTitle"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <TextView
+        android:id="@+id/modelPtrStringTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="modelPtr to string: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/modelPtrStringValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="null"
+        app:layout_constraintTop_toBottomOf="@id/modelPtrStringTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <TextView
+        android:id="@+id/modelSharedPtrStringTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="modelSharedPtr to string: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        />
+
+    <TextView
+        android:id="@+id/modelSharedPtrStringValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="null"
+        app:layout_constraintTop_toBottomOf="@id/modelSharedPtrStringTitle"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <TextView
+        android:id="@+id/inputStringTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="please input some text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="140dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/inputStringText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="please input some text"
+        app:layout_constraintTop_toTopOf="@id/inputStringTitle"
+        app:layout_constraintBottom_toBottomOf="@id/inputStringTitle"
+        app:layout_constraintStart_toEndOf="@id/inputStringTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/onModelChangedPtrTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="onModelChangedPtr callback\nmodelPtr to string: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputStringTitle"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/onModelChangedPtrValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="null"
+        app:layout_constraintTop_toBottomOf="@id/onModelChangedPtrTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <TextView
+        android:id="@+id/onModelChangedSharedPtrTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="onModelChangedSharedPtr callback\nmodelSharedPtr to string: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onModelChangedPtrValue"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/onModelChangedSharedPtrValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="null"
+        app:layout_constraintTop_toBottomOf="@id/onModelChangedSharedPtrTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
