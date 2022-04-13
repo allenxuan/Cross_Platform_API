@@ -70,6 +70,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eyy-2y-fIs"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="onModelChangedPtr callback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrV-z8-nc0">
                                 <rect key="frame" x="7" y="326" width="225" height="21"/>
@@ -125,6 +128,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="onModelChangedPtrValue" destination="N3i-MJ-uey" id="1Kq-N8-Gfm"/>
                         <outlet property="sumIntAndFloatValue" destination="aPH-oK-fTW" id="Lk7-ib-vFr"/>
                     </connections>
                 </viewController>

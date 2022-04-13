@@ -10,6 +10,7 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *sumIntAndFloatValue;
+@property (weak, nonatomic) IBOutlet UILabel *onModelChangedPtrValue;
 
 @end
 
