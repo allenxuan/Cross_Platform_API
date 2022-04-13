@@ -30,7 +30,7 @@ namespace cross_platform_external {
     }
 
     float ApiCenter::sumIntAndFloat() {
-        return model_operator_->SumFloatAndUint32();
+        return model_operator_->SumIntAndFloat();
     }
 
     std::string ApiCenter::getString() {
