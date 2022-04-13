@@ -38,7 +38,9 @@
     self.callback = [[HYXCallback alloc] init];
     self.callback.sumIntAndFloatValue = self.sumIntAndFloatValue;
     self.callback.onModelChangedPtrValue = self.onModelChangedPtrValue;
+    
     self.apiCenter = [ApiCenter_OC new];
+    [self.apiCenter registerModelCallback:self.callback];
     
     _sumIntAndFloatValue.text = @(self.apiCenter.sumIntAndFloat).stringValue;
      
