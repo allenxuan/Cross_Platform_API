@@ -2,10 +2,15 @@
 //  ViewController.m
 //  cross_platform_api_ios
 //
-//  Created by bytedance on 2022/4/12.
+//  Created by bytedance on 2022/4/13.
 //
 
 #import "ViewController.h"
+#include <swig/gen/CrossPlatformApi_proxy.h>
+#include <swig/gen/CrossPlatformApi_proxy.h>
+#include <swig/gen/CrossPlatformApi_proxy.h>
+#include <swig/gen/CrossPlatformApi_proxy.h>
+#include <swig/gen/CrossPlatformApi_proxy.h>
 #include <swig/gen/CrossPlatformApi_proxy.h>
 
 @interface ViewController ()
@@ -18,10 +23,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    Model_OC * a = [Model_OC new];
-    auto b = a.getA_float;
-    auto c = a.getA_string;
-    auto d = 11;
+    Model_OC *model = [Model_OC new];
+    float a_float = model.getA_float;
+    int c = 2;
 }
 
 
