@@ -4,9 +4,6 @@
 #include <external_layer/cross_platform_api.h>
 #include <external_layer/model_external.h>
 #include <common_layer/callback.h>
-
-
-#include "CrossPlatformApi_proxy.h"
 %}
 
 // Java specific constants and enums support.

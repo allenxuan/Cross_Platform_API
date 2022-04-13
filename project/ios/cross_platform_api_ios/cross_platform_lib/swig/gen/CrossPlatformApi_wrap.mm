@@ -265,9 +265,6 @@ namespace Swig {
 #include <common_layer/callback.h>
 
 
-#include "CrossPlatformApi_proxy.h"
-
-
 #include <stdint.h>		// Use the C99 official header
 
 
