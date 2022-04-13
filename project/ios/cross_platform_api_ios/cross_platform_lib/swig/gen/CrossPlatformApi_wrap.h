@@ -16,6 +16,17 @@
 extern "C" {
 #endif
 
+class SwigDirector_ModelCallback : public cross_platform_common::ModelCallback, public Swig::Director {
+
+public:
+    void swig_connect_director(id objcdirector);
+    void swig_disconnect_director();
+    SwigDirector_ModelCallback();
+    virtual ~SwigDirector_ModelCallback();
+    virtual void onModelChangedPtr(cross_platform_external::Model &model_ptr);
+    virtual void onModelChangedSharedPtr(std::shared_ptr< cross_platform_external::Model > model_shared_ptr);
+};
+
 
 #ifdef __cplusplus
 }

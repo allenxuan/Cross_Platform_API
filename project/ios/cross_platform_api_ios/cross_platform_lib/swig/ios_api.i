@@ -32,20 +32,19 @@
 
 // shared_ptr support.
 %shared_ptr(cross_platform_external::Model)
-//%shared_ptr(cross_platform_common::ModelCallback)
+%shared_ptr(cross_platform_common::ModelCallback)
 
 // container template.
-//%template(StrVec) std::vector<std::string>;
+%template(StrVec) std::vector<std::string>;
 
 //director(callback) support.
-//%feature("director") cross_platform_common::ModelCallback;
+%feature("director") cross_platform_common::ModelCallback;
 
 //ignore classes, methods, fields.
 //%ignore cross_platform_common::ModelCallback
-//%ignore nleimage_api::NLEImage::replaceEmbeddedResources(const std::vector<std::pair<std::string, nleimage::Resource>> &replaceInfo);
-%ignore cross_platform_external::Model::a_vector;
+//%ignore cross_platform_external::Model::a_vector;
 
 //api headers.
 %include "external_layer/model_external.h"
-//%include "common_layer/callback.h"
-//%include "external_layer/cross_platform_api.h"
+%include "common_layer/callback.h"
+%include "external_layer/cross_platform_api.h"

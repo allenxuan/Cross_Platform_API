@@ -317,6 +317,20 @@ SWIGINTERN void SWIG_ObjcException(int code, const char *msg) {
 #include <vector>
 #include <stdexcept>
 
+SWIGINTERN std::vector< std::string >::const_reference std_vector_Sl_std_string_Sg__get(std::vector< std::string > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_std_string_Sg__set(std::vector< std::string > *self,int i,std::vector< std::string >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
 
 struct SWIG_null_deleter {
   void operator() (void const *) const {
@@ -336,10 +350,205 @@ struct SWIG_null_deleter {
 #include <objc/runtime.h>
 #include "CrossPlatformApi_wrap.h"
 
+SwigDirector_ModelCallback::SwigDirector_ModelCallback() : cross_platform_common::ModelCallback(), Swig::Director() {
+}
+
+SwigDirector_ModelCallback::~SwigDirector_ModelCallback() {
+  
+}
+
+void SwigDirector_ModelCallback::onModelChangedPtr(cross_platform_external::Model &model_ptr) {
+  void * jmodel_ptr = 0 ;
+  
+  ::id swigjobj = swig_get_self();
+  BOOL swigmethodoverridden = NO;
+  if (swigjobj) {
+    swigmethodoverridden = [swigjobj methodForSelector:@selector(onModelChangedPtr:)] != [ModelCallback_OC instanceMethodForSelector:@selector(onModelChangedPtr:)];
+  }
+  if (!swigmethodoverridden) {
+    SWIG_ObjcThrowException(SWIG_ObjcDirectorPureVirtual, "Attempted to invoke pure virtual method cross_platform_common::ModelCallback::onModelChangedPtr.");
+    return;
+  }
+  if (swigjobj) {
+    jmodel_ptr = (cross_platform_external::Model *) &model_ptr; 
+    [swigjobj onModelChangedPtr: [[Model_OC alloc] initWithCptr:jmodel_ptr swigOwnCObject:NO]];
+  } else {
+    SWIG_ObjcThrowException(SWIG_ObjcRuntimeException, "null upcall object");
+  }
+}
+
+void SwigDirector_ModelCallback::onModelChangedSharedPtr(std::shared_ptr< cross_platform_external::Model > model_shared_ptr) {
+  void* jmodel_shared_ptr  ;
+  
+  ::id swigjobj = swig_get_self();
+  BOOL swigmethodoverridden = NO;
+  if (swigjobj) {
+    swigmethodoverridden = [swigjobj methodForSelector:@selector(onModelChangedSharedPtr:)] != [ModelCallback_OC instanceMethodForSelector:@selector(onModelChangedSharedPtr:)];
+  }
+  if (!swigmethodoverridden) {
+    SWIG_ObjcThrowException(SWIG_ObjcDirectorPureVirtual, "Attempted to invoke pure virtual method cross_platform_common::ModelCallback::onModelChangedSharedPtr.");
+    return;
+  }
+  if (swigjobj) {
+    jmodel_shared_ptr = new std::shared_ptr< cross_platform_external::Model >(model_shared_ptr); 
+    [swigjobj onModelChangedSharedPtr: [[Model_OC alloc] initWithCptr:jmodel_shared_ptr swigOwnCObject:YES]];
+  } else {
+    SWIG_ObjcThrowException(SWIG_ObjcRuntimeException, "null upcall object");
+  }
+}
+
+void SwigDirector_ModelCallback::swig_connect_director(id objcdirector) {
+  swig_set_self(objcdirector);
+}
+
+
+void SwigDirector_ModelCallback::swig_disconnect_director() {
+  swig_set_self(nil);
+}
+
+
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+void * Objc_CrossPlatformApi_new_StrVec()
+{
+  void * imresult = 0 ;
+  std::vector< std::string > *result = 0 ;
+  
+  result = (std::vector< std::string > *)new std::vector< std::string >();
+  imresult = (void *)result; 
+  return imresult;
+}
+
+unsigned long Objc_CrossPlatformApi_StrVec_size(void * imarg1)
+{
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  unsigned long imresult = 0 ;
+  std::vector< std::string >::size_type result;
+  
+  arg1 = (std::vector< std::string > *)imarg1; 
+  result = ((std::vector< std::string > const *)arg1)->size();
+  imresult = (unsigned long)result; 
+  return imresult;
+}
+
+unsigned long Objc_CrossPlatformApi_StrVec_capacity(void * imarg1)
+{
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  unsigned long imresult = 0 ;
+  std::vector< std::string >::size_type result;
+  
+  arg1 = (std::vector< std::string > *)imarg1; 
+  result = ((std::vector< std::string > const *)arg1)->capacity();
+  imresult = (unsigned long)result; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_StrVec_reserve(void * imarg1, unsigned long imarg2)
+{
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  std::vector< std::string >::size_type arg2 ;
+  
+  arg1 = (std::vector< std::string > *)imarg1; 
+  arg2 = (std::vector< std::string >::size_type)imarg2; 
+  (arg1)->reserve(arg2);
+}
+
+BOOL Objc_CrossPlatformApi_StrVec_isEmpty(void * imarg1)
+{
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  BOOL imresult = 0 ;
+  bool result;
+  
+  arg1 = (std::vector< std::string > *)imarg1; 
+  result = (bool)((std::vector< std::string > const *)arg1)->empty();
+  imresult = (result) ? YES : NO; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_StrVec_clear(void * imarg1)
+{
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  
+  arg1 = (std::vector< std::string > *)imarg1; 
+  (arg1)->clear();
+}
+
+void Objc_CrossPlatformApi_StrVec_add(void * imarg1, NSString* imarg2)
+{
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  std::vector< std::string >::value_type *arg2 = 0 ;
+  
+  arg1 = (std::vector< std::string > *)imarg1; 
+  
+  std::string arg2_str;
+  if(!imarg2) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "null string reference");
+  } else {
+    arg2_str.assign([imarg2 UTF8String]);
+    arg2 = &arg2_str;
+  }
+  
+  (arg1)->push_back((std::vector< std::string >::value_type const &)*arg2);
+}
+
+NSString* Objc_CrossPlatformApi_StrVec_get(void * imarg1, int imarg2)
+{
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  int arg2 ;
+  NSString* imresult = 0 ;
+  std::vector< std::string >::value_type *result = 0 ;
+  
+  arg1 = (std::vector< std::string > *)imarg1; 
+  arg2 = (int)imarg2; 
+  try {
+    result = (std::vector< std::string >::value_type *) &std_vector_Sl_std_string_Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_ObjcThrowException(SWIG_ObjcIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  imresult = [NSString stringWithUTF8String: result->c_str()]; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_StrVec_set(void * imarg1, int imarg2, NSString* imarg3)
+{
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  int arg2 ;
+  std::vector< std::string >::value_type *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::string > *)imarg1; 
+  arg2 = (int)imarg2; 
+  
+  std::string arg3_str;
+  if(!imarg3) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "null string reference");
+  } else {
+    arg3_str.assign([imarg3 UTF8String]);
+    arg3 = &arg3_str;
+  }
+  
+  try {
+    std_vector_Sl_std_string_Sg__set(arg1,arg2,(std::string const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_ObjcThrowException(SWIG_ObjcIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+void Objc_CrossPlatformApi_delete_StrVec(void * imarg1)
+{
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  
+  arg1 = (std::vector< std::string > *)imarg1; 
+  delete arg1;
+}
 
 void Objc_CrossPlatformApi_Model_a_uint64_set(void * imarg1, unsigned long long imarg2)
 {
@@ -433,6 +642,34 @@ NSString* Objc_CrossPlatformApi_Model_a_string_get(void * imarg1)
   return imresult;
 }
 
+void Objc_CrossPlatformApi_Model_a_vector_set(void * imarg1, void * imarg2)
+{
+  cross_platform_external::Model *arg1 = (cross_platform_external::Model *) 0 ;
+  std::vector< std::string > *arg2 = (std::vector< std::string > *) 0 ;
+  std::shared_ptr< cross_platform_external::Model > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_external::Model > *)imarg1;
+  arg1 = (cross_platform_external::Model *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (std::vector< std::string > *)imarg2; 
+  if (arg1) (arg1)->a_vector = *arg2;
+}
+
+void * Objc_CrossPlatformApi_Model_a_vector_get(void * imarg1)
+{
+  cross_platform_external::Model *arg1 = (cross_platform_external::Model *) 0 ;
+  void * imresult = 0 ;
+  std::shared_ptr< cross_platform_external::Model > *smartarg1 = 0 ;
+  std::vector< std::string > *result = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_external::Model > *)imarg1;
+  arg1 = (cross_platform_external::Model *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (std::vector< std::string > *)& ((arg1)->a_vector);
+  imresult = (void *)result; 
+  return imresult;
+}
+
 void * Objc_CrossPlatformApi_new_Model()
 {
   void * imresult = 0 ;
@@ -454,6 +691,200 @@ void Objc_CrossPlatformApi_delete_Model(void * imarg1)
   smartarg1 = (std::shared_ptr<  cross_platform_external::Model > *)imarg1;
   arg1 = (cross_platform_external::Model *)(smartarg1 ? smartarg1->get() : 0); 
   (void)arg1; delete smartarg1;
+}
+
+void * Objc_CrossPlatformApi_new_ModelCallback()
+{
+  void * imresult = 0 ;
+  cross_platform_common::ModelCallback *result = 0 ;
+  
+  result = (cross_platform_common::ModelCallback *)new SwigDirector_ModelCallback();
+  
+  imresult = result ? new std::shared_ptr<  cross_platform_common::ModelCallback >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_delete_ModelCallback(void * imarg1)
+{
+  cross_platform_common::ModelCallback *arg1 = (cross_platform_common::ModelCallback *) 0 ;
+  std::shared_ptr< cross_platform_common::ModelCallback > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_common::ModelCallback > *)imarg1;
+  arg1 = (cross_platform_common::ModelCallback *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+void Objc_CrossPlatformApi_ModelCallback_onModelChangedPtr(void * imarg1, void * imarg2)
+{
+  cross_platform_common::ModelCallback *arg1 = (cross_platform_common::ModelCallback *) 0 ;
+  cross_platform_external::Model *arg2 = 0 ;
+  std::shared_ptr< cross_platform_common::ModelCallback > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_common::ModelCallback > *)imarg1;
+  arg1 = (cross_platform_common::ModelCallback *)(smartarg1 ? smartarg1->get() : 0); 
+  
+  arg2 = (cross_platform_external::Model *)(((std::shared_ptr<  cross_platform_external::Model > *)imarg2) ? ((std::shared_ptr<  cross_platform_external::Model > *)imarg2)->get() : 0);
+  if (!arg2) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "cross_platform_external::Model & reference is null");
+    return ;
+  } 
+  (arg1)->onModelChangedPtr(*arg2);
+}
+
+void Objc_CrossPlatformApi_ModelCallback_onModelChangedSharedPtr(void * imarg1, void* imarg2)
+{
+  cross_platform_common::ModelCallback *arg1 = (cross_platform_common::ModelCallback *) 0 ;
+  std::shared_ptr< cross_platform_external::Model > arg2 ;
+  std::shared_ptr< cross_platform_common::ModelCallback > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_common::ModelCallback > *)imarg1;
+  arg1 = (cross_platform_common::ModelCallback *)(smartarg1 ? smartarg1->get() : 0); 
+  if (imarg2) arg2 = *(std::shared_ptr< cross_platform_external::Model > *)imarg2; 
+  (arg1)->onModelChangedSharedPtr(arg2);
+}
+
+void Objc_CrossPlatformApi_swigDirectorConnect(void* objarg, id objcdirector) {
+  std::shared_ptr< cross_platform_common::ModelCallback > *obj = (std::shared_ptr< cross_platform_common::ModelCallback > *)objarg;
+  // Keep a local instance of the smart pointer around while we are using the raw pointer
+  // Avoids using smart pointer specific API.
+  SwigDirector_ModelCallback *director = dynamic_cast<SwigDirector_ModelCallback *>(obj->operator->());
+  if (director) {
+    director->swig_connect_director(objcdirector);
+  }
+}
+
+void Objc_CrossPlatformApi_swigDirectorDisconnect(void* objarg) {
+  std::shared_ptr< cross_platform_common::ModelCallback > *obj = (std::shared_ptr< cross_platform_common::ModelCallback > *)objarg;
+  // Keep a local instance of the smart pointer around while we are using the raw pointer
+  // Avoids using smart pointer specific API.
+  SwigDirector_ModelCallback *director = dynamic_cast<SwigDirector_ModelCallback *>(obj->operator->());
+  if (director) {
+    director->swig_disconnect_director();
+  }
+}
+
+void * Objc_CrossPlatformApi_new_ApiCenter()
+{
+  void * imresult = 0 ;
+  cross_platform_external::ApiCenter *result = 0 ;
+  
+  result = (cross_platform_external::ApiCenter *)new cross_platform_external::ApiCenter();
+  imresult = (void *)result; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_delete_ApiCenter(void * imarg1)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  delete arg1;
+}
+
+void Objc_CrossPlatformApi_ApiCenter_registerModelCallback(void * imarg1, void* imarg2)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  std::shared_ptr< cross_platform_common::ModelCallback > *arg2 = 0 ;
+  std::shared_ptr< cross_platform_common::ModelCallback > tempnull2 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  arg2 = imarg2 ? (std::shared_ptr< cross_platform_common::ModelCallback > *)imarg2 : &tempnull2; 
+  (arg1)->registerModelCallback((std::shared_ptr< cross_platform_common::ModelCallback > const &)*arg2);
+}
+
+void Objc_CrossPlatformApi_ApiCenter_unRegisterModelCallback(void * imarg1, void* imarg2)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  std::shared_ptr< cross_platform_common::ModelCallback > *arg2 = 0 ;
+  std::shared_ptr< cross_platform_common::ModelCallback > tempnull2 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  arg2 = imarg2 ? (std::shared_ptr< cross_platform_common::ModelCallback > *)imarg2 : &tempnull2; 
+  (arg1)->unRegisterModelCallback((std::shared_ptr< cross_platform_common::ModelCallback > const &)*arg2);
+}
+
+void * Objc_CrossPlatformApi_ApiCenter_getModelPtr(void * imarg1)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  void * imresult = 0 ;
+  cross_platform_external::Model *result = 0 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  result = (cross_platform_external::Model *) &(arg1)->getModelPtr();
+  imresult = new std::shared_ptr<  cross_platform_external::Model >(result SWIG_NO_NULL_DELETER_0); 
+  return imresult;
+}
+
+void* Objc_CrossPlatformApi_ApiCenter_getModelSharedPtr(void * imarg1)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  void* imresult = 0 ;
+  std::shared_ptr< cross_platform_external::Model > result;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  result = (arg1)->getModelSharedPtr();
+  imresult = result ? new std::shared_ptr< cross_platform_external::Model >(result) : 0; 
+  return imresult;
+}
+
+float Objc_CrossPlatformApi_ApiCenter_sumIntAndFloat(void * imarg1)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  float imresult = 0 ;
+  float result;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  result = (float)(arg1)->sumIntAndFloat();
+  imresult = (float)result; 
+  return imresult;
+}
+
+NSString* Objc_CrossPlatformApi_ApiCenter_getString(void * imarg1)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  NSString* imresult = 0 ;
+  std::string result;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  result = (arg1)->getString();
+  imresult = [NSString stringWithUTF8String: (&result)->c_str()]; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_ApiCenter_setString(void * imarg1, NSString* imarg2)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  std::string *arg2 = 0 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  
+  std::string arg2_str;
+  if(!imarg2) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "null string reference");
+  } else {
+    arg2_str.assign([imarg2 UTF8String]);
+    arg2 = &arg2_str;
+  }
+  
+  (arg1)->setString((std::string const &)*arg2);
+}
+
+void Objc_CrossPlatformApi_ApiCenter_setVector(void * imarg1, void * imarg2)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  std::vector< std::string > *arg2 = 0 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  arg2 = (std::vector< std::string > *)imarg2;
+  if (!arg2) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "std::vector< std::string > const & reference is null");
+    return ;
+  } 
+  (arg1)->setVector((std::vector< std::string > const &)*arg2);
 }
 
 

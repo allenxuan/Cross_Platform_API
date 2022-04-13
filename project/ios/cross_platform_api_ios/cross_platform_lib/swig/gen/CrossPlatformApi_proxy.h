@@ -7,6 +7,9 @@
  * changes to this file unless you know what you are doing--modify the SWIG
  * interface file instead.
  * ----------------------------------------------------------------------------- */
+#ifndef CROSSPLATFORMAPI_PROXY_H
+#define CROSSPLATFORMAPI_PROXY_H
+
 
 #import <Foundation/Foundation.h>
 
@@ -14,6 +17,27 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+__attribute__ ((visibility("default"))) @interface StrVec_OC : NSObject
+{
+	void *swigCPtr;
+	BOOL swigCMemOwn;
+}
+-(void*)getCptr;
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
+-(id)init;
+-(unsigned long)size;
+-(unsigned long)capacity;
+-(void)reserve: (unsigned long)n;
+-(BOOL)isEmpty;
+-(void)clear;
+-(void)add: (NSString*)x;
+-(NSString*)get: (int)i;
+-(void)set: (int)i val: (NSString*)val;
+
+-(void)dealloc;
+
+@end
 
 __attribute__ ((visibility("default"))) @interface Model_OC : NSObject
 {
@@ -28,7 +52,45 @@ __attribute__ ((visibility("default"))) @interface Model_OC : NSObject
 -(float)getA_float;
 -(void)setA_string: (NSString*)value;
 -(NSString*)getA_string;
+-(void)setA_vector: (StrVec_OC*)value;
+-(StrVec_OC*)getA_vector;
 -(id)init;
+
+-(void)dealloc;
+
+@end
+
+__attribute__ ((visibility("default"))) @interface ModelCallback_OC : NSObject
+{
+	void *swigCPtr;
+	BOOL swigCMemOwn;
+}
+-(void*)getCptr;
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
+-(id)init;
+-(void)onModelChangedPtr: (Model_OC*)model_ptr;
+-(void)onModelChangedSharedPtr: (Model_OC*)model_shared_ptr;
+
+-(void)dealloc;
+
+@end
+
+__attribute__ ((visibility("default"))) @interface ApiCenter_OC : NSObject
+{
+	void *swigCPtr;
+	BOOL swigCMemOwn;
+}
+-(void*)getCptr;
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
+-(id)init;
+-(void)registerModelCallback: (ModelCallback_OC*)callback;
+-(void)unRegisterModelCallback: (ModelCallback_OC*)callback;
+-(Model_OC*)getModelPtr;
+-(Model_OC*)getModelSharedPtr;
+-(float)sumIntAndFloat;
+-(NSString*)getString;
+-(void)setString: (NSString*)string;
+-(void)setVector: (StrVec_OC*)vector;
 
 -(void)dealloc;
 
@@ -37,5 +99,7 @@ __attribute__ ((visibility("default"))) @interface Model_OC : NSObject
 
 #ifdef __cplusplus
 }
+#endif
+
 #endif
 
