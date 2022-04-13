@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import com.allenxuan.xuanyihuang.cross_platform_api.android.ApiCenter
@@ -70,7 +69,6 @@ class MainActivity : AppCompatActivity() {
         sumIntAndFloatValue?.text = apiCenter.sumIntAndFloat().toString()
         modelPtrStringValue?.text = apiCenter.modelPtr.toStringCustom()
         modelSharedPtrStringValue?.text = apiCenter.modelSharedPtr.toStringCustom()
-
     }
 
     override fun onDestroy() {

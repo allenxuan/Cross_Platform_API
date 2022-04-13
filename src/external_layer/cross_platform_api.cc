@@ -38,7 +38,7 @@ namespace cross_platform_external {
     }
 
     void ApiCenter::setString(const std::string &string) {
-        model_operator_->SetString(string);
+         model_operator_->SetString(string);
         OnFieldChange();
     }
 

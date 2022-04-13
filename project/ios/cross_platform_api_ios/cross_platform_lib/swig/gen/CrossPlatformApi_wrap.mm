@@ -370,7 +370,7 @@ void SwigDirector_ModelCallback::onModelChangedPtr(cross_platform_external::Mode
     return;
   }
   if (swigjobj) {
-    jmodel_ptr = (cross_platform_external::Model *) &model_ptr; 
+    jmodel_ptr = new std::shared_ptr<  cross_platform_external::Model > (&model_ptr SWIG_NO_NULL_DELETER_0); 
     [swigjobj onModelChangedPtr: [[Model_OC alloc] initWithCptr:jmodel_ptr swigOwnCObject:NO]];
   } else {
     SWIG_ObjcThrowException(SWIG_ObjcRuntimeException, "null upcall object");
