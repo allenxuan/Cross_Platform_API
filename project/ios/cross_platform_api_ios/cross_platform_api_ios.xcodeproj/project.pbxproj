@@ -17,9 +17,9 @@
 		2BE667F72805D2C500007C29 /* cross_platform_api_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE667F62805D2C500007C29 /* cross_platform_api_iosTests.m */; };
 		2BE668012805D2C500007C29 /* cross_platform_api_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE668002805D2C500007C29 /* cross_platform_api_iosUITests.m */; };
 		2BE668032805D2C500007C29 /* cross_platform_api_iosUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE668022805D2C500007C29 /* cross_platform_api_iosUITestsLaunchTests.m */; };
-		2BE668252805D4F500007C29 /* CrossPlatformApi_wrap.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BE668202805D4F500007C29 /* CrossPlatformApi_wrap.mm */; };
-		2BE668262805D4F500007C29 /* CrossPlatformApi_proxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BE668222805D4F500007C29 /* CrossPlatformApi_proxy.mm */; };
 		2BE6683D2806712500007C29 /* include in Resources */ = {isa = PBXBuildFile; fileRef = 2BE6683C2806712500007C29 /* include */; };
+		2BE6687A28068B6600007C29 /* CrossPlatformApi_proxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6687628068B6600007C29 /* CrossPlatformApi_proxy.mm */; };
+		2BE6687B28068B6600007C29 /* swig_gen_ios.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2BE6687728068B6600007C29 /* swig_gen_ios.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,13 +57,13 @@
 		2BE667FC2805D2C500007C29 /* cross_platform_api_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cross_platform_api_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE668002805D2C500007C29 /* cross_platform_api_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cross_platform_api_iosUITests.m; sourceTree = "<group>"; };
 		2BE668022805D2C500007C29 /* cross_platform_api_iosUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cross_platform_api_iosUITestsLaunchTests.m; sourceTree = "<group>"; };
-		2BE6681F2805D4F500007C29 /* CrossPlatformApi_wrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossPlatformApi_wrap.h; sourceTree = "<group>"; };
-		2BE668202805D4F500007C29 /* CrossPlatformApi_wrap.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CrossPlatformApi_wrap.mm; sourceTree = "<group>"; };
-		2BE668212805D4F500007C29 /* CrossPlatformApi_proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossPlatformApi_proxy.h; sourceTree = "<group>"; };
-		2BE668222805D4F500007C29 /* CrossPlatformApi_proxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CrossPlatformApi_proxy.mm; sourceTree = "<group>"; };
-		2BE668232805D4F500007C29 /* swig_gen_ios.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = swig_gen_ios.sh; sourceTree = "<group>"; };
-		2BE668242805D4F500007C29 /* ios_api.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = ios_api.i; sourceTree = "<group>"; };
 		2BE6683C2806712500007C29 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = ../../../include; sourceTree = "<group>"; };
+		2BE6687328068B6600007C29 /* CrossPlatformApi_wrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossPlatformApi_wrap.h; sourceTree = "<group>"; };
+		2BE6687428068B6600007C29 /* CrossPlatformApi_wrap.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CrossPlatformApi_wrap.mm; sourceTree = "<group>"; };
+		2BE6687528068B6600007C29 /* CrossPlatformApi_proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossPlatformApi_proxy.h; sourceTree = "<group>"; };
+		2BE6687628068B6600007C29 /* CrossPlatformApi_proxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CrossPlatformApi_proxy.mm; sourceTree = "<group>"; };
+		2BE6687728068B6600007C29 /* swig_gen_ios.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = swig_gen_ios.sh; sourceTree = "<group>"; };
+		2BE6687828068B6600007C29 /* ios_api.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = ios_api.i; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,8 @@
 		2BE667CE2805D2C200007C29 = {
 			isa = PBXGroup;
 			children = (
+				2BE6687028068B6600007C29 /* cross_platform_lib */,
 				2BE6683C2806712500007C29 /* include */,
-				2BE6681C2805D4F500007C29 /* cross_platform_lib */,
 				2BE667D92805D2C200007C29 /* cross_platform_api_ios */,
 				2BE667F52805D2C500007C29 /* cross_platform_api_iosTests */,
 				2BE667FF2805D2C500007C29 /* cross_platform_api_iosUITests */,
@@ -148,31 +148,31 @@
 			path = cross_platform_api_iosUITests;
 			sourceTree = "<group>";
 		};
-		2BE6681C2805D4F500007C29 /* cross_platform_lib */ = {
+		2BE6687028068B6600007C29 /* cross_platform_lib */ = {
 			isa = PBXGroup;
 			children = (
-				2BE6681D2805D4F500007C29 /* swig */,
+				2BE6687128068B6600007C29 /* swig */,
 			);
 			path = cross_platform_lib;
 			sourceTree = "<group>";
 		};
-		2BE6681D2805D4F500007C29 /* swig */ = {
+		2BE6687128068B6600007C29 /* swig */ = {
 			isa = PBXGroup;
 			children = (
-				2BE6681E2805D4F500007C29 /* gen */,
-				2BE668232805D4F500007C29 /* swig_gen_ios.sh */,
-				2BE668242805D4F500007C29 /* ios_api.i */,
+				2BE6687228068B6600007C29 /* gen */,
+				2BE6687728068B6600007C29 /* swig_gen_ios.sh */,
+				2BE6687828068B6600007C29 /* ios_api.i */,
 			);
 			path = swig;
 			sourceTree = "<group>";
 		};
-		2BE6681E2805D4F500007C29 /* gen */ = {
+		2BE6687228068B6600007C29 /* gen */ = {
 			isa = PBXGroup;
 			children = (
-				2BE6681F2805D4F500007C29 /* CrossPlatformApi_wrap.h */,
-				2BE668202805D4F500007C29 /* CrossPlatformApi_wrap.mm */,
-				2BE668212805D4F500007C29 /* CrossPlatformApi_proxy.h */,
-				2BE668222805D4F500007C29 /* CrossPlatformApi_proxy.mm */,
+				2BE6687328068B6600007C29 /* CrossPlatformApi_wrap.h */,
+				2BE6687428068B6600007C29 /* CrossPlatformApi_wrap.mm */,
+				2BE6687528068B6600007C29 /* CrossPlatformApi_proxy.h */,
+				2BE6687628068B6600007C29 /* CrossPlatformApi_proxy.mm */,
 			);
 			path = gen;
 			sourceTree = "<group>";
@@ -282,6 +282,7 @@
 			files = (
 				2BE667EA2805D2C400007C29 /* LaunchScreen.storyboard in Resources */,
 				2BE667E72805D2C400007C29 /* Assets.xcassets in Resources */,
+				2BE6687B28068B6600007C29 /* swig_gen_ios.sh in Resources */,
 				2BE667E52805D2C200007C29 /* Main.storyboard in Resources */,
 				2BE6683D2806712500007C29 /* include in Resources */,
 			);
@@ -309,9 +310,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BE667E22805D2C200007C29 /* ViewController.m in Sources */,
-				2BE668252805D4F500007C29 /* CrossPlatformApi_wrap.mm in Sources */,
 				2BE667DC2805D2C200007C29 /* AppDelegate.m in Sources */,
-				2BE668262805D4F500007C29 /* CrossPlatformApi_proxy.mm in Sources */,
+				2BE6687A28068B6600007C29 /* CrossPlatformApi_proxy.mm in Sources */,
 				2BE667ED2805D2C400007C29 /* main.m in Sources */,
 				2BE667DF2805D2C200007C29 /* SceneDelegate.m in Sources */,
 			);
@@ -425,7 +425,10 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../include";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../include",
+					"$(SRCROOT)/cross_platform_lib",
+				);
 			};
 			name = Debug;
 		};
@@ -478,7 +481,10 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../include";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../include",
+					"$(SRCROOT)/cross_platform_lib",
+				);
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
