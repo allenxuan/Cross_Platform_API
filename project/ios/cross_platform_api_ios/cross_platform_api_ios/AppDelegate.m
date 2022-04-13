@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  cross_platform_api_ios
 //
-//  Created by bytedance on 2022/4/11.
+//  Created by bytedance on 2022/4/12.
 //
 
 #import "AppDelegate.h"

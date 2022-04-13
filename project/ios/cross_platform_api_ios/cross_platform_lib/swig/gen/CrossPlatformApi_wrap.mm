@@ -260,7 +260,9 @@ namespace Swig {
 
 #endif /* __cplusplus */
 
+//#include <external_layer/cross_platform_api.h>
 #include "cross_platform_api.h"
+#include <cross_platform_api.h>
 #include "model_external.h"
 #include "callback.h"
 
