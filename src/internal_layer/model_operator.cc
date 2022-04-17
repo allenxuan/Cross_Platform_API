@@ -26,12 +26,20 @@ namespace cross_platform_internal {
         return model_internal_->a_uint32 - model_internal_->a_uint64;
     }
 
-    std::string ModelOperator::GetString() {
-        return model_internal_->a_string;
+    void ModelOperator::SetUint64(uint64_t a_uint64_t) {
+        model_internal_->a_uint64 = a_uint64_t;
     }
 
-    void ModelOperator::SetString(const std::string &string) {
-        model_internal_->a_string = string;
+    uint64_t ModelOperator::GetUnit64() {
+        return model_internal_->a_uint64;
+    }
+
+    void ModelOperator::SetFloat(float a_float) {
+        model_internal_->a_float = a_float;
+    }
+
+    float ModelOperator::GetFloat() {
+        return model_internal_->a_float;
     }
 
     bool ModelOperator::GetBool() {
@@ -42,8 +50,52 @@ namespace cross_platform_internal {
         model_internal_->a_bool = b;
     }
 
-    void ModelOperator::SetVector(const std::vector<std::string> &vector) {
-        model_internal_->a_vector = vector;
+    std::string ModelOperator::GetString() {
+        return model_internal_->a_string;
+    }
+
+    void ModelOperator::SetString(const std::string &string) {
+        model_internal_->a_string = string;
+    }
+
+    void ModelOperator::SetStringVector(const std::vector<std::string> &vector) {
+        model_internal_->a_string_vector = vector;
+    }
+
+    std::vector<std::string> ModelOperator::GetStringVector() {
+        return model_internal_->a_string_vector;
+    }
+
+    void ModelOperator::SetDataVector(const std::vector<cross_platform_common::Data> &data_vector) {
+        model_internal_->a_data_vector = data_vector;
+    }
+
+    std::vector<cross_platform_common::Data> &ModelOperator::GetDataVectorRef() {
+        return model_internal_->a_data_vector;
+    }
+
+    void ModelOperator::SetDataSharedPtrVector(const std::vector<std::shared_ptr<cross_platform_common::Data>> &data_shared_ptr_vector) {
+        model_internal_->a_data_share_ptr_vector = data_shared_ptr_vector;
+    }
+
+    std::vector<std::shared_ptr<cross_platform_common::Data>> ModelOperator::GetDataSharedPtrVector() {
+        return model_internal_->a_data_share_ptr_vector;
+    }
+
+    void ModelOperator::SetDataMap(const std::map<std::string, cross_platform_common::Data> &data_map) {
+        model_internal_->a_data_map = data_map;
+    }
+
+    std::map<std::string, cross_platform_common::Data> &ModelOperator::GetDataMapRef() {
+        return model_internal_->a_data_map;
+    }
+
+    void ModelOperator::SetDataSharedPtrMap(const std::map<std::string, std::shared_ptr<cross_platform_common::Data>> &a_data_shared_ptr_map) {
+        model_internal_->a_data_shared_ptr_map = a_data_shared_ptr_map;
+    }
+
+    std::map<std::string, std::shared_ptr<cross_platform_common::Data>> ModelOperator::GetDataSharedPtrMap() {
+        return model_internal_->a_data_shared_ptr_map;
     }
 }
 

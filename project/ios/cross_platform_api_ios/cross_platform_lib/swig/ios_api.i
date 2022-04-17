@@ -3,6 +3,7 @@
 %{
 #include <external_layer/cross_platform_api.h>
 #include <external_layer/model_external.h>
+#include <common_layer/data.h>
 #include <common_layer/callback.h>
 %}
 
@@ -25,17 +26,23 @@
 %include <std_vector.i>
 %include <cpointer.i>
 //%include <std_wstring.i>
+%include <std_map.i>
 //%include <std_unordered_map.i>
 //%include <swiginterface.i>
 %include <typemaps.i>
 //%include <arrays_java.i>
 
 // shared_ptr support.
+%shared_ptr(cross_platform_common::Data)
 %shared_ptr(cross_platform_external::Model)
 %shared_ptr(cross_platform_common::ModelCallback)
 
 // container template.
 %template(StrVec) std::vector<std::string>;
+%template(DataVec) std::vector<cross_platform_common::Data>;
+%template(DataSharePtrVec) std::vector<std::shared_ptr<cross_platform_common::Data>>;
+%template(DataMap) std::map<std::string, cross_platform_common::Data>;
+%template(DataSharePtrMap) std::map<std::string, std::shared_ptr<cross_platform_common::Data>>;
 
 //director(callback) support.
 %feature("director") cross_platform_common::ModelCallback;
@@ -45,6 +52,7 @@
 //%ignore cross_platform_external::Model::a_vector;
 
 //api headers.
+%include "common_layer/data.h"
 %include "external_layer/model_external.h"
 %include "common_layer/callback.h"
 %include "external_layer/cross_platform_api.h"

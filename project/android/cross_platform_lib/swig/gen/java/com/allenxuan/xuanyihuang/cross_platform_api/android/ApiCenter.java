@@ -48,10 +48,16 @@ public class ApiCenter {
     CrossPlatformApiJNI.ApiCenter_unRegisterModelCallback(swigCPtr, this, ModelCallback.getCPtr(callback), callback);
   }
 
+  /**
+   * @return plain reference
+   */
   public Model getModelPtr() {
     return new Model(CrossPlatformApiJNI.ApiCenter_getModelPtr(swigCPtr, this), true);
   }
 
+  /**
+   * @return shared_ptr by value
+   */
   public Model getModelSharedPtr() {
     long cPtr = CrossPlatformApiJNI.ApiCenter_getModelSharedPtr(swigCPtr, this);
     return (cPtr == 0) ? null : new Model(cPtr, true);
@@ -59,6 +65,30 @@ public class ApiCenter {
 
   public float sumIntAndFloat() {
     return CrossPlatformApiJNI.ApiCenter_sumIntAndFloat(swigCPtr, this);
+  }
+
+  public void setUint64(java.math.BigInteger a_uint64_t) {
+    CrossPlatformApiJNI.ApiCenter_setUint64(swigCPtr, this, a_uint64_t);
+  }
+
+  public java.math.BigInteger getUnit64() {
+    return CrossPlatformApiJNI.ApiCenter_getUnit64(swigCPtr, this);
+  }
+
+  public void setFloat(float a_float) {
+    CrossPlatformApiJNI.ApiCenter_setFloat(swigCPtr, this, a_float);
+  }
+
+  public float getFloat() {
+    return CrossPlatformApiJNI.ApiCenter_getFloat(swigCPtr, this);
+  }
+
+  public boolean getBool() {
+    return CrossPlatformApiJNI.ApiCenter_getBool(swigCPtr, this);
+  }
+
+  public void setBool(boolean b) {
+    CrossPlatformApiJNI.ApiCenter_setBool(swigCPtr, this, b);
   }
 
   public String getString() {
@@ -69,8 +99,44 @@ public class ApiCenter {
     CrossPlatformApiJNI.ApiCenter_setString(swigCPtr, this, string);
   }
 
-  public void setVector(StrVec vector) {
-    CrossPlatformApiJNI.ApiCenter_setVector(swigCPtr, this, StrVec.getCPtr(vector), vector);
+  public void setStringVector(StrVec vector) {
+    CrossPlatformApiJNI.ApiCenter_setStringVector(swigCPtr, this, StrVec.getCPtr(vector), vector);
+  }
+
+  public StrVec getStringVector() {
+    return new StrVec(CrossPlatformApiJNI.ApiCenter_getStringVector(swigCPtr, this), true);
+  }
+
+  public void setDataVector(DataVec data_vector) {
+    CrossPlatformApiJNI.ApiCenter_setDataVector(swigCPtr, this, DataVec.getCPtr(data_vector), data_vector);
+  }
+
+  public DataVec getDataVectorRef() {
+    return new DataVec(CrossPlatformApiJNI.ApiCenter_getDataVectorRef(swigCPtr, this), false);
+  }
+
+  public void setDataSharedPtrVector(DataSharePtrVec data_shared_ptr_vector) {
+    CrossPlatformApiJNI.ApiCenter_setDataSharedPtrVector(swigCPtr, this, DataSharePtrVec.getCPtr(data_shared_ptr_vector), data_shared_ptr_vector);
+  }
+
+  public DataSharePtrVec getDataSharedPtrVector() {
+    return new DataSharePtrVec(CrossPlatformApiJNI.ApiCenter_getDataSharedPtrVector(swigCPtr, this), true);
+  }
+
+  public void setDataMap(DataMap data_map) {
+    CrossPlatformApiJNI.ApiCenter_setDataMap(swigCPtr, this, DataMap.getCPtr(data_map), data_map);
+  }
+
+  public DataMap getDataMapRef() {
+    return new DataMap(CrossPlatformApiJNI.ApiCenter_getDataMapRef(swigCPtr, this), false);
+  }
+
+  public void setDataSharedPtrMap(DataSharePtrMap a_data_shared_ptr_map) {
+    CrossPlatformApiJNI.ApiCenter_setDataSharedPtrMap(swigCPtr, this, DataSharePtrMap.getCPtr(a_data_shared_ptr_map), a_data_shared_ptr_map);
+  }
+
+  public DataSharePtrMap getDataSharedPtrMap() {
+    return new DataSharePtrMap(CrossPlatformApiJNI.ApiCenter_getDataSharedPtrMap(swigCPtr, this), true);
   }
 
 }

@@ -8,6 +8,8 @@
 #include <cstdint>
 #include <string>
 #include <vector>
+#include <map>
+#include <common_layer/data.h>
 
 namespace cross_platform_internal {
     struct Model {
@@ -21,7 +23,11 @@ namespace cross_platform_internal {
         int8_t a_int8 = 6;
         long a_long = 7;
         long long a_long_long = 8;
-        std::vector<std::string> a_vector;
+        std::vector<std::string> a_string_vector;
+        std::vector<cross_platform_common::Data> a_data_vector;
+        std::vector<std::shared_ptr<cross_platform_common::Data>> a_data_share_ptr_vector;
+        std::map<std::string, cross_platform_common::Data> a_data_map;
+        std::map<std::string, std::shared_ptr<cross_platform_common::Data>> a_data_shared_ptr_map;
     };
 }
 

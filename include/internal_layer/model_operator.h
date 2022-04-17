@@ -19,21 +19,53 @@ namespace cross_platform_internal {
 
         const std::unique_ptr<Model> &GetModel();
 
+        //### primitives start ###
         float SumIntAndFloat();
 
         float SumFloatAndUint32();
 
         uint64_t Uint32MinusUint64();
 
-        std::string GetString();
+        void SetUint64(uint64_t a_uint64_t);
 
-        void SetString(const std::string &string);
+        uint64_t GetUnit64();
+
+        void SetFloat(float a_float);
+
+        float GetFloat();
 
         bool GetBool();
 
         void SetBool(bool b);
+        //### primitives end ###
 
-        void SetVector(const std::vector<std::string> &vector);
+        //### string start ###
+        std::string GetString();
+
+        void SetString(const std::string &string);
+        //### string end ###
+
+        //### containers start ###
+        void SetStringVector(const std::vector<std::string> &vector);
+
+        std::vector<std::string> GetStringVector();
+
+        void SetDataVector(const std::vector<cross_platform_common::Data> &data_vector);
+
+        std::vector<cross_platform_common::Data> &GetDataVectorRef();
+
+        void SetDataSharedPtrVector(const std::vector<std::shared_ptr<cross_platform_common::Data>> &data_shared_ptr_vector);
+
+        std::vector<std::shared_ptr<cross_platform_common::Data>> GetDataSharedPtrVector();
+
+        void SetDataMap(const std::map<std::string, cross_platform_common::Data> &data_map);
+
+        std::map<std::string, cross_platform_common::Data> &GetDataMapRef();
+
+        void SetDataSharedPtrMap(const std::map<std::string, std::shared_ptr<cross_platform_common::Data>> &a_data_shared_ptr_map);
+
+        std::map<std::string, std::shared_ptr<cross_platform_common::Data>> GetDataSharedPtrMap();
+        //### containers end ###
 
     private:
         std::unique_ptr<Model> model_internal_ = nullptr;

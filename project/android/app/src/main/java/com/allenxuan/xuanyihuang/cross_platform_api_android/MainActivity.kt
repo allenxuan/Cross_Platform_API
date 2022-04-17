@@ -6,10 +6,9 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.TextView
-import com.allenxuan.xuanyihuang.cross_platform_api.android.ApiCenter
-import com.allenxuan.xuanyihuang.cross_platform_api.android.Model
-import com.allenxuan.xuanyihuang.cross_platform_api.android.ModelCallback
+import com.allenxuan.xuanyihuang.cross_platform_api.android.*
 import com.allenxuan.xuanyihuang.cross_platform_lib.SDK
+import java.math.BigInteger
 
 class MainActivity : AppCompatActivity() {
     private var sumIntAndFloatValue: TextView? = null
@@ -69,6 +68,44 @@ class MainActivity : AppCompatActivity() {
         sumIntAndFloatValue?.text = apiCenter.sumIntAndFloat().toString()
         modelPtrStringValue?.text = apiCenter.modelPtr.toStringCustom()
         modelSharedPtrStringValue?.text = apiCenter.modelSharedPtr.toStringCustom()
+
+        //### primitives start ###
+        apiCenter.setUint64(BigInteger("123456"))
+        val a_unit64 = apiCenter.unit64.toLong()
+
+        apiCenter.float = 123.4f
+        val a_float = apiCenter.float
+
+        apiCenter.bool = true
+        val a_bool = apiCenter.bool
+        //### primitives end ###
+
+        //### string start ###
+        apiCenter.string = "abc"
+        val a_string = apiCenter.string
+        //### string end ###
+
+        //### containers start ###
+        val strVec = StrVec()
+        apiCenter.stringVector = strVec
+        val a_str_vec = apiCenter.stringVector
+
+        val dataVec = DataVec()
+        apiCenter.setDataVector(dataVec)
+        val a_data_vec = apiCenter.dataVectorRef
+
+        val dataSharedPtrVec = DataSharePtrVec()
+        apiCenter.setDataSharedPtrVector(dataSharedPtrVec)
+        val a_data_shared_ptr_vec = apiCenter.dataSharedPtrVector
+
+        val dataMap = DataMap()
+        apiCenter.setDataMap(dataMap)
+        val a_data_map = apiCenter.dataMapRef
+
+        val dataSharedPtrMap = DataSharePtrMap()
+        apiCenter.setDataSharedPtrMap(dataSharedPtrMap)
+        val a_data_shared_ptr_map = apiCenter.dataSharedPtrMap
+        //### containers end ###
     }
 
     override fun onDestroy() {

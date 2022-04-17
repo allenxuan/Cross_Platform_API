@@ -33,18 +33,87 @@ namespace cross_platform_external {
         return model_operator_->SumIntAndFloat();
     }
 
+    void ApiCenter::setUint64(uint64_t a_uint64_t) {
+        model_operator_->SetUint64(a_uint64_t);
+        OnFieldChange();
+    }
+
+    uint64_t ApiCenter::getUnit64() {
+        return model_operator_->GetUnit64();
+    }
+
+    float ApiCenter::getFloat() {
+        return model_operator_->GetFloat();
+    }
+
+    void ApiCenter::setFloat(float a_float) {
+        model_operator_->SetFloat(a_float);
+        OnFieldChange();
+    }
+
+    bool ApiCenter::getBool() {
+        return model_operator_->GetBool();
+    }
+
+    void ApiCenter::setBool(bool b) {
+        model_operator_->SetBool(b);
+        OnFieldChange();
+    }
+
     std::string ApiCenter::getString() {
         return model_operator_->GetString();
     }
 
     void ApiCenter::setString(const std::string &string) {
-         model_operator_->SetString(string);
+        model_operator_->SetString(string);
         OnFieldChange();
     }
 
-    void ApiCenter::setVector(const std::vector<std::string> &vector) {
-        model_operator_->SetVector(vector);
+    void ApiCenter::setStringVector(const std::vector<std::string> &vector) {
+        model_operator_->SetStringVector(vector);
         OnFieldChange();
+    }
+
+    std::vector<std::string> ApiCenter::getStringVector() {
+        return model_operator_->GetStringVector();
+    }
+
+    void ApiCenter::setDataVector(const std::vector<cross_platform_common::Data> &data_vector) {
+        model_operator_->SetDataVector(data_vector);
+        OnFieldChange();
+    }
+
+    std::vector<cross_platform_common::Data> &ApiCenter::getDataVectorRef() {
+        return model_operator_->GetDataVectorRef();
+    }
+
+    void ApiCenter::setDataSharedPtrVector(
+            const std::vector<std::shared_ptr<cross_platform_common::Data>> &data_shared_ptr_vector) {
+        model_operator_->SetDataSharedPtrVector(data_shared_ptr_vector);
+        OnFieldChange();
+    }
+
+    std::vector<std::shared_ptr<cross_platform_common::Data>> ApiCenter::getDataSharedPtrVector() {
+        return model_operator_->GetDataSharedPtrVector();
+    }
+
+    void ApiCenter::setDataMap(const std::map<std::string, cross_platform_common::Data> &data_map) {
+        model_operator_->SetDataMap(data_map);
+        OnFieldChange();
+    }
+
+    std::map<std::string, cross_platform_common::Data> &ApiCenter::getDataMapRef() {
+        return model_operator_->GetDataMapRef();
+    }
+
+    void ApiCenter::setDataSharedPtrMap(
+            const std::map<std::string, std::shared_ptr<cross_platform_common::Data>> &a_data_shared_ptr_map) {
+        model_operator_->SetDataSharedPtrMap(a_data_shared_ptr_map);
+        OnFieldChange();
+    }
+
+    std::map<std::string, std::shared_ptr<cross_platform_common::Data>> ApiCenter::getDataSharedPtrMap() {
+        return model_operator_->GetDataSharedPtrMap();
     }
 
     //copy data
