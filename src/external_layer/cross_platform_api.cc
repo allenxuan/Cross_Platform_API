@@ -116,6 +116,25 @@ namespace cross_platform_external {
         return model_operator_->GetDataSharedPtrMap();
     }
 
+    void ApiCenter::setDataPair(const std::pair<std::string, cross_platform_common::Data> &a_data_pair) {
+        model_operator_->SetDataPair(a_data_pair);
+        OnFieldChange();
+    }
+
+    std::pair<std::string, cross_platform_common::Data> &ApiCenter::getDataPairRef() {
+        return model_operator_->GetDataPairRef();
+    }
+
+    void ApiCenter::setDataSharedPtrPair(
+            const std::pair<std::string, std::shared_ptr<cross_platform_common::Data>> &a_data_shared_ptr_pair) {
+        model_operator_->SetDataSharedPtrPair(a_data_shared_ptr_pair);
+        OnFieldChange();
+    }
+
+    std::pair<std::string, std::shared_ptr<cross_platform_common::Data>> ApiCenter::getDataSharedPtrPair() {
+        return model_operator_->GetDataSharedPtrPair();
+    }
+
     //copy data
     void ApiCenter::ModelSync() {
         model_external_ptr_.a_uint64 = model_operator_->GetModel()->a_uint64;

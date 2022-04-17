@@ -75,6 +75,14 @@ namespace cross_platform_external {
         void setDataSharedPtrMap(const std::map<std::string, std::shared_ptr<cross_platform_common::Data>> &a_data_shared_ptr_map);
 
         std::map<std::string, std::shared_ptr<cross_platform_common::Data>> getDataSharedPtrMap();
+
+        void setDataPair(const std::pair<std::string, cross_platform_common::Data> &a_data_pair);
+
+        std::pair<std::string, cross_platform_common::Data> &getDataPairRef();
+
+        void setDataSharedPtrPair(const std::pair<std::string, std::shared_ptr<cross_platform_common::Data>> &a_data_shared_ptr_pair);
+
+        std::pair<std::string, std::shared_ptr<cross_platform_common::Data>> getDataSharedPtrPair();
         //### containers end ###
 
     private:

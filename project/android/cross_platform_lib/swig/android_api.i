@@ -43,6 +43,8 @@
 %template(DataSharePtrVec) std::vector<std::shared_ptr<cross_platform_common::Data>>;
 %template(DataMap) std::map<std::string, cross_platform_common::Data>;
 %template(DataSharePtrMap) std::map<std::string, std::shared_ptr<cross_platform_common::Data>>;
+%template(DataPair) std::pair<std::string, cross_platform_common::Data>;
+%template(DataSharedPtrPair) std::pair<std::string, std::shared_ptr<cross_platform_common::Data>>;
 
 //director(callback) support.
 %feature("director") cross_platform_common::ModelCallback;

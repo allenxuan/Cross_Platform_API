@@ -105,6 +105,14 @@ class MainActivity : AppCompatActivity() {
         val dataSharedPtrMap = DataSharePtrMap()
         apiCenter.setDataSharedPtrMap(dataSharedPtrMap)
         val a_data_shared_ptr_map = apiCenter.dataSharedPtrMap
+
+        val dataPair = DataPair()
+        apiCenter.setDataPair(dataPair)
+        val a_data_pair = apiCenter.dataPairRef
+
+        val dataSharedPtrPair = DataSharedPtrPair()
+        apiCenter.setDataSharedPtrPair(dataSharedPtrPair)
+        val a_data_shared_ptr_pair = apiCenter.dataSharedPtrPair
         //### containers end ###
     }
 

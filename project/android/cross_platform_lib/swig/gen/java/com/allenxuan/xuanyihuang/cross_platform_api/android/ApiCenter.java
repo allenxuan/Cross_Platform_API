@@ -139,4 +139,20 @@ public class ApiCenter {
     return new DataSharePtrMap(CrossPlatformApiJNI.ApiCenter_getDataSharedPtrMap(swigCPtr, this), true);
   }
 
+  public void setDataPair(DataPair a_data_pair) {
+    CrossPlatformApiJNI.ApiCenter_setDataPair(swigCPtr, this, DataPair.getCPtr(a_data_pair), a_data_pair);
+  }
+
+  public DataPair getDataPairRef() {
+    return new DataPair(CrossPlatformApiJNI.ApiCenter_getDataPairRef(swigCPtr, this), false);
+  }
+
+  public void setDataSharedPtrPair(DataSharedPtrPair a_data_shared_ptr_pair) {
+    CrossPlatformApiJNI.ApiCenter_setDataSharedPtrPair(swigCPtr, this, DataSharedPtrPair.getCPtr(a_data_shared_ptr_pair), a_data_shared_ptr_pair);
+  }
+
+  public DataSharedPtrPair getDataSharedPtrPair() {
+    return new DataSharedPtrPair(CrossPlatformApiJNI.ApiCenter_getDataSharedPtrPair(swigCPtr, this), true);
+  }
+
 }

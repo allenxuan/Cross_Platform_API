@@ -90,6 +90,22 @@ public class CrossPlatformApiJNI {
   public final static native void DataSharePtrMap_putUnchecked(long jarg1, DataSharePtrMap jarg1_, String jarg2, long jarg3, Data jarg3_);
   public final static native void DataSharePtrMap_removeUnchecked(long jarg1, DataSharePtrMap jarg1_, long jarg2, DataSharePtrMap.Iterator jarg2_);
   public final static native void delete_DataSharePtrMap(long jarg1);
+  public final static native long new_DataPair__SWIG_0();
+  public final static native long new_DataPair__SWIG_1(String jarg1, long jarg2, Data jarg2_);
+  public final static native long new_DataPair__SWIG_2(long jarg1, DataPair jarg1_);
+  public final static native void DataPair_first_set(long jarg1, DataPair jarg1_, String jarg2);
+  public final static native String DataPair_first_get(long jarg1, DataPair jarg1_);
+  public final static native void DataPair_second_set(long jarg1, DataPair jarg1_, long jarg2, Data jarg2_);
+  public final static native long DataPair_second_get(long jarg1, DataPair jarg1_);
+  public final static native void delete_DataPair(long jarg1);
+  public final static native long new_DataSharedPtrPair__SWIG_0();
+  public final static native long new_DataSharedPtrPair__SWIG_1(String jarg1, long jarg2, Data jarg2_);
+  public final static native long new_DataSharedPtrPair__SWIG_2(long jarg1, DataSharedPtrPair jarg1_);
+  public final static native void DataSharedPtrPair_first_set(long jarg1, DataSharedPtrPair jarg1_, String jarg2);
+  public final static native String DataSharedPtrPair_first_get(long jarg1, DataSharedPtrPair jarg1_);
+  public final static native void DataSharedPtrPair_second_set(long jarg1, DataSharedPtrPair jarg1_, long jarg2, Data jarg2_);
+  public final static native long DataSharedPtrPair_second_get(long jarg1, DataSharedPtrPair jarg1_);
+  public final static native void delete_DataSharedPtrPair(long jarg1);
   public final static native void Data_a_data_set(long jarg1, Data jarg1_, String jarg2);
   public final static native String Data_a_data_get(long jarg1, Data jarg1_);
   public final static native long new_Data();
@@ -135,6 +151,10 @@ public class CrossPlatformApiJNI {
   public final static native long ApiCenter_getDataMapRef(long jarg1, ApiCenter jarg1_);
   public final static native void ApiCenter_setDataSharedPtrMap(long jarg1, ApiCenter jarg1_, long jarg2, DataSharePtrMap jarg2_);
   public final static native long ApiCenter_getDataSharedPtrMap(long jarg1, ApiCenter jarg1_);
+  public final static native void ApiCenter_setDataPair(long jarg1, ApiCenter jarg1_, long jarg2, DataPair jarg2_);
+  public final static native long ApiCenter_getDataPairRef(long jarg1, ApiCenter jarg1_);
+  public final static native void ApiCenter_setDataSharedPtrPair(long jarg1, ApiCenter jarg1_, long jarg2, DataSharedPtrPair jarg2_);
+  public final static native long ApiCenter_getDataSharedPtrPair(long jarg1, ApiCenter jarg1_);
 
   public static void SwigDirector_ModelCallback_onModelChangedPtr(ModelCallback jself, long model_ptr) {
     jself.onModelChangedPtr((model_ptr == 0) ? null : new Model(model_ptr, true));
