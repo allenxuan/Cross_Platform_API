@@ -55,7 +55,53 @@
     _sumIntAndFloatValue.text = @(self.apiCenter.sumIntAndFloat).stringValue;
     _modelPtrStringValue.text = [self modelToString:self.apiCenter.getModelPtr];
     _modelSharedPtrStringValue.text = [self modelToString:self.apiCenter.getModelSharedPtr];
-     
+    
+    
+    //### primitives start ###
+    [self.apiCenter setUint64:12345];
+    auto a_uinit64 = [self.apiCenter getUnit64];
+    
+    [self.apiCenter setFloat:123.4f];
+    auto a_float = [self.apiCenter getFloat];
+   
+    [self.apiCenter setBool:true];
+    auto a_bool = [self.apiCenter getBool];
+    //### primitives end ###
+    
+    //### string start ###
+    [self.apiCenter setString:@"abc"];
+    auto a_string = [self.apiCenter getString];
+    //### string end ###
+    
+    //### containers start ###
+    StrVec_OC *strVec = [StrVec_OC new];
+    [self.apiCenter setStringVector:strVec];
+    auto a_str_vec = [self.apiCenter getStringVector];
+    
+    DataVec_OC *dataVec = [DataVec_OC new];
+    [self.apiCenter setDataVector:dataVec];
+    auto a_data_vec = [self.apiCenter getDataVectorRef];
+    
+    DataSharePtrVec_OC *dataSharedPtrVec = [DataSharePtrVec_OC new];
+    [self.apiCenter setDataSharedPtrVector:dataSharedPtrVec];
+    auto a_data_shared_ptr_vec = [self.apiCenter getDataSharedPtrVector];
+    
+    DataMap_OC *dataMap = [DataMap_OC new];
+    [self.apiCenter setDataMap:dataMap];
+    auto a_data_map = [self.apiCenter getDataMapRef];
+    
+    DataSharePtrMap_OC *dataSharedPtrMap = [DataSharePtrMap_OC new];
+    [self.apiCenter setDataSharedPtrMap: dataSharedPtrMap];
+    auto a_data_shared_ptr_map = [self.apiCenter getDataSharedPtrMap];
+    
+    DataPair_OC *dataPair = [DataPair_OC new];
+    [self.apiCenter setDataPair:dataPair];
+    auto a_data_pair = [self.apiCenter getDataPairRef];
+    
+    DataSharedPtrPair_OC *dataSharedPtrPair = [DataSharedPtrPair_OC new];
+    [self.apiCenter setDataSharedPtrPair:dataSharedPtrPair];
+    auto a_data_shared_ptr_pair = [self.apiCenter getDataSharedPtrPair];
+    //### containers end ###
 }
 
 

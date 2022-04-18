@@ -49,10 +49,6 @@
 //director(callback) support.
 %feature("director") cross_platform_common::ModelCallback;
 
-//ignore classes, methods, fields.
-//%ignore cross_platform_common::ModelCallback
-//%ignore cross_platform_external::Model::a_vector;
-
 //api headers.
 %include "common_layer/data.h"
 %include "external_layer/model_external.h"
