@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#source ios_swig_before.sh
-
 swig_i="ios_api.i"
 swig_root_dir="gen"
 swig_cpp_out_dir="gen"
@@ -15,10 +13,10 @@ rm -rf ${swig_root_dir}
 mkdir -p ${swig_cpp_out_dir}
 mkdir -p ${swig_oc_out_dir}
 
-echo ${swig_include_dir}
-echo ${swig_oc_out_dir}
-echo "${swig_cpp_out_dir}/${swig_cpp_out_file_name}"
-echo ${swig_i}
+#echo ${swig_include_dir}
+#echo ${swig_oc_out_dir}
+#echo "${swig_cpp_out_dir}/${swig_cpp_out_file_name}"
+#echo ${swig_i}
 
 swig -c++ -objc \
   -doxygen \
@@ -27,5 +25,3 @@ swig -c++ -objc \
   -outdir ${swig_oc_out_dir} \
   -o "${swig_cpp_out_dir}/${swig_cpp_out_file_name}" \
   ${swig_i}
-
-#source ios_swig_after.sh
