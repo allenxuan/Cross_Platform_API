@@ -15,7 +15,7 @@ endif()
 
 add_subdirectory(src)
 
-add_option_force(TEST OFF)
+add_option_force(TEST ON)
 if (OPTION_TEST)
     message(STATUS "include cmake/Test.cmake")
     include(cmake/Test.cmake)
