@@ -1,3 +1,5 @@
 rootProject.name = "cross_platform_api_android"
 include ':app'
 include ':cross_platform_lib'
+include ':root'
+project(':root').projectDir = new File('../..')
