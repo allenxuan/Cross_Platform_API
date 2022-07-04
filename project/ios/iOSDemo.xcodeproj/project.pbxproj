@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B99F26B2872CDC0002C19DF /* model_operator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B99F2662872CDC0002C19DF /* model_operator.cc */; };
+		2B99F26C2872CDC0002C19DF /* cross_platform_api.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2B99F2682872CDC0002C19DF /* cross_platform_api.cc */; };
 		2BE6689828068ECF00007C29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6689728068ECF00007C29 /* AppDelegate.m */; };
 		2BE6689B28068ECF00007C29 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6689A28068ECF00007C29 /* SceneDelegate.m */; };
 		2BE6689E28068ECF00007C29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6689D28068ECF00007C29 /* ViewController.m */; };
@@ -17,8 +19,6 @@
 		2BE668B328068ED100007C29 /* iOSDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE668B228068ED100007C29 /* iOSDemoTests.m */; };
 		2BE668BD28068ED100007C29 /* iOSDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE668BC28068ED100007C29 /* iOSDemoUITests.m */; };
 		2BE668BF28068ED100007C29 /* iOSDemoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE668BE28068ED100007C29 /* iOSDemoUITestsLaunchTests.m */; };
-		2BE668E528068FB700007C29 /* model_operator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2BE668DF28068FB700007C29 /* model_operator.cc */; };
-		2BE668E628068FB700007C29 /* cross_platform_api.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2BE668E128068FB700007C29 /* cross_platform_api.cc */; };
 		2BE6690F2806A0FA00007C29 /* CrossPlatformApi_proxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BE669072806905800007C29 /* CrossPlatformApi_proxy.mm */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B99F2552872CDA2002C19DF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2B99F2562872CDA2002C19DF /* model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model.h; sourceTree = "<group>"; };
+		2B99F2572872CDA2002C19DF /* model_operator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model_operator.h; sourceTree = "<group>"; };
+		2B99F2592872CDA2002C19DF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2B99F25A2872CDA2002C19DF /* model_external.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model_external.h; sourceTree = "<group>"; };
+		2B99F25B2872CDA2002C19DF /* cross_platform_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cross_platform_api.h; sourceTree = "<group>"; };
+		2B99F25D2872CDA2002C19DF /* data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = data.h; sourceTree = "<group>"; };
+		2B99F25E2872CDA2002C19DF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2B99F25F2872CDA2002C19DF /* callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callback.h; sourceTree = "<group>"; };
+		2B99F2642872CDC0002C19DF /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		2B99F2662872CDC0002C19DF /* model_operator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model_operator.cc; sourceTree = "<group>"; };
+		2B99F2682872CDC0002C19DF /* cross_platform_api.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cross_platform_api.cc; sourceTree = "<group>"; };
 		2BE6689328068ECF00007C29 /* iOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE6689628068ECF00007C29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BE6689728068ECF00007C29 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,17 +69,6 @@
 		2BE668B828068ED100007C29 /* iOSDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE668BC28068ED100007C29 /* iOSDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSDemoUITests.m; sourceTree = "<group>"; };
 		2BE668BE28068ED100007C29 /* iOSDemoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSDemoUITestsLaunchTests.m; sourceTree = "<group>"; };
-		2BE668CD28068F8B00007C29 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2BE668CE28068F8B00007C29 /* model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model.h; sourceTree = "<group>"; };
-		2BE668CF28068F8B00007C29 /* model_operator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model_operator.h; sourceTree = "<group>"; };
-		2BE668D128068F8B00007C29 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2BE668D228068F8B00007C29 /* model_external.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model_external.h; sourceTree = "<group>"; };
-		2BE668D328068F8B00007C29 /* cross_platform_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cross_platform_api.h; sourceTree = "<group>"; };
-		2BE668D528068F8B00007C29 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2BE668D628068F8B00007C29 /* callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callback.h; sourceTree = "<group>"; };
-		2BE668DB28068FB700007C29 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
-		2BE668DF28068FB700007C29 /* model_operator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model_operator.cc; sourceTree = "<group>"; };
-		2BE668E128068FB700007C29 /* cross_platform_api.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cross_platform_api.cc; sourceTree = "<group>"; };
 		2BE669042806905800007C29 /* CrossPlatformApi_wrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossPlatformApi_wrap.h; sourceTree = "<group>"; };
 		2BE669052806905800007C29 /* CrossPlatformApi_wrap.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CrossPlatformApi_wrap.mm; sourceTree = "<group>"; };
 		2BE669062806905800007C29 /* CrossPlatformApi_proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossPlatformApi_proxy.h; sourceTree = "<group>"; };
@@ -101,13 +102,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B99F2532872CDA2002C19DF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				2B99F2542872CDA2002C19DF /* internal_layer */,
+				2B99F2582872CDA2002C19DF /* external_layer */,
+				2B99F25C2872CDA2002C19DF /* common_layer */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = "<group>";
+		};
+		2B99F2542872CDA2002C19DF /* internal_layer */ = {
+			isa = PBXGroup;
+			children = (
+				2B99F2552872CDA2002C19DF /* README.md */,
+				2B99F2562872CDA2002C19DF /* model.h */,
+				2B99F2572872CDA2002C19DF /* model_operator.h */,
+			);
+			path = internal_layer;
+			sourceTree = "<group>";
+		};
+		2B99F2582872CDA2002C19DF /* external_layer */ = {
+			isa = PBXGroup;
+			children = (
+				2B99F2592872CDA2002C19DF /* README.md */,
+				2B99F25A2872CDA2002C19DF /* model_external.h */,
+				2B99F25B2872CDA2002C19DF /* cross_platform_api.h */,
+			);
+			path = external_layer;
+			sourceTree = "<group>";
+		};
+		2B99F25C2872CDA2002C19DF /* common_layer */ = {
+			isa = PBXGroup;
+			children = (
+				2B99F25D2872CDA2002C19DF /* data.h */,
+				2B99F25E2872CDA2002C19DF /* README.md */,
+				2B99F25F2872CDA2002C19DF /* callback.h */,
+			);
+			path = common_layer;
+			sourceTree = "<group>";
+		};
+		2B99F2632872CDC0002C19DF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2B99F2642872CDC0002C19DF /* CMakeLists.txt */,
+				2B99F2652872CDC0002C19DF /* internal_layer */,
+				2B99F2672872CDC0002C19DF /* external_layer */,
+				2B99F2692872CDC0002C19DF /* common_layer */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		2B99F2652872CDC0002C19DF /* internal_layer */ = {
+			isa = PBXGroup;
+			children = (
+				2B99F2662872CDC0002C19DF /* model_operator.cc */,
+			);
+			path = internal_layer;
+			sourceTree = "<group>";
+		};
+		2B99F2672872CDC0002C19DF /* external_layer */ = {
+			isa = PBXGroup;
+			children = (
+				2B99F2682872CDC0002C19DF /* cross_platform_api.cc */,
+			);
+			path = external_layer;
+			sourceTree = "<group>";
+		};
+		2B99F2692872CDC0002C19DF /* common_layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = common_layer;
+			sourceTree = "<group>";
+		};
 		2BE6688A28068ECF00007C29 = {
 			isa = PBXGroup;
 			children = (
-				2BE669012806905800007C29 /* cross_platform_lib */,
-				2BE668CB28068F8B00007C29 /* include */,
-				2BE668DA28068FB700007C29 /* src */,
+				2B99F2532872CDA2002C19DF /* include */,
+				2B99F2632872CDC0002C19DF /* src */,
 				2BE6689528068ECF00007C29 /* app */,
+				2BE669012806905800007C29 /* cross_platform_lib */,
 				2BE668B128068ED100007C29 /* iOSDemoTests */,
 				2BE668BB28068ED100007C29 /* iOSDemoUITests */,
 				2BE6689428068ECF00007C29 /* Products */,
@@ -157,81 +234,6 @@
 				2BE668BE28068ED100007C29 /* iOSDemoUITestsLaunchTests.m */,
 			);
 			path = iOSDemoUITests;
-			sourceTree = "<group>";
-		};
-		2BE668CB28068F8B00007C29 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				2BE668CC28068F8B00007C29 /* internal_layer */,
-				2BE668D028068F8B00007C29 /* external_layer */,
-				2BE668D428068F8B00007C29 /* common_layer */,
-			);
-			name = include;
-			path = ../../../include;
-			sourceTree = "<group>";
-		};
-		2BE668CC28068F8B00007C29 /* internal_layer */ = {
-			isa = PBXGroup;
-			children = (
-				2BE668CD28068F8B00007C29 /* README.md */,
-				2BE668CE28068F8B00007C29 /* model.h */,
-				2BE668CF28068F8B00007C29 /* model_operator.h */,
-			);
-			path = internal_layer;
-			sourceTree = "<group>";
-		};
-		2BE668D028068F8B00007C29 /* external_layer */ = {
-			isa = PBXGroup;
-			children = (
-				2BE668D128068F8B00007C29 /* README.md */,
-				2BE668D228068F8B00007C29 /* model_external.h */,
-				2BE668D328068F8B00007C29 /* cross_platform_api.h */,
-			);
-			path = external_layer;
-			sourceTree = "<group>";
-		};
-		2BE668D428068F8B00007C29 /* common_layer */ = {
-			isa = PBXGroup;
-			children = (
-				2BE668D528068F8B00007C29 /* README.md */,
-				2BE668D628068F8B00007C29 /* callback.h */,
-			);
-			path = common_layer;
-			sourceTree = "<group>";
-		};
-		2BE668DA28068FB700007C29 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				2BE668DB28068FB700007C29 /* CMakeLists.txt */,
-				2BE668DE28068FB700007C29 /* internal_layer */,
-				2BE668E028068FB700007C29 /* external_layer */,
-				2BE668E228068FB700007C29 /* common_layer */,
-			);
-			name = src;
-			path = ../../../src;
-			sourceTree = "<group>";
-		};
-		2BE668DE28068FB700007C29 /* internal_layer */ = {
-			isa = PBXGroup;
-			children = (
-				2BE668DF28068FB700007C29 /* model_operator.cc */,
-			);
-			path = internal_layer;
-			sourceTree = "<group>";
-		};
-		2BE668E028068FB700007C29 /* external_layer */ = {
-			isa = PBXGroup;
-			children = (
-				2BE668E128068FB700007C29 /* cross_platform_api.cc */,
-			);
-			path = external_layer;
-			sourceTree = "<group>";
-		};
-		2BE668E228068FB700007C29 /* common_layer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = common_layer;
 			sourceTree = "<group>";
 		};
 		2BE669012806905800007C29 /* cross_platform_lib */ = {
@@ -397,9 +399,9 @@
 				2BE6689E28068ECF00007C29 /* ViewController.m in Sources */,
 				2BE6689828068ECF00007C29 /* AppDelegate.m in Sources */,
 				2BE668A928068ED100007C29 /* main.m in Sources */,
-				2BE668E628068FB700007C29 /* cross_platform_api.cc in Sources */,
+				2B99F26C2872CDC0002C19DF /* cross_platform_api.cc in Sources */,
 				2BE6689B28068ECF00007C29 /* SceneDelegate.m in Sources */,
-				2BE668E528068FB700007C29 /* model_operator.cc in Sources */,
+				2B99F26B2872CDC0002C19DF /* model_operator.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +513,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../../include",
+					"$(SRCROOT)/../../include",
 					"$(SRCROOT)/cross_platform_lib",
 				);
 			};
@@ -566,7 +568,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../../include",
+					"$(SRCROOT)/../../include",
 					"$(SRCROOT)/cross_platform_lib",
 				);
 				VALIDATE_PRODUCT = YES;
@@ -595,6 +597,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "allenxuan.cross-platform-api-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../include",
+					"$(SRCROOT)/cross_platform_lib",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -621,6 +627,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "allenxuan.cross-platform-api-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../include",
+					"$(SRCROOT)/cross_platform_lib",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
