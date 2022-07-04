@@ -1,4 +1,4 @@
-rootProject.name = "cross_platform_api_android"
+rootProject.name = "AndroidDemo"
 include ':app'
 include ':cross_platform_lib'
 include ':root'
