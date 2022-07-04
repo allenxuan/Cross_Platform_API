@@ -6,7 +6,7 @@ swig_cpp_out_dir="gen"
 swig_cpp_out_file_name="CrossPlatformApi_wrap.mm" #must be this name
 swig_oc_out_dir="gen"
 
-swig_include_dir="-I../../../../../include"
+swig_include_dir="-I../../../../include"
 swig_include_dir="${swig_include_dir} -I./"
 
 rm -rf ${swig_root_dir}

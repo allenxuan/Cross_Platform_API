@@ -1,0 +1,9 @@
+/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles/rebuild_cache.dir
+/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles/edit_cache.dir
+/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles/_CrossPlatformApi.dir
+/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/CMakeFiles/rebuild_cache.dir
+/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/CMakeFiles/edit_cache.dir
+/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/CMakeFiles/test_main_executable.dir
+/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/src/CMakeFiles/rebuild_cache.dir
+/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/src/CMakeFiles/edit_cache.dir
+/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir
