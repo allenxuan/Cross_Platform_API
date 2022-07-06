@@ -4,4 +4,5 @@ target_include_directories(cross_platform_lib
         )
 add_sources(cross_platform_lib
         external_layer/cross_platform_api.cc
-        internal_layer/model_operator.cc)
+        internal_layer/model_operator.cc
+        common_layer/data.cc)

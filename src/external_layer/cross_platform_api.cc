@@ -138,10 +138,14 @@ namespace cross_platform_external {
     //copy data
     void ApiCenter::ModelSync() {
         model_external_ptr_.a_uint64 = model_operator_->GetModel()->a_uint64;
+        model_external_ptr_.a_float = model_operator_->GetModel()->a_float;
         model_external_ptr_.a_string = model_operator_->GetModel()->a_string;
+        model_external_ptr_.a_string_vector = model_operator_->GetModel()->a_string_vector;
 
         model_external_shared_ptr_->a_uint64 = model_operator_->GetModel()->a_uint64;
+        model_external_shared_ptr_->a_float = model_operator_->GetModel()->a_float;
         model_external_shared_ptr_->a_string = model_operator_->GetModel()->a_string;
+        model_external_shared_ptr_->a_string_vector = model_operator_->GetModel()->a_string_vector;
     }
 
     void ApiCenter::OnFieldChange() {
