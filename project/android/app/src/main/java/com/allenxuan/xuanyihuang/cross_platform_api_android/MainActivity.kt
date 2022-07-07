@@ -139,8 +139,13 @@ class MainActivity : AppCompatActivity() {
         assert(dgc != null)
         assert(dgc?.a_data == "a_data")
         assert(dgc?.a_child_data == true)
-        assert(dgc?.a_grand_child_data == 5.8f)
+        assert(dgc?.a_grand_child_data == 5.6f)
         //### polymorphism end
+
+        //### enums start
+        data.type = DataType.kType2
+        dataChild.type = DataType.kType3
+        //### enums end
     }
 
     override fun onDestroy() {
