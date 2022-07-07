@@ -40,16 +40,16 @@ public class Data {
     }
   }
 
+  public Data() {
+    this(CrossPlatformApiJNI.new_Data(), true);
+  }
+
   public void setA_data(String value) {
     CrossPlatformApiJNI.Data_a_data_set(swigCPtr, this, value);
   }
 
   public String getA_data() {
     return CrossPlatformApiJNI.Data_a_data_get(swigCPtr, this);
-  }
-
-  public Data() {
-    this(CrossPlatformApiJNI.new_Data(), true);
   }
 
 }

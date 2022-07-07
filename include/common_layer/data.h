@@ -11,26 +11,30 @@
 namespace cross_platform_common {
     class Data {
     public:
-        KEY_FUNCTION_DEC(Data)
-
         Data() = default;
 
-        ~Data() = default;
+        //non-inline non-pure virtual destructor as key function.
+        VIRTUAL_DESTRUCTOR_DEC(Data)
 
         std::string a_data;
+
+//    protected:
+//        KEY_FUNCTION_DEC(Data)
     };
 
     class DataChild : public Data {
     public:
-        KEY_FUNCTION_OVERRIDE_DEC(DataChild)
+        DataChild() = default;
+
+        VIRTUAL_DESTRUCTOR_OVERRIDE_DEC(DataChild)
 
         STATIC_DYNAMIC_CAST_DEC(DataChild)
 
-        DataChild() = default;
-
-        ~DataChild() = default;
-
         bool a_child_data = false;
+
+//    protected:
+//        KEY_FUNCTION_OVERRIDE_DEC(DataChild)
+
     private:
         bool a_child_private_data_ = false;
     };
@@ -38,15 +42,17 @@ namespace cross_platform_common {
 
     class DataGrandChild : public DataChild {
     public:
-        KEY_FUNCTION_OVERRIDE_DEC(DataGrandChild)
+        DataGrandChild() = default;
+
+        VIRTUAL_DESTRUCTOR_OVERRIDE_DEC(DataGrandChild)
 
         STATIC_DYNAMIC_CAST_DEC(DataGrandChild)
 
-        DataGrandChild() = default;
-
-        ~DataGrandChild() = default;
-
         float a_grand_child_data = 0.5f;
+
+//    protected:
+//        KEY_FUNCTION_OVERRIDE_DEC(DataGrandChild)
+
     private:
         float a_grand_child_private_data_ = 0.7f;
     };

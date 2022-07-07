@@ -49,7 +49,7 @@ namespace unit_test {
         EXPECT_EQ(string_vec[1], "1");
     }
 
-    TEST_F(UnitTest, TestSharedPtrVector) {
+    TEST_F(UnitTest, Polymorphism) {
         std::vector<std::shared_ptr<cross_platform_common::Data>> aDataSharedPtrVec;
         auto aDataChild = std::make_shared<cross_platform_common::DataChild>();
         aDataChild->a_data = "data child";

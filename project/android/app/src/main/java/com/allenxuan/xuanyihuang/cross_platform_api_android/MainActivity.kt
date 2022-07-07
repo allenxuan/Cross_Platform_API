@@ -114,6 +114,33 @@ class MainActivity : AppCompatActivity() {
         apiCenter.setDataSharedPtrPair(dataSharedPtrPair)
         val a_data_shared_ptr_pair = apiCenter.dataSharedPtrPair
         //### containers end ###
+
+        //### polymorphism start
+        val data = Data().also {
+            it.a_data = "a_data"
+        }
+        val dataChild = DataChild().also {
+            it.a_data = "a_data"
+            it.a_child_data = true
+        }
+        val dataGrandChild = DataGrandChild().also {
+            it.a_data = "a_data"
+            it.a_child_data = true
+            it.a_grand_child_data = 5.6f
+        }
+        a_data_shared_ptr_vec.add(data)
+        a_data_shared_ptr_vec.add(dataChild)
+        a_data_shared_ptr_vec.add(dataGrandChild)
+        val dc: DataChild? = DataChild.DynamicCast(a_data_shared_ptr_vec[1])
+        assert(dc != null)
+        assert(dc?.a_data == "a_data")
+        assert(dc?.a_child_data == true)
+        val dgc : DataGrandChild? = DataGrandChild.DynamicCast(a_data_shared_ptr_vec[2])
+        assert(dgc != null)
+        assert(dgc?.a_data == "a_data")
+        assert(dgc?.a_child_data == true)
+        assert(dgc?.a_grand_child_data == 5.8f)
+        //### polymorphism end
     }
 
     override fun onDestroy() {

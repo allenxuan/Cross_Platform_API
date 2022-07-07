@@ -3568,6 +3568,33 @@ SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_andr
 }
 
 
+SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_new_1Data(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  cross_platform_common::Data *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (cross_platform_common::Data *)new cross_platform_common::Data();
+  
+  *(std::shared_ptr<  cross_platform_common::Data > **)&jresult = result ? new std::shared_ptr<  cross_platform_common::Data >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_delete_1Data(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
+  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  
+  smartarg1 = *(std::shared_ptr<  cross_platform_common::Data > **)&jarg1;
+  arg1 = (cross_platform_common::Data *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+
 SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_Data_1a_1data_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
   std::string *arg2 = 0 ;
@@ -3610,30 +3637,157 @@ SWIGEXPORT jstring JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_a
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_new_1Data(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_new_1DataChild(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
-  cross_platform_common::Data *result = 0 ;
+  cross_platform_common::DataChild *result = 0 ;
   
   (void)jenv;
   (void)jcls;
-  result = (cross_platform_common::Data *)new cross_platform_common::Data();
+  result = (cross_platform_common::DataChild *)new cross_platform_common::DataChild();
   
-  *(std::shared_ptr<  cross_platform_common::Data > **)&jresult = result ? new std::shared_ptr<  cross_platform_common::Data >(result SWIG_NO_NULL_DELETER_1) : 0;
+  *(std::shared_ptr<  cross_platform_common::DataChild > **)&jresult = result ? new std::shared_ptr<  cross_platform_common::DataChild >(result SWIG_NO_NULL_DELETER_1) : 0;
   
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_delete_1Data(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
-  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_delete_1DataChild(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  cross_platform_common::DataChild *arg1 = (cross_platform_common::DataChild *) 0 ;
+  std::shared_ptr< cross_platform_common::DataChild > *smartarg1 = 0 ;
   
   (void)jenv;
   (void)jcls;
   
-  smartarg1 = *(std::shared_ptr<  cross_platform_common::Data > **)&jarg1;
-  arg1 = (cross_platform_common::Data *)(smartarg1 ? smartarg1->get() : 0); 
+  smartarg1 = *(std::shared_ptr<  cross_platform_common::DataChild > **)&jarg1;
+  arg1 = (cross_platform_common::DataChild *)(smartarg1 ? smartarg1->get() : 0); 
   (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_DataChild_1DynamicCast(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::shared_ptr< cross_platform_common::Data > *arg1 = 0 ;
+  std::shared_ptr< cross_platform_common::Data > tempnull1 ;
+  std::shared_ptr< cross_platform_common::DataChild > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = jarg1 ? *(std::shared_ptr< cross_platform_common::Data > **)&jarg1 : &tempnull1; 
+  result = cross_platform_common::DataChild::DynamicCast((std::shared_ptr< cross_platform_common::Data > const &)*arg1);
+  *(std::shared_ptr< cross_platform_common::DataChild > **)&jresult = result ? new std::shared_ptr< cross_platform_common::DataChild >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_DataChild_1a_1child_1data_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
+  cross_platform_common::DataChild *arg1 = (cross_platform_common::DataChild *) 0 ;
+  bool arg2 ;
+  std::shared_ptr< cross_platform_common::DataChild > *smartarg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  cross_platform_common::DataChild > **)&jarg1;
+  arg1 = (cross_platform_common::DataChild *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = jarg2 ? true : false; 
+  if (arg1) (arg1)->a_child_data = arg2;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_DataChild_1a_1child_1data_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  cross_platform_common::DataChild *arg1 = (cross_platform_common::DataChild *) 0 ;
+  std::shared_ptr< cross_platform_common::DataChild > *smartarg1 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  cross_platform_common::DataChild > **)&jarg1;
+  arg1 = (cross_platform_common::DataChild *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (bool) ((arg1)->a_child_data);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_new_1DataGrandChild(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  cross_platform_common::DataGrandChild *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (cross_platform_common::DataGrandChild *)new cross_platform_common::DataGrandChild();
+  
+  *(std::shared_ptr<  cross_platform_common::DataGrandChild > **)&jresult = result ? new std::shared_ptr<  cross_platform_common::DataGrandChild >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_delete_1DataGrandChild(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  cross_platform_common::DataGrandChild *arg1 = (cross_platform_common::DataGrandChild *) 0 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > *smartarg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  
+  smartarg1 = *(std::shared_ptr<  cross_platform_common::DataGrandChild > **)&jarg1;
+  arg1 = (cross_platform_common::DataGrandChild *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_DataGrandChild_1DynamicCast(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::shared_ptr< cross_platform_common::Data > *arg1 = 0 ;
+  std::shared_ptr< cross_platform_common::Data > tempnull1 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = jarg1 ? *(std::shared_ptr< cross_platform_common::Data > **)&jarg1 : &tempnull1; 
+  result = cross_platform_common::DataGrandChild::DynamicCast((std::shared_ptr< cross_platform_common::Data > const &)*arg1);
+  *(std::shared_ptr< cross_platform_common::DataGrandChild > **)&jresult = result ? new std::shared_ptr< cross_platform_common::DataGrandChild >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_DataGrandChild_1a_1grand_1child_1data_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+  cross_platform_common::DataGrandChild *arg1 = (cross_platform_common::DataGrandChild *) 0 ;
+  float arg2 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > *smartarg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  cross_platform_common::DataGrandChild > **)&jarg1;
+  arg1 = (cross_platform_common::DataGrandChild *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (float)jarg2; 
+  if (arg1) (arg1)->a_grand_child_data = arg2;
+}
+
+
+SWIGEXPORT jfloat JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_DataGrandChild_1a_1grand_1child_1data_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jfloat jresult = 0 ;
+  cross_platform_common::DataGrandChild *arg1 = (cross_platform_common::DataGrandChild *) 0 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > *smartarg1 = 0 ;
+  float result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  cross_platform_common::DataGrandChild > **)&jarg1;
+  arg1 = (cross_platform_common::DataGrandChild *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (float) ((arg1)->a_grand_child_data);
+  jresult = (jfloat)result; 
+  return jresult;
 }
 
 
@@ -3789,7 +3943,7 @@ SWIGEXPORT jstring JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_a
 }
 
 
-SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_Model_1a_1vector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_Model_1a_1string_1vector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   cross_platform_external::Model *arg1 = (cross_platform_external::Model *) 0 ;
   std::vector< std::string > *arg2 = (std::vector< std::string > *) 0 ;
   std::shared_ptr< cross_platform_external::Model > *smartarg1 = 0 ;
@@ -3802,11 +3956,11 @@ SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_andr
   smartarg1 = *(std::shared_ptr<  cross_platform_external::Model > **)&jarg1;
   arg1 = (cross_platform_external::Model *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = *(std::vector< std::string > **)&jarg2; 
-  if (arg1) (arg1)->a_vector = *arg2;
+  if (arg1) (arg1)->a_string_vector = *arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_Model_1a_1vector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_Model_1a_1string_1vector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   cross_platform_external::Model *arg1 = (cross_platform_external::Model *) 0 ;
   std::shared_ptr< cross_platform_external::Model > *smartarg1 = 0 ;
@@ -3818,7 +3972,7 @@ SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_and
   
   smartarg1 = *(std::shared_ptr<  cross_platform_external::Model > **)&jarg1;
   arg1 = (cross_platform_external::Model *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (std::vector< std::string > *)& ((arg1)->a_vector);
+  result = (std::vector< std::string > *)& ((arg1)->a_string_vector);
   *(std::vector< std::string > **)&jresult = result; 
   return jresult;
 }
@@ -4430,6 +4584,26 @@ SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_and
   return jresult;
 }
 
+
+SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_DataChild_1SWIGSmartPtrUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+    jlong baseptr = 0;
+    std::shared_ptr< cross_platform_common::DataChild > *argp1;
+    (void)jenv;
+    (void)jcls;
+    argp1 = *(std::shared_ptr< cross_platform_common::DataChild > **)&jarg1;
+    *(std::shared_ptr< cross_platform_common::Data > **)&baseptr = argp1 ? new std::shared_ptr< cross_platform_common::Data >(*argp1) : 0;
+    return baseptr;
+}
+
+SWIGEXPORT jlong JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_DataGrandChild_1SWIGSmartPtrUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+    jlong baseptr = 0;
+    std::shared_ptr< cross_platform_common::DataGrandChild > *argp1;
+    (void)jenv;
+    (void)jcls;
+    argp1 = *(std::shared_ptr< cross_platform_common::DataGrandChild > **)&jarg1;
+    *(std::shared_ptr< cross_platform_common::DataChild > **)&baseptr = argp1 ? new std::shared_ptr< cross_platform_common::DataChild >(*argp1) : 0;
+    return baseptr;
+}
 
 SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_swig_1module_1init(JNIEnv *jenv, jclass jcls) {
   int i;

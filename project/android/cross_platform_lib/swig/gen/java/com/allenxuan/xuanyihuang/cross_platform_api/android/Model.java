@@ -64,12 +64,12 @@ public class Model {
     return CrossPlatformApiJNI.Model_a_string_get(swigCPtr, this);
   }
 
-  public void setA_vector(StrVec value) {
-    CrossPlatformApiJNI.Model_a_vector_set(swigCPtr, this, StrVec.getCPtr(value), value);
+  public void setA_string_vector(StrVec value) {
+    CrossPlatformApiJNI.Model_a_string_vector_set(swigCPtr, this, StrVec.getCPtr(value), value);
   }
 
-  public StrVec getA_vector() {
-    long cPtr = CrossPlatformApiJNI.Model_a_vector_get(swigCPtr, this);
+  public StrVec getA_string_vector() {
+    long cPtr = CrossPlatformApiJNI.Model_a_string_vector_get(swigCPtr, this);
     return (cPtr == 0) ? null : new StrVec(cPtr, false);
   }
 

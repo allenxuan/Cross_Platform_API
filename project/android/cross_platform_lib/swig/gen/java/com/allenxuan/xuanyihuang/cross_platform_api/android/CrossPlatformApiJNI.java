@@ -106,18 +106,28 @@ public class CrossPlatformApiJNI {
   public final static native void DataSharedPtrPair_second_set(long jarg1, DataSharedPtrPair jarg1_, long jarg2, Data jarg2_);
   public final static native long DataSharedPtrPair_second_get(long jarg1, DataSharedPtrPair jarg1_);
   public final static native void delete_DataSharedPtrPair(long jarg1);
-  public final static native void Data_a_data_set(long jarg1, Data jarg1_, String jarg2);
-  public final static native String Data_a_data_get(long jarg1, Data jarg1_);
   public final static native long new_Data();
   public final static native void delete_Data(long jarg1);
+  public final static native void Data_a_data_set(long jarg1, Data jarg1_, String jarg2);
+  public final static native String Data_a_data_get(long jarg1, Data jarg1_);
+  public final static native long new_DataChild();
+  public final static native void delete_DataChild(long jarg1);
+  public final static native long DataChild_DynamicCast(long jarg1, Data jarg1_);
+  public final static native void DataChild_a_child_data_set(long jarg1, DataChild jarg1_, boolean jarg2);
+  public final static native boolean DataChild_a_child_data_get(long jarg1, DataChild jarg1_);
+  public final static native long new_DataGrandChild();
+  public final static native void delete_DataGrandChild(long jarg1);
+  public final static native long DataGrandChild_DynamicCast(long jarg1, Data jarg1_);
+  public final static native void DataGrandChild_a_grand_child_data_set(long jarg1, DataGrandChild jarg1_, float jarg2);
+  public final static native float DataGrandChild_a_grand_child_data_get(long jarg1, DataGrandChild jarg1_);
   public final static native void Model_a_uint64_set(long jarg1, Model jarg1_, java.math.BigInteger jarg2);
   public final static native java.math.BigInteger Model_a_uint64_get(long jarg1, Model jarg1_);
   public final static native void Model_a_float_set(long jarg1, Model jarg1_, float jarg2);
   public final static native float Model_a_float_get(long jarg1, Model jarg1_);
   public final static native void Model_a_string_set(long jarg1, Model jarg1_, String jarg2);
   public final static native String Model_a_string_get(long jarg1, Model jarg1_);
-  public final static native void Model_a_vector_set(long jarg1, Model jarg1_, long jarg2, StrVec jarg2_);
-  public final static native long Model_a_vector_get(long jarg1, Model jarg1_);
+  public final static native void Model_a_string_vector_set(long jarg1, Model jarg1_, long jarg2, StrVec jarg2_);
+  public final static native long Model_a_string_vector_get(long jarg1, Model jarg1_);
   public final static native long new_Model();
   public final static native void delete_Model(long jarg1);
   public final static native long new_ModelCallback();
@@ -155,6 +165,8 @@ public class CrossPlatformApiJNI {
   public final static native long ApiCenter_getDataPairRef(long jarg1, ApiCenter jarg1_);
   public final static native void ApiCenter_setDataSharedPtrPair(long jarg1, ApiCenter jarg1_, long jarg2, DataSharedPtrPair jarg2_);
   public final static native long ApiCenter_getDataSharedPtrPair(long jarg1, ApiCenter jarg1_);
+  public final static native long DataChild_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long DataGrandChild_SWIGSmartPtrUpcast(long jarg1);
 
   public static void SwigDirector_ModelCallback_onModelChangedPtr(ModelCallback jself, long model_ptr) {
     jself.onModelChangedPtr((model_ptr == 0) ? null : new Model(model_ptr, true));

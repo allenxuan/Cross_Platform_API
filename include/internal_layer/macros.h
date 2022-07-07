@@ -12,12 +12,27 @@ virtual void __key_function_() const;
 
 #ifndef KEY_FUNCTION_OVERRIDE_DEC
 #define KEY_FUNCTION_OVERRIDE_DEC(CLASS) \
-virtual void __key_function_() const override;
+void __key_function_() const override;
 #endif
 
 #ifndef KEY_FUNCTION_IMP
 #define KEY_FUNCTION_IMP(CLASS) \
 void CLASS::__key_function_() const {}
+#endif
+
+#ifndef VIRTUAL_DESTRUCTOR_DEC
+#define VIRTUAL_DESTRUCTOR_DEC(CLASS) \
+virtual ~CLASS();
+#endif
+
+#ifndef VIRTUAL_DESTRUCTOR_OVERRIDE_DEC
+#define VIRTUAL_DESTRUCTOR_OVERRIDE_DEC(CLASS) \
+~CLASS() override;
+#endif
+
+#ifndef VIRTUAL_DESTRUCTOR_EMPTY_IMP
+#define VIRTUAL_DESTRUCTOR_EMPTY_IMP(CLASS) \
+CLASS::~CLASS() {}
 #endif
 
 #ifndef STATIC_DYNAMIC_CAST_DEC
