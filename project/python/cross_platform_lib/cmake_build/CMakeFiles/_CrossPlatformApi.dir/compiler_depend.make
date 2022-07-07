@@ -542,6 +542,7 @@ CMakeFiles/_CrossPlatformApi.dir/Users/bytedance/Desktop/ClionProject/cross_mobl
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/include/external_layer/cross_platform_api.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/include/internal_layer/model.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/include/common_layer/data.h \
+  /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/include/internal_layer/macros.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/include/internal_layer/model_operator.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/include/external_layer/model_external.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/include/common_layer/callback.h \
@@ -561,6 +562,8 @@ CMakeFiles/_CrossPlatformApi.dir/Users/bytedance/Desktop/ClionProject/cross_mobl
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include/float.h:
 
 /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/include/internal_layer/model_operator.h:
+
+/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/include/internal_layer/macros.h:
 
 /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/include/common_layer/data.h:
 

@@ -369,6 +369,7 @@ cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/external_layer/cross_pl
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/optional \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__tree \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/common_layer/data.h \
+  /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/internal_layer/macros.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/internal_layer/model_operator.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/external_layer/model_external.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/common_layer/callback.h

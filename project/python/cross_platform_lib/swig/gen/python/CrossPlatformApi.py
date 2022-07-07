@@ -713,17 +713,59 @@ class DataSharedPtrPair(object):
 # Register DataSharedPtrPair in _CrossPlatformApi:
 _CrossPlatformApi.DataSharedPtrPair_swigregister(DataSharedPtrPair)
 
+kType1 = _CrossPlatformApi.kType1
+kType2 = _CrossPlatformApi.kType2
+kType3 = _CrossPlatformApi.kType3
 class Data(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
-    a_data = property(_CrossPlatformApi.Data_a_data_get, _CrossPlatformApi.Data_a_data_set)
 
     def __init__(self):
         _CrossPlatformApi.Data_swiginit(self, _CrossPlatformApi.new_Data())
     __swig_destroy__ = _CrossPlatformApi.delete_Data
+    type = property(_CrossPlatformApi.Data_type_get, _CrossPlatformApi.Data_type_set)
+    a_data = property(_CrossPlatformApi.Data_a_data_get, _CrossPlatformApi.Data_a_data_set)
 
 # Register Data in _CrossPlatformApi:
 _CrossPlatformApi.Data_swigregister(Data)
+
+class DataChild(Data):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        _CrossPlatformApi.DataChild_swiginit(self, _CrossPlatformApi.new_DataChild())
+    __swig_destroy__ = _CrossPlatformApi.delete_DataChild
+
+    @staticmethod
+    def DynamicCast(data: "std::shared_ptr< cross_platform_common::Data > const &") -> "std::shared_ptr< cross_platform_common::DataChild >":
+        return _CrossPlatformApi.DataChild_DynamicCast(data)
+    a_child_data = property(_CrossPlatformApi.DataChild_a_child_data_get, _CrossPlatformApi.DataChild_a_child_data_set)
+
+# Register DataChild in _CrossPlatformApi:
+_CrossPlatformApi.DataChild_swigregister(DataChild)
+
+def DataChild_DynamicCast(data: "std::shared_ptr< cross_platform_common::Data > const &") -> "std::shared_ptr< cross_platform_common::DataChild >":
+    return _CrossPlatformApi.DataChild_DynamicCast(data)
+
+class DataGrandChild(DataChild):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        _CrossPlatformApi.DataGrandChild_swiginit(self, _CrossPlatformApi.new_DataGrandChild())
+    __swig_destroy__ = _CrossPlatformApi.delete_DataGrandChild
+
+    @staticmethod
+    def DynamicCast(data: "std::shared_ptr< cross_platform_common::Data > const &") -> "std::shared_ptr< cross_platform_common::DataGrandChild >":
+        return _CrossPlatformApi.DataGrandChild_DynamicCast(data)
+    a_grand_child_data = property(_CrossPlatformApi.DataGrandChild_a_grand_child_data_get, _CrossPlatformApi.DataGrandChild_a_grand_child_data_set)
+
+# Register DataGrandChild in _CrossPlatformApi:
+_CrossPlatformApi.DataGrandChild_swigregister(DataGrandChild)
+
+def DataGrandChild_DynamicCast(data: "std::shared_ptr< cross_platform_common::Data > const &") -> "std::shared_ptr< cross_platform_common::DataGrandChild >":
+    return _CrossPlatformApi.DataGrandChild_DynamicCast(data)
 
 class Model(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
@@ -731,7 +773,7 @@ class Model(object):
     a_uint64 = property(_CrossPlatformApi.Model_a_uint64_get, _CrossPlatformApi.Model_a_uint64_set)
     a_float = property(_CrossPlatformApi.Model_a_float_get, _CrossPlatformApi.Model_a_float_set)
     a_string = property(_CrossPlatformApi.Model_a_string_get, _CrossPlatformApi.Model_a_string_set)
-    a_vector = property(_CrossPlatformApi.Model_a_vector_get, _CrossPlatformApi.Model_a_vector_set)
+    a_string_vector = property(_CrossPlatformApi.Model_a_string_vector_get, _CrossPlatformApi.Model_a_string_vector_set)
 
     def __init__(self):
         _CrossPlatformApi.Model_swiginit(self, _CrossPlatformApi.new_Model())

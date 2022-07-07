@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o"
+  "CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o.d"
   "CMakeFiles/cross_platform_lib.dir/external_layer/cross_platform_api.cc.o"
   "CMakeFiles/cross_platform_lib.dir/external_layer/cross_platform_api.cc.o.d"
   "CMakeFiles/cross_platform_lib.dir/internal_layer/model_operator.cc.o"

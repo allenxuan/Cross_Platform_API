@@ -8,8 +8,6 @@ sys.path.append('../cross_platform_lib/swig/gen/python')
 print(sys.path)
 import CrossPlatformApi as cpa
 
-print("Hello")
-
 
 class TestCase:
     def run(self):
@@ -93,6 +91,58 @@ class TestSimpleUse(TestCase):
 
 
 cases.append("TestSimpleUse", TestSimpleUse())
+
+
+class TestPolymorphism(TestCase):
+    def run(self):
+        apiCenter = cpa.ApiCenter()
+        ### polymorphism start
+        dataSharedPtrVec = apiCenter.getDataSharedPtrVector()
+
+        data = cpa.Data()
+        data.a_data = "a_data_string"
+        dataSharedPtrVec = dataSharedPtrVec + (data,)
+
+        dataChild = cpa.DataChild()
+        dataChild.a_data = "a_data_string"
+        dataChild.a_child_data = True
+        dataSharedPtrVec = dataSharedPtrVec + (dataChild,)
+
+        dataGrandChild = cpa.DataGrandChild()
+        dataGrandChild.a_data = "a_data_string"
+        dataGrandChild.a_child_data = True
+        dataGrandChild.a_grand_child_data = 5.6
+        dataSharedPtrVec = dataSharedPtrVec + (dataGrandChild,)
+
+        apiCenter.setDataSharedPtrVector(dataSharedPtrVec)
+        gotDataSharedPtrVec = apiCenter.getDataSharedPtrVector()
+        gotDataChild = cpa.DataChild.DynamicCast(gotDataSharedPtrVec[1])
+        assert (gotDataChild is not None)
+        assert (gotDataChild.a_data == "a_data_string")
+        assert (gotDataChild.a_child_data == True)
+        gotDataGrandChild = cpa.DataGrandChild.DynamicCast(gotDataSharedPtrVec[2])
+        assert (gotDataGrandChild is not None)
+        assert (gotDataGrandChild.a_data == "a_data_string")
+        assert (gotDataGrandChild.a_child_data == True)
+        assert (abs(gotDataGrandChild.a_grand_child_data - 5.6) < 0.000001)
+        ### polymorphism end
+
+
+cases.append("TestPolymorphism", TestPolymorphism())
+
+
+class TestEnums(TestCase):
+    def run(self):
+        apiCenter = cpa.ApiCenter()
+        ### enums start
+        dataChild = cpa.DataChild()
+        dataChild.type = cpa.kType2
+        dataGrandChild = cpa.DataGrandChild()
+        dataGrandChild.type = cpa.kType3
+        ### enums end
+
+
+cases.append("TestEnums", TestEnums())
 
 
 # Defining main function

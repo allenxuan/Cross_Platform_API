@@ -1,2 +1,2 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libcross_platform_lib.a CMakeFiles/cross_platform_lib.dir/external_layer/cross_platform_api.cc.o CMakeFiles/cross_platform_lib.dir/internal_layer/model_operator.cc.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libcross_platform_lib.a CMakeFiles/cross_platform_lib.dir/external_layer/cross_platform_api.cc.o CMakeFiles/cross_platform_lib.dir/internal_layer/model_operator.cc.o CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libcross_platform_lib.a

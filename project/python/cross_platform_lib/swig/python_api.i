@@ -34,6 +34,8 @@
 
 // shared_ptr support.
 %shared_ptr(cross_platform_common::Data)
+%shared_ptr(cross_platform_common::DataChild)
+%shared_ptr(cross_platform_common::DataGrandChild)
 %shared_ptr(cross_platform_external::Model)
 %shared_ptr(cross_platform_common::ModelCallback)
 
@@ -50,6 +52,7 @@
 %feature("director") cross_platform_common::ModelCallback;
 
 //api headers.
+%include "internal_layer/macros.h"
 %include "common_layer/data.h"
 %include "external_layer/model_external.h"
 %include "common_layer/callback.h"

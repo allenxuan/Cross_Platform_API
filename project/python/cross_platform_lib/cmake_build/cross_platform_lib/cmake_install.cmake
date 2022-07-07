@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/src/cmake_install.cmake")
+  include("/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/test/cmake_install.cmake")
 
 endif()
 

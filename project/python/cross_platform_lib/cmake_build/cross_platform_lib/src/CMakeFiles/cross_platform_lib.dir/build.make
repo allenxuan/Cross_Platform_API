@@ -97,19 +97,35 @@ cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/internal_layer/model_op
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cross_platform_lib.dir/internal_layer/model_operator.cc.s"
 	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/internal_layer/model_operator.cc -o CMakeFiles/cross_platform_lib.dir/internal_layer/model_operator.cc.s
 
+cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o: cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/flags.make
+cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o: ../../../../src/common_layer/data.cc
+cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o: cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o"
+	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o -MF CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o.d -o CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o -c /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/common_layer/data.cc
+
+cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.i"
+	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/common_layer/data.cc > CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.i
+
+cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.s"
+	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/common_layer/data.cc -o CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.s
+
 # Object files for target cross_platform_lib
 cross_platform_lib_OBJECTS = \
 "CMakeFiles/cross_platform_lib.dir/external_layer/cross_platform_api.cc.o" \
-"CMakeFiles/cross_platform_lib.dir/internal_layer/model_operator.cc.o"
+"CMakeFiles/cross_platform_lib.dir/internal_layer/model_operator.cc.o" \
+"CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o"
 
 # External object files for target cross_platform_lib
 cross_platform_lib_EXTERNAL_OBJECTS =
 
 cross_platform_lib/src/libcross_platform_lib.a: cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/external_layer/cross_platform_api.cc.o
 cross_platform_lib/src/libcross_platform_lib.a: cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/internal_layer/model_operator.cc.o
+cross_platform_lib/src/libcross_platform_lib.a: cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o
 cross_platform_lib/src/libcross_platform_lib.a: cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/build.make
 cross_platform_lib/src/libcross_platform_lib.a: cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcross_platform_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libcross_platform_lib.a"
 	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/src && $(CMAKE_COMMAND) -P CMakeFiles/cross_platform_lib.dir/cmake_clean_target.cmake
 	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/cross_platform_lib/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cross_platform_lib.dir/link.txt --verbose=$(VERBOSE)
 

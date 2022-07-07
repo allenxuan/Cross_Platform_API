@@ -34,7 +34,6 @@
 
 // shared_ptr support.
 %shared_ptr(cross_platform_common::Data)
-%shared_ptr(cross_platform_common::Data)
 %shared_ptr(cross_platform_common::DataChild)
 %shared_ptr(cross_platform_common::DataGrandChild)
 %shared_ptr(cross_platform_external::Model)

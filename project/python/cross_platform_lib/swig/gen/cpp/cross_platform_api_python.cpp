@@ -3100,46 +3100,50 @@ namespace Swig {
 #define SWIGTYPE_p_allocator_type swig_types[0]
 #define SWIGTYPE_p_char swig_types[1]
 #define SWIGTYPE_p_cross_platform_common__Data swig_types[2]
-#define SWIGTYPE_p_cross_platform_common__ModelCallback swig_types[3]
-#define SWIGTYPE_p_cross_platform_external__ApiCenter swig_types[4]
-#define SWIGTYPE_p_cross_platform_external__Model swig_types[5]
-#define SWIGTYPE_p_difference_type swig_types[6]
-#define SWIGTYPE_p_first_type swig_types[7]
-#define SWIGTYPE_p_int swig_types[8]
-#define SWIGTYPE_p_key_type swig_types[9]
-#define SWIGTYPE_p_long_long swig_types[10]
-#define SWIGTYPE_p_mapped_type swig_types[11]
-#define SWIGTYPE_p_p_PyObject swig_types[12]
-#define SWIGTYPE_p_second_type swig_types[13]
-#define SWIGTYPE_p_short swig_types[14]
-#define SWIGTYPE_p_signed_char swig_types[15]
-#define SWIGTYPE_p_size_type swig_types[16]
-#define SWIGTYPE_p_std__allocatorT_cross_platform_common__Data_t swig_types[17]
-#define SWIGTYPE_p_std__allocatorT_std__pairT_std__string_const_cross_platform_common__Data_t_t swig_types[18]
-#define SWIGTYPE_p_std__allocatorT_std__pairT_std__string_const_std__shared_ptrT_cross_platform_common__Data_t_t_t swig_types[19]
-#define SWIGTYPE_p_std__allocatorT_std__shared_ptrT_cross_platform_common__Data_t_t swig_types[20]
-#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[21]
-#define SWIGTYPE_p_std__invalid_argument swig_types[22]
-#define SWIGTYPE_p_std__lessT_std__string_t swig_types[23]
-#define SWIGTYPE_p_std__mapT_std__string_cross_platform_common__Data_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_cross_platform_common__Data_t_t_t swig_types[24]
-#define SWIGTYPE_p_std__mapT_std__string_std__shared_ptrT_cross_platform_common__Data_t_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__shared_ptrT_cross_platform_common__Data_t_t_t_t swig_types[25]
-#define SWIGTYPE_p_std__pairT_std__string_cross_platform_common__Data_t swig_types[26]
-#define SWIGTYPE_p_std__pairT_std__string_std__shared_ptrT_cross_platform_common__Data_t_t swig_types[27]
-#define SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t swig_types[28]
-#define SWIGTYPE_p_std__shared_ptrT_cross_platform_common__ModelCallback_t swig_types[29]
-#define SWIGTYPE_p_std__shared_ptrT_cross_platform_external__Model_t swig_types[30]
-#define SWIGTYPE_p_std__vectorT_cross_platform_common__Data_std__allocatorT_cross_platform_common__Data_t_t swig_types[31]
-#define SWIGTYPE_p_std__vectorT_std__shared_ptrT_cross_platform_common__Data_t_std__allocatorT_std__shared_ptrT_cross_platform_common__Data_t_t_t swig_types[32]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[33]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[34]
-#define SWIGTYPE_p_unsigned_char swig_types[35]
-#define SWIGTYPE_p_unsigned_int swig_types[36]
-#define SWIGTYPE_p_unsigned_long_long swig_types[37]
-#define SWIGTYPE_p_unsigned_short swig_types[38]
-#define SWIGTYPE_p_value_type swig_types[39]
-#define SWIGTYPE_p_wchar_t swig_types[40]
-static swig_type_info *swig_types[42];
-static swig_module_info swig_module = {swig_types, 41, 0, 0, 0, 0};
+#define SWIGTYPE_p_cross_platform_common__DataChild swig_types[3]
+#define SWIGTYPE_p_cross_platform_common__DataGrandChild swig_types[4]
+#define SWIGTYPE_p_cross_platform_common__ModelCallback swig_types[5]
+#define SWIGTYPE_p_cross_platform_external__ApiCenter swig_types[6]
+#define SWIGTYPE_p_cross_platform_external__Model swig_types[7]
+#define SWIGTYPE_p_difference_type swig_types[8]
+#define SWIGTYPE_p_first_type swig_types[9]
+#define SWIGTYPE_p_int swig_types[10]
+#define SWIGTYPE_p_key_type swig_types[11]
+#define SWIGTYPE_p_long_long swig_types[12]
+#define SWIGTYPE_p_mapped_type swig_types[13]
+#define SWIGTYPE_p_p_PyObject swig_types[14]
+#define SWIGTYPE_p_second_type swig_types[15]
+#define SWIGTYPE_p_short swig_types[16]
+#define SWIGTYPE_p_signed_char swig_types[17]
+#define SWIGTYPE_p_size_type swig_types[18]
+#define SWIGTYPE_p_std__allocatorT_cross_platform_common__Data_t swig_types[19]
+#define SWIGTYPE_p_std__allocatorT_std__pairT_std__string_const_cross_platform_common__Data_t_t swig_types[20]
+#define SWIGTYPE_p_std__allocatorT_std__pairT_std__string_const_std__shared_ptrT_cross_platform_common__Data_t_t_t swig_types[21]
+#define SWIGTYPE_p_std__allocatorT_std__shared_ptrT_cross_platform_common__Data_t_t swig_types[22]
+#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[23]
+#define SWIGTYPE_p_std__invalid_argument swig_types[24]
+#define SWIGTYPE_p_std__lessT_std__string_t swig_types[25]
+#define SWIGTYPE_p_std__mapT_std__string_cross_platform_common__Data_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_cross_platform_common__Data_t_t_t swig_types[26]
+#define SWIGTYPE_p_std__mapT_std__string_std__shared_ptrT_cross_platform_common__Data_t_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__shared_ptrT_cross_platform_common__Data_t_t_t_t swig_types[27]
+#define SWIGTYPE_p_std__pairT_std__string_cross_platform_common__Data_t swig_types[28]
+#define SWIGTYPE_p_std__pairT_std__string_std__shared_ptrT_cross_platform_common__Data_t_t swig_types[29]
+#define SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataChild_t swig_types[30]
+#define SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataGrandChild_t swig_types[31]
+#define SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t swig_types[32]
+#define SWIGTYPE_p_std__shared_ptrT_cross_platform_common__ModelCallback_t swig_types[33]
+#define SWIGTYPE_p_std__shared_ptrT_cross_platform_external__Model_t swig_types[34]
+#define SWIGTYPE_p_std__vectorT_cross_platform_common__Data_std__allocatorT_cross_platform_common__Data_t_t swig_types[35]
+#define SWIGTYPE_p_std__vectorT_std__shared_ptrT_cross_platform_common__Data_t_std__allocatorT_std__shared_ptrT_cross_platform_common__Data_t_t_t swig_types[36]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[37]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[38]
+#define SWIGTYPE_p_unsigned_char swig_types[39]
+#define SWIGTYPE_p_unsigned_int swig_types[40]
+#define SWIGTYPE_p_unsigned_long_long swig_types[41]
+#define SWIGTYPE_p_unsigned_short swig_types[42]
+#define SWIGTYPE_p_value_type swig_types[43]
+#define SWIGTYPE_p_wchar_t swig_types[44]
+static swig_type_info *swig_types[46];
+static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -6141,6 +6145,36 @@ SWIGINTERN PyObject *std_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_c
 SWIGINTERN void std_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__erase__SWIG_1(std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *self,std::map< std::string,std::shared_ptr< cross_platform_common::Data > >::iterator position){ self->erase(position); }
 SWIGINTERN void std_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__erase__SWIG_2(std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *self,std::map< std::string,std::shared_ptr< cross_platform_common::Data > >::iterator first,std::map< std::string,std::shared_ptr< cross_platform_common::Data > >::iterator last){ self->erase(first, last); }
 
+SWIGINTERN int
+SWIG_AsVal_int (PyObject * obj, int *val)
+{
+  long v;
+  int res = SWIG_AsVal_long (obj, &v);
+  if (SWIG_IsOK(res)) {
+    if ((v < INT_MIN || v > INT_MAX)) {
+      return SWIG_OverflowError;
+    } else {
+      if (val) *val = static_cast< int >(v);
+    }
+  }  
+  return res;
+}
+
+
+SWIGINTERN int
+SWIG_AsVal_bool (PyObject *obj, bool *val)
+{
+  int r;
+  if (!PyBool_Check(obj))
+    return SWIG_ERROR;
+  r = PyObject_IsTrue(obj);
+  if (r == -1)
+    return SWIG_ERROR;
+  if (val) *val = r ? true : false;
+  return SWIG_OK;
+}
+
+
 /* Getting isfinite working pre C99 across multiple platforms is non-trivial. Users can provide SWIG_isfinite on older platforms. */
 #ifndef SWIG_isfinite
 /* isfinite() is a macro for C99 */
@@ -6208,20 +6242,6 @@ SWIGINTERNINLINE PyObject *
 SWIG_From_float  (float value)
 {    
   return SWIG_From_double  (value);
-}
-
-
-SWIGINTERN int
-SWIG_AsVal_bool (PyObject *obj, bool *val)
-{
-  int r;
-  if (!PyBool_Check(obj))
-    return SWIG_ERROR;
-  r = PyObject_IsTrue(obj);
-  if (r == -1)
-    return SWIG_ERROR;
-  if (val) *val = r ? true : false;
-  return SWIG_OK;
 }
 
 
@@ -15763,6 +15783,132 @@ SWIGINTERN PyObject *DataSharedPtrPair_swiginit(PyObject *SWIGUNUSEDPARM(self), 
   return SWIG_Python_InitShadowInstance(args);
 }
 
+SWIGINTERN PyObject *_wrap_new_Data(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cross_platform_common::Data *result = 0 ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "new_Data", 0, 0, 0)) SWIG_fail;
+  result = (cross_platform_common::Data *)new cross_platform_common::Data();
+  {
+    std::shared_ptr<  cross_platform_common::Data > *smartresult = result ? new std::shared_ptr<  cross_platform_common::Data >(result SWIG_NO_NULL_DELETER_SWIG_POINTER_NEW) : 0;
+    resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(smartresult), SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t, SWIG_POINTER_NEW | SWIG_POINTER_OWN);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_Data(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::shared_ptr< cross_platform_common::Data > tempshared1 ;
+  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  {
+    int newmem = 0;
+    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t, 0 |  0 , &newmem);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Data" "', argument " "1"" of type '" "cross_platform_common::Data *""'");
+    }
+    if (newmem & SWIG_CAST_NEW_MEMORY) {
+      tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
+      delete reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
+      arg1 = const_cast< cross_platform_common::Data * >(tempshared1.get());
+    } else {
+      smartarg1 = reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
+      arg1 = const_cast< cross_platform_common::Data * >((smartarg1 ? smartarg1->get() : 0));
+    }
+  }
+  (void)arg1; delete smartarg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Data_type_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
+  cross_platform_common::DataType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::shared_ptr< cross_platform_common::Data > tempshared1 ;
+  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Data_type_set", 2, 2, swig_obj)) SWIG_fail;
+  {
+    int newmem = 0;
+    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t, 0 |  0 , &newmem);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Data_type_set" "', argument " "1"" of type '" "cross_platform_common::Data *""'");
+    }
+    if (newmem & SWIG_CAST_NEW_MEMORY) {
+      tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
+      delete reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
+      arg1 = const_cast< cross_platform_common::Data * >(tempshared1.get());
+    } else {
+      smartarg1 = reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
+      arg1 = const_cast< cross_platform_common::Data * >((smartarg1 ? smartarg1->get() : 0));
+    }
+  }
+  ecode2 = SWIG_AsVal_int(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Data_type_set" "', argument " "2"" of type '" "cross_platform_common::DataType""'");
+  } 
+  arg2 = static_cast< cross_platform_common::DataType >(val2);
+  if (arg1) (arg1)->type = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Data_type_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::shared_ptr< cross_platform_common::Data > tempshared1 ;
+  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+  PyObject *swig_obj[1] ;
+  cross_platform_common::DataType result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  {
+    int newmem = 0;
+    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t, 0 |  0 , &newmem);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Data_type_get" "', argument " "1"" of type '" "cross_platform_common::Data *""'");
+    }
+    if (newmem & SWIG_CAST_NEW_MEMORY) {
+      tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
+      delete reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
+      arg1 = const_cast< cross_platform_common::Data * >(tempshared1.get());
+    } else {
+      smartarg1 = reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
+      arg1 = const_cast< cross_platform_common::Data * >((smartarg1 ? smartarg1->get() : 0));
+    }
+  }
+  result = (cross_platform_common::DataType) ((arg1)->type);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Data_a_data_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
@@ -15846,15 +15992,26 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_new_Data(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *Data_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *Data_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  return SWIG_Python_InitShadowInstance(args);
+}
+
+SWIGINTERN PyObject *_wrap_new_DataChild(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  cross_platform_common::Data *result = 0 ;
+  cross_platform_common::DataChild *result = 0 ;
   
-  if (!SWIG_Python_UnpackTuple(args, "new_Data", 0, 0, 0)) SWIG_fail;
-  result = (cross_platform_common::Data *)new cross_platform_common::Data();
+  if (!SWIG_Python_UnpackTuple(args, "new_DataChild", 0, 0, 0)) SWIG_fail;
+  result = (cross_platform_common::DataChild *)new cross_platform_common::DataChild();
   {
-    std::shared_ptr<  cross_platform_common::Data > *smartresult = result ? new std::shared_ptr<  cross_platform_common::Data >(result SWIG_NO_NULL_DELETER_SWIG_POINTER_NEW) : 0;
-    resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(smartresult), SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t, SWIG_POINTER_NEW | SWIG_POINTER_OWN);
+    std::shared_ptr<  cross_platform_common::DataChild > *smartresult = result ? new std::shared_ptr<  cross_platform_common::DataChild >(result SWIG_NO_NULL_DELETER_SWIG_POINTER_NEW) : 0;
+    resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(smartresult), SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataChild_t, SWIG_POINTER_NEW | SWIG_POINTER_OWN);
   }
   return resultobj;
 fail:
@@ -15862,30 +16019,30 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_delete_Data(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_delete_DataChild(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
+  cross_platform_common::DataChild *arg1 = (cross_platform_common::DataChild *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  std::shared_ptr< cross_platform_common::Data > tempshared1 ;
-  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+  std::shared_ptr< cross_platform_common::DataChild > tempshared1 ;
+  std::shared_ptr< cross_platform_common::DataChild > *smartarg1 = 0 ;
   PyObject *swig_obj[1] ;
   
   if (!args) SWIG_fail;
   swig_obj[0] = args;
   {
     int newmem = 0;
-    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t, 0 |  0 , &newmem);
+    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataChild_t, 0 |  0 , &newmem);
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Data" "', argument " "1"" of type '" "cross_platform_common::Data *""'");
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_DataChild" "', argument " "1"" of type '" "cross_platform_common::DataChild *""'");
     }
     if (newmem & SWIG_CAST_NEW_MEMORY) {
-      tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
-      delete reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
-      arg1 = const_cast< cross_platform_common::Data * >(tempshared1.get());
+      tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_common::DataChild > * >(argp1);
+      delete reinterpret_cast< std::shared_ptr<  cross_platform_common::DataChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataChild * >(tempshared1.get());
     } else {
-      smartarg1 = reinterpret_cast< std::shared_ptr<  cross_platform_common::Data > * >(argp1);
-      arg1 = const_cast< cross_platform_common::Data * >((smartarg1 ? smartarg1->get() : 0));
+      smartarg1 = reinterpret_cast< std::shared_ptr<  cross_platform_common::DataChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataChild * >((smartarg1 ? smartarg1->get() : 0));
     }
   }
   (void)arg1; delete smartarg1;
@@ -15896,14 +16053,299 @@ fail:
 }
 
 
-SWIGINTERN PyObject *Data_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_DataChild_DynamicCast(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::shared_ptr< cross_platform_common::Data > *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  std::shared_ptr< cross_platform_common::Data > tempshared1 ;
+  PyObject *swig_obj[1] ;
+  std::shared_ptr< cross_platform_common::DataChild > result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  {
+    int newmem = 0;
+    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t,  0 , &newmem);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DataChild_DynamicCast" "', argument " "1"" of type '" "std::shared_ptr< cross_platform_common::Data > const &""'");
+    }
+    if (newmem & SWIG_CAST_NEW_MEMORY) {
+      if (argp1) tempshared1 = *reinterpret_cast< std::shared_ptr< cross_platform_common::Data > * >(argp1);
+      delete reinterpret_cast< std::shared_ptr< cross_platform_common::Data > * >(argp1);
+      arg1 = &tempshared1;
+    } else {
+      arg1 = (argp1) ? reinterpret_cast< std::shared_ptr< cross_platform_common::Data > * >(argp1) : &tempshared1;
+    }
+  }
+  result = cross_platform_common::DataChild::DynamicCast((std::shared_ptr< cross_platform_common::Data > const &)*arg1);
+  {
+    std::shared_ptr<  cross_platform_common::DataChild > *smartresult = result ? new std::shared_ptr<  cross_platform_common::DataChild >(result) : 0;
+    resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(smartresult), SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataChild_t, SWIG_POINTER_OWN);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_DataChild_a_child_data_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cross_platform_common::DataChild *arg1 = (cross_platform_common::DataChild *) 0 ;
+  bool arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::shared_ptr< cross_platform_common::DataChild > tempshared1 ;
+  std::shared_ptr< cross_platform_common::DataChild > *smartarg1 = 0 ;
+  bool val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "DataChild_a_child_data_set", 2, 2, swig_obj)) SWIG_fail;
+  {
+    int newmem = 0;
+    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataChild_t, 0 |  0 , &newmem);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DataChild_a_child_data_set" "', argument " "1"" of type '" "cross_platform_common::DataChild *""'");
+    }
+    if (newmem & SWIG_CAST_NEW_MEMORY) {
+      tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_common::DataChild > * >(argp1);
+      delete reinterpret_cast< std::shared_ptr<  cross_platform_common::DataChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataChild * >(tempshared1.get());
+    } else {
+      smartarg1 = reinterpret_cast< std::shared_ptr<  cross_platform_common::DataChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataChild * >((smartarg1 ? smartarg1->get() : 0));
+    }
+  }
+  ecode2 = SWIG_AsVal_bool(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "DataChild_a_child_data_set" "', argument " "2"" of type '" "bool""'");
+  } 
+  arg2 = static_cast< bool >(val2);
+  if (arg1) (arg1)->a_child_data = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_DataChild_a_child_data_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cross_platform_common::DataChild *arg1 = (cross_platform_common::DataChild *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::shared_ptr< cross_platform_common::DataChild > tempshared1 ;
+  std::shared_ptr< cross_platform_common::DataChild > *smartarg1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  {
+    int newmem = 0;
+    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataChild_t, 0 |  0 , &newmem);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DataChild_a_child_data_get" "', argument " "1"" of type '" "cross_platform_common::DataChild *""'");
+    }
+    if (newmem & SWIG_CAST_NEW_MEMORY) {
+      tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_common::DataChild > * >(argp1);
+      delete reinterpret_cast< std::shared_ptr<  cross_platform_common::DataChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataChild * >(tempshared1.get());
+    } else {
+      smartarg1 = reinterpret_cast< std::shared_ptr<  cross_platform_common::DataChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataChild * >((smartarg1 ? smartarg1->get() : 0));
+    }
+  }
+  result = (bool) ((arg1)->a_child_data);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *DataChild_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *obj;
   if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t, SWIG_NewClientData(obj));
+  SWIG_TypeNewClientData(SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataChild_t, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
 
-SWIGINTERN PyObject *Data_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *DataChild_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  return SWIG_Python_InitShadowInstance(args);
+}
+
+SWIGINTERN PyObject *_wrap_new_DataGrandChild(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cross_platform_common::DataGrandChild *result = 0 ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "new_DataGrandChild", 0, 0, 0)) SWIG_fail;
+  result = (cross_platform_common::DataGrandChild *)new cross_platform_common::DataGrandChild();
+  {
+    std::shared_ptr<  cross_platform_common::DataGrandChild > *smartresult = result ? new std::shared_ptr<  cross_platform_common::DataGrandChild >(result SWIG_NO_NULL_DELETER_SWIG_POINTER_NEW) : 0;
+    resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(smartresult), SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataGrandChild_t, SWIG_POINTER_NEW | SWIG_POINTER_OWN);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_DataGrandChild(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cross_platform_common::DataGrandChild *arg1 = (cross_platform_common::DataGrandChild *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > tempshared1 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > *smartarg1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  {
+    int newmem = 0;
+    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataGrandChild_t, 0 |  0 , &newmem);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_DataGrandChild" "', argument " "1"" of type '" "cross_platform_common::DataGrandChild *""'");
+    }
+    if (newmem & SWIG_CAST_NEW_MEMORY) {
+      tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_common::DataGrandChild > * >(argp1);
+      delete reinterpret_cast< std::shared_ptr<  cross_platform_common::DataGrandChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataGrandChild * >(tempshared1.get());
+    } else {
+      smartarg1 = reinterpret_cast< std::shared_ptr<  cross_platform_common::DataGrandChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataGrandChild * >((smartarg1 ? smartarg1->get() : 0));
+    }
+  }
+  (void)arg1; delete smartarg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_DataGrandChild_DynamicCast(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::shared_ptr< cross_platform_common::Data > *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  std::shared_ptr< cross_platform_common::Data > tempshared1 ;
+  PyObject *swig_obj[1] ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  {
+    int newmem = 0;
+    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__Data_t,  0 , &newmem);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DataGrandChild_DynamicCast" "', argument " "1"" of type '" "std::shared_ptr< cross_platform_common::Data > const &""'");
+    }
+    if (newmem & SWIG_CAST_NEW_MEMORY) {
+      if (argp1) tempshared1 = *reinterpret_cast< std::shared_ptr< cross_platform_common::Data > * >(argp1);
+      delete reinterpret_cast< std::shared_ptr< cross_platform_common::Data > * >(argp1);
+      arg1 = &tempshared1;
+    } else {
+      arg1 = (argp1) ? reinterpret_cast< std::shared_ptr< cross_platform_common::Data > * >(argp1) : &tempshared1;
+    }
+  }
+  result = cross_platform_common::DataGrandChild::DynamicCast((std::shared_ptr< cross_platform_common::Data > const &)*arg1);
+  {
+    std::shared_ptr<  cross_platform_common::DataGrandChild > *smartresult = result ? new std::shared_ptr<  cross_platform_common::DataGrandChild >(result) : 0;
+    resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(smartresult), SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataGrandChild_t, SWIG_POINTER_OWN);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_DataGrandChild_a_grand_child_data_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cross_platform_common::DataGrandChild *arg1 = (cross_platform_common::DataGrandChild *) 0 ;
+  float arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > tempshared1 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > *smartarg1 = 0 ;
+  float val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "DataGrandChild_a_grand_child_data_set", 2, 2, swig_obj)) SWIG_fail;
+  {
+    int newmem = 0;
+    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataGrandChild_t, 0 |  0 , &newmem);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DataGrandChild_a_grand_child_data_set" "', argument " "1"" of type '" "cross_platform_common::DataGrandChild *""'");
+    }
+    if (newmem & SWIG_CAST_NEW_MEMORY) {
+      tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_common::DataGrandChild > * >(argp1);
+      delete reinterpret_cast< std::shared_ptr<  cross_platform_common::DataGrandChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataGrandChild * >(tempshared1.get());
+    } else {
+      smartarg1 = reinterpret_cast< std::shared_ptr<  cross_platform_common::DataGrandChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataGrandChild * >((smartarg1 ? smartarg1->get() : 0));
+    }
+  }
+  ecode2 = SWIG_AsVal_float(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "DataGrandChild_a_grand_child_data_set" "', argument " "2"" of type '" "float""'");
+  } 
+  arg2 = static_cast< float >(val2);
+  if (arg1) (arg1)->a_grand_child_data = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_DataGrandChild_a_grand_child_data_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cross_platform_common::DataGrandChild *arg1 = (cross_platform_common::DataGrandChild *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > tempshared1 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > *smartarg1 = 0 ;
+  PyObject *swig_obj[1] ;
+  float result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  {
+    int newmem = 0;
+    res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataGrandChild_t, 0 |  0 , &newmem);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DataGrandChild_a_grand_child_data_get" "', argument " "1"" of type '" "cross_platform_common::DataGrandChild *""'");
+    }
+    if (newmem & SWIG_CAST_NEW_MEMORY) {
+      tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_common::DataGrandChild > * >(argp1);
+      delete reinterpret_cast< std::shared_ptr<  cross_platform_common::DataGrandChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataGrandChild * >(tempshared1.get());
+    } else {
+      smartarg1 = reinterpret_cast< std::shared_ptr<  cross_platform_common::DataGrandChild > * >(argp1);
+      arg1 = const_cast< cross_platform_common::DataGrandChild * >((smartarg1 ? smartarg1->get() : 0));
+    }
+  }
+  result = (float) ((arg1)->a_grand_child_data);
+  resultobj = SWIG_From_float(static_cast< float >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *DataGrandChild_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_std__shared_ptrT_cross_platform_common__DataGrandChild_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *DataGrandChild_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   return SWIG_Python_InitShadowInstance(args);
 }
 
@@ -16142,7 +16584,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Model_a_vector_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Model_a_string_vector_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cross_platform_external::Model *arg1 = (cross_platform_external::Model *) 0 ;
   std::vector< std::string,std::allocator< std::string > > *arg2 = (std::vector< std::string,std::allocator< std::string > > *) 0 ;
@@ -16154,12 +16596,12 @@ SWIGINTERN PyObject *_wrap_Model_a_vector_set(PyObject *SWIGUNUSEDPARM(self), Py
   int res2 = 0 ;
   PyObject *swig_obj[2] ;
   
-  if (!SWIG_Python_UnpackTuple(args, "Model_a_vector_set", 2, 2, swig_obj)) SWIG_fail;
+  if (!SWIG_Python_UnpackTuple(args, "Model_a_string_vector_set", 2, 2, swig_obj)) SWIG_fail;
   {
     int newmem = 0;
     res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_external__Model_t, 0 |  0 , &newmem);
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_a_vector_set" "', argument " "1"" of type '" "cross_platform_external::Model *""'");
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_a_string_vector_set" "', argument " "1"" of type '" "cross_platform_external::Model *""'");
     }
     if (newmem & SWIG_CAST_NEW_MEMORY) {
       tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_external::Model > * >(argp1);
@@ -16172,10 +16614,10 @@ SWIGINTERN PyObject *_wrap_Model_a_vector_set(PyObject *SWIGUNUSEDPARM(self), Py
   }
   res2 = SWIG_ConvertPtr(swig_obj[1], &argp2,SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t, 0 |  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Model_a_vector_set" "', argument " "2"" of type '" "std::vector< std::string,std::allocator< std::string > > *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Model_a_string_vector_set" "', argument " "2"" of type '" "std::vector< std::string,std::allocator< std::string > > *""'"); 
   }
   arg2 = reinterpret_cast< std::vector< std::string,std::allocator< std::string > > * >(argp2);
-  if (arg1) (arg1)->a_vector = *arg2;
+  if (arg1) (arg1)->a_string_vector = *arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -16183,7 +16625,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Model_a_vector_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Model_a_string_vector_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cross_platform_external::Model *arg1 = (cross_platform_external::Model *) 0 ;
   void *argp1 = 0 ;
@@ -16199,7 +16641,7 @@ SWIGINTERN PyObject *_wrap_Model_a_vector_get(PyObject *SWIGUNUSEDPARM(self), Py
     int newmem = 0;
     res1 = SWIG_ConvertPtrAndOwn(swig_obj[0], &argp1, SWIGTYPE_p_std__shared_ptrT_cross_platform_external__Model_t, 0 |  0 , &newmem);
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_a_vector_get" "', argument " "1"" of type '" "cross_platform_external::Model *""'");
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_a_string_vector_get" "', argument " "1"" of type '" "cross_platform_external::Model *""'");
     }
     if (newmem & SWIG_CAST_NEW_MEMORY) {
       tempshared1 = *reinterpret_cast< std::shared_ptr<  cross_platform_external::Model > * >(argp1);
@@ -16210,7 +16652,7 @@ SWIGINTERN PyObject *_wrap_Model_a_vector_get(PyObject *SWIGUNUSEDPARM(self), Py
       arg1 = const_cast< cross_platform_external::Model * >((smartarg1 ? smartarg1->get() : 0));
     }
   }
-  result = (std::vector< std::string,std::allocator< std::string > > *)& ((arg1)->a_vector);
+  result = (std::vector< std::string,std::allocator< std::string > > *)& ((arg1)->a_string_vector);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t, 0 |  0 );
   return resultobj;
 fail:
@@ -17546,20 +17988,36 @@ static PyMethodDef SwigMethods[] = {
 	 { "delete_DataSharedPtrPair", _wrap_delete_DataSharedPtrPair, METH_O, NULL},
 	 { "DataSharedPtrPair_swigregister", DataSharedPtrPair_swigregister, METH_O, NULL},
 	 { "DataSharedPtrPair_swiginit", DataSharedPtrPair_swiginit, METH_VARARGS, NULL},
-	 { "Data_a_data_set", _wrap_Data_a_data_set, METH_VARARGS, NULL},
-	 { "Data_a_data_get", _wrap_Data_a_data_get, METH_O, NULL},
 	 { "new_Data", _wrap_new_Data, METH_NOARGS, NULL},
 	 { "delete_Data", _wrap_delete_Data, METH_O, NULL},
+	 { "Data_type_set", _wrap_Data_type_set, METH_VARARGS, NULL},
+	 { "Data_type_get", _wrap_Data_type_get, METH_O, NULL},
+	 { "Data_a_data_set", _wrap_Data_a_data_set, METH_VARARGS, NULL},
+	 { "Data_a_data_get", _wrap_Data_a_data_get, METH_O, NULL},
 	 { "Data_swigregister", Data_swigregister, METH_O, NULL},
 	 { "Data_swiginit", Data_swiginit, METH_VARARGS, NULL},
+	 { "new_DataChild", _wrap_new_DataChild, METH_NOARGS, NULL},
+	 { "delete_DataChild", _wrap_delete_DataChild, METH_O, NULL},
+	 { "DataChild_DynamicCast", _wrap_DataChild_DynamicCast, METH_O, NULL},
+	 { "DataChild_a_child_data_set", _wrap_DataChild_a_child_data_set, METH_VARARGS, NULL},
+	 { "DataChild_a_child_data_get", _wrap_DataChild_a_child_data_get, METH_O, NULL},
+	 { "DataChild_swigregister", DataChild_swigregister, METH_O, NULL},
+	 { "DataChild_swiginit", DataChild_swiginit, METH_VARARGS, NULL},
+	 { "new_DataGrandChild", _wrap_new_DataGrandChild, METH_NOARGS, NULL},
+	 { "delete_DataGrandChild", _wrap_delete_DataGrandChild, METH_O, NULL},
+	 { "DataGrandChild_DynamicCast", _wrap_DataGrandChild_DynamicCast, METH_O, NULL},
+	 { "DataGrandChild_a_grand_child_data_set", _wrap_DataGrandChild_a_grand_child_data_set, METH_VARARGS, NULL},
+	 { "DataGrandChild_a_grand_child_data_get", _wrap_DataGrandChild_a_grand_child_data_get, METH_O, NULL},
+	 { "DataGrandChild_swigregister", DataGrandChild_swigregister, METH_O, NULL},
+	 { "DataGrandChild_swiginit", DataGrandChild_swiginit, METH_VARARGS, NULL},
 	 { "Model_a_uint64_set", _wrap_Model_a_uint64_set, METH_VARARGS, NULL},
 	 { "Model_a_uint64_get", _wrap_Model_a_uint64_get, METH_O, NULL},
 	 { "Model_a_float_set", _wrap_Model_a_float_set, METH_VARARGS, NULL},
 	 { "Model_a_float_get", _wrap_Model_a_float_get, METH_O, NULL},
 	 { "Model_a_string_set", _wrap_Model_a_string_set, METH_VARARGS, NULL},
 	 { "Model_a_string_get", _wrap_Model_a_string_get, METH_O, NULL},
-	 { "Model_a_vector_set", _wrap_Model_a_vector_set, METH_VARARGS, NULL},
-	 { "Model_a_vector_get", _wrap_Model_a_vector_get, METH_O, NULL},
+	 { "Model_a_string_vector_set", _wrap_Model_a_string_vector_set, METH_VARARGS, NULL},
+	 { "Model_a_string_vector_get", _wrap_Model_a_string_vector_get, METH_O, NULL},
 	 { "new_Model", _wrap_new_Model, METH_NOARGS, NULL},
 	 { "delete_Model", _wrap_delete_Model, METH_O, NULL},
 	 { "Model_swigregister", Model_swigregister, METH_O, NULL},
@@ -17618,9 +18076,32 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
+static void *_p_cross_platform_common__DataGrandChildTo_p_cross_platform_common__DataChild(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((cross_platform_common::DataChild *)  ((cross_platform_common::DataGrandChild *) x));
+}
+static void *_p_std__shared_ptrT_cross_platform_common__DataChild_tTo_p_std__shared_ptrT_cross_platform_common__Data_t(void *x, int *newmemory) {
+    *newmemory = SWIG_CAST_NEW_MEMORY;
+    return (void *) new std::shared_ptr< cross_platform_common::Data >(*(std::shared_ptr< cross_platform_common::DataChild > *)x);
+}
+static void *_p_std__shared_ptrT_cross_platform_common__DataGrandChild_tTo_p_std__shared_ptrT_cross_platform_common__Data_t(void *x, int *newmemory) {
+    *newmemory = SWIG_CAST_NEW_MEMORY;
+    return (void *) new std::shared_ptr< cross_platform_common::Data >(*(std::shared_ptr< cross_platform_common::DataGrandChild > *)x);
+}
+static void *_p_cross_platform_common__DataGrandChildTo_p_cross_platform_common__Data(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((cross_platform_common::Data *) (cross_platform_common::DataChild *) ((cross_platform_common::DataGrandChild *) x));
+}
+static void *_p_cross_platform_common__DataChildTo_p_cross_platform_common__Data(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((cross_platform_common::Data *)  ((cross_platform_common::DataChild *) x));
+}
+static void *_p_std__shared_ptrT_cross_platform_common__DataGrandChild_tTo_p_std__shared_ptrT_cross_platform_common__DataChild_t(void *x, int *newmemory) {
+    *newmemory = SWIG_CAST_NEW_MEMORY;
+    return (void *) new std::shared_ptr< cross_platform_common::DataChild >(*(std::shared_ptr< cross_platform_common::DataGrandChild > *)x);
+}
 static swig_type_info _swigt__p_allocator_type = {"_p_allocator_type", "allocator_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cross_platform_common__Data = {"_p_cross_platform_common__Data", "cross_platform_common::Data *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_cross_platform_common__DataChild = {"_p_cross_platform_common__DataChild", "cross_platform_common::DataChild *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_cross_platform_common__DataGrandChild = {"_p_cross_platform_common__DataGrandChild", "cross_platform_common::DataGrandChild *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cross_platform_common__ModelCallback = {"_p_cross_platform_common__ModelCallback", "cross_platform_common::ModelCallback *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cross_platform_external__ApiCenter = {"_p_cross_platform_external__ApiCenter", "cross_platform_external::ApiCenter *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cross_platform_external__Model = {"_p_cross_platform_external__Model", "cross_platform_external::Model *", 0, 0, (void*)0, 0};
@@ -17646,6 +18127,8 @@ static swig_type_info _swigt__p_std__mapT_std__string_cross_platform_common__Dat
 static swig_type_info _swigt__p_std__mapT_std__string_std__shared_ptrT_cross_platform_common__Data_t_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__shared_ptrT_cross_platform_common__Data_t_t_t_t = {"_p_std__mapT_std__string_std__shared_ptrT_cross_platform_common__Data_t_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__shared_ptrT_cross_platform_common__Data_t_t_t_t", "std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *|std::map< std::string,std::shared_ptr< cross_platform_common::Data >,std::less< std::string >,std::allocator< std::pair< std::string const,std::shared_ptr< cross_platform_common::Data > > > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__pairT_std__string_cross_platform_common__Data_t = {"_p_std__pairT_std__string_cross_platform_common__Data_t", "std::pair< std::string,cross_platform_common::Data > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__pairT_std__string_std__shared_ptrT_cross_platform_common__Data_t_t = {"_p_std__pairT_std__string_std__shared_ptrT_cross_platform_common__Data_t_t", "std::pair< std::string,std::shared_ptr< cross_platform_common::Data > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__shared_ptrT_cross_platform_common__DataChild_t = {"_p_std__shared_ptrT_cross_platform_common__DataChild_t", "std::shared_ptr< cross_platform_common::DataChild > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__shared_ptrT_cross_platform_common__DataGrandChild_t = {"_p_std__shared_ptrT_cross_platform_common__DataGrandChild_t", "std::shared_ptr< cross_platform_common::DataGrandChild > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__shared_ptrT_cross_platform_common__Data_t = {"_p_std__shared_ptrT_cross_platform_common__Data_t", "std::shared_ptr< cross_platform_common::Data > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__shared_ptrT_cross_platform_common__ModelCallback_t = {"_p_std__shared_ptrT_cross_platform_common__ModelCallback_t", "std::shared_ptr< cross_platform_common::ModelCallback > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__shared_ptrT_cross_platform_external__Model_t = {"_p_std__shared_ptrT_cross_platform_external__Model_t", "std::shared_ptr< cross_platform_external::Model > *", 0, 0, (void*)0, 0};
@@ -17664,6 +18147,8 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_allocator_type,
   &_swigt__p_char,
   &_swigt__p_cross_platform_common__Data,
+  &_swigt__p_cross_platform_common__DataChild,
+  &_swigt__p_cross_platform_common__DataGrandChild,
   &_swigt__p_cross_platform_common__ModelCallback,
   &_swigt__p_cross_platform_external__ApiCenter,
   &_swigt__p_cross_platform_external__Model,
@@ -17689,6 +18174,8 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__mapT_std__string_std__shared_ptrT_cross_platform_common__Data_t_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__shared_ptrT_cross_platform_common__Data_t_t_t_t,
   &_swigt__p_std__pairT_std__string_cross_platform_common__Data_t,
   &_swigt__p_std__pairT_std__string_std__shared_ptrT_cross_platform_common__Data_t_t,
+  &_swigt__p_std__shared_ptrT_cross_platform_common__DataChild_t,
+  &_swigt__p_std__shared_ptrT_cross_platform_common__DataGrandChild_t,
   &_swigt__p_std__shared_ptrT_cross_platform_common__Data_t,
   &_swigt__p_std__shared_ptrT_cross_platform_common__ModelCallback_t,
   &_swigt__p_std__shared_ptrT_cross_platform_external__Model_t,
@@ -17706,7 +18193,9 @@ static swig_type_info *swig_type_initial[] = {
 
 static swig_cast_info _swigc__p_allocator_type[] = {  {&_swigt__p_allocator_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_cross_platform_common__Data[] = {  {&_swigt__p_cross_platform_common__Data, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_cross_platform_common__Data[] = {  {&_swigt__p_cross_platform_common__DataGrandChild, _p_cross_platform_common__DataGrandChildTo_p_cross_platform_common__Data, 0, 0},  {&_swigt__p_cross_platform_common__DataChild, _p_cross_platform_common__DataChildTo_p_cross_platform_common__Data, 0, 0},  {&_swigt__p_cross_platform_common__Data, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_cross_platform_common__DataChild[] = {  {&_swigt__p_cross_platform_common__DataGrandChild, _p_cross_platform_common__DataGrandChildTo_p_cross_platform_common__DataChild, 0, 0},  {&_swigt__p_cross_platform_common__DataChild, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_cross_platform_common__DataGrandChild[] = {  {&_swigt__p_cross_platform_common__DataGrandChild, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cross_platform_common__ModelCallback[] = {  {&_swigt__p_cross_platform_common__ModelCallback, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cross_platform_external__ApiCenter[] = {  {&_swigt__p_cross_platform_external__ApiCenter, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cross_platform_external__Model[] = {  {&_swigt__p_cross_platform_external__Model, 0, 0, 0},{0, 0, 0, 0}};
@@ -17732,7 +18221,9 @@ static swig_cast_info _swigc__p_std__mapT_std__string_cross_platform_common__Dat
 static swig_cast_info _swigc__p_std__mapT_std__string_std__shared_ptrT_cross_platform_common__Data_t_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__shared_ptrT_cross_platform_common__Data_t_t_t_t[] = {  {&_swigt__p_std__mapT_std__string_std__shared_ptrT_cross_platform_common__Data_t_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__shared_ptrT_cross_platform_common__Data_t_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__pairT_std__string_cross_platform_common__Data_t[] = {  {&_swigt__p_std__pairT_std__string_cross_platform_common__Data_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__pairT_std__string_std__shared_ptrT_cross_platform_common__Data_t_t[] = {  {&_swigt__p_std__pairT_std__string_std__shared_ptrT_cross_platform_common__Data_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__shared_ptrT_cross_platform_common__Data_t[] = {  {&_swigt__p_std__shared_ptrT_cross_platform_common__Data_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__shared_ptrT_cross_platform_common__DataChild_t[] = {  {&_swigt__p_std__shared_ptrT_cross_platform_common__DataChild_t, 0, 0, 0},  {&_swigt__p_std__shared_ptrT_cross_platform_common__DataGrandChild_t, _p_std__shared_ptrT_cross_platform_common__DataGrandChild_tTo_p_std__shared_ptrT_cross_platform_common__DataChild_t, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__shared_ptrT_cross_platform_common__DataGrandChild_t[] = {  {&_swigt__p_std__shared_ptrT_cross_platform_common__DataGrandChild_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__shared_ptrT_cross_platform_common__Data_t[] = {  {&_swigt__p_std__shared_ptrT_cross_platform_common__DataChild_t, _p_std__shared_ptrT_cross_platform_common__DataChild_tTo_p_std__shared_ptrT_cross_platform_common__Data_t, 0, 0},  {&_swigt__p_std__shared_ptrT_cross_platform_common__Data_t, 0, 0, 0},  {&_swigt__p_std__shared_ptrT_cross_platform_common__DataGrandChild_t, _p_std__shared_ptrT_cross_platform_common__DataGrandChild_tTo_p_std__shared_ptrT_cross_platform_common__Data_t, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__shared_ptrT_cross_platform_common__ModelCallback_t[] = {  {&_swigt__p_std__shared_ptrT_cross_platform_common__ModelCallback_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__shared_ptrT_cross_platform_external__Model_t[] = {  {&_swigt__p_std__shared_ptrT_cross_platform_external__Model_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_cross_platform_common__Data_std__allocatorT_cross_platform_common__Data_t_t[] = {  {&_swigt__p_std__vectorT_cross_platform_common__Data_std__allocatorT_cross_platform_common__Data_t_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -17750,6 +18241,8 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_allocator_type,
   _swigc__p_char,
   _swigc__p_cross_platform_common__Data,
+  _swigc__p_cross_platform_common__DataChild,
+  _swigc__p_cross_platform_common__DataGrandChild,
   _swigc__p_cross_platform_common__ModelCallback,
   _swigc__p_cross_platform_external__ApiCenter,
   _swigc__p_cross_platform_external__Model,
@@ -17775,6 +18268,8 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__mapT_std__string_std__shared_ptrT_cross_platform_common__Data_t_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__shared_ptrT_cross_platform_common__Data_t_t_t_t,
   _swigc__p_std__pairT_std__string_cross_platform_common__Data_t,
   _swigc__p_std__pairT_std__string_std__shared_ptrT_cross_platform_common__Data_t_t,
+  _swigc__p_std__shared_ptrT_cross_platform_common__DataChild_t,
+  _swigc__p_std__shared_ptrT_cross_platform_common__DataGrandChild_t,
   _swigc__p_std__shared_ptrT_cross_platform_common__Data_t,
   _swigc__p_std__shared_ptrT_cross_platform_common__ModelCallback_t,
   _swigc__p_std__shared_ptrT_cross_platform_external__Model_t,
@@ -18528,6 +19023,9 @@ SWIG_init(void) {
   // thread safe initialization
   swig::container_owner_attribute();
   
+  SWIG_Python_SetConstant(d, "kType1",SWIG_From_int(static_cast< int >(cross_platform_common::kType1)));
+  SWIG_Python_SetConstant(d, "kType2",SWIG_From_int(static_cast< int >(cross_platform_common::kType2)));
+  SWIG_Python_SetConstant(d, "kType3",SWIG_From_int(static_cast< int >(cross_platform_common::kType3)));
 #if PY_VERSION_HEX >= 0x03000000
   return m;
 #else

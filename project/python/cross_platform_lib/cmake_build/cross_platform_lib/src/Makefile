@@ -65,6 +65,18 @@ CMAKE_BINARY_DIR = /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_a
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -84,6 +96,39 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -129,6 +174,30 @@ cross_platform_lib: cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/rul
 cross_platform_lib/fast:
 	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build && $(MAKE) $(MAKESILENT) -f cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/build.make cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/build
 .PHONY : cross_platform_lib/fast
+
+common_layer/data.o: common_layer/data.cc.o
+.PHONY : common_layer/data.o
+
+# target to build an object file
+common_layer/data.cc.o:
+	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build && $(MAKE) $(MAKESILENT) -f cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/build.make cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.o
+.PHONY : common_layer/data.cc.o
+
+common_layer/data.i: common_layer/data.cc.i
+.PHONY : common_layer/data.i
+
+# target to preprocess a source file
+common_layer/data.cc.i:
+	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build && $(MAKE) $(MAKESILENT) -f cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/build.make cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.i
+.PHONY : common_layer/data.cc.i
+
+common_layer/data.s: common_layer/data.cc.s
+.PHONY : common_layer/data.s
+
+# target to generate assembly for a file
+common_layer/data.cc.s:
+	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build && $(MAKE) $(MAKESILENT) -f cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/build.make cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/common_layer/data.cc.s
+.PHONY : common_layer/data.cc.s
 
 external_layer/cross_platform_api.o: external_layer/cross_platform_api.cc.o
 .PHONY : external_layer/cross_platform_api.o
@@ -185,8 +254,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... cross_platform_lib"
+	@echo "... common_layer/data.o"
+	@echo "... common_layer/data.i"
+	@echo "... common_layer/data.s"
 	@echo "... external_layer/cross_platform_api.o"
 	@echo "... external_layer/cross_platform_api.i"
 	@echo "... external_layer/cross_platform_api.s"

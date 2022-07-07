@@ -80,17 +80,18 @@ clean: cross_platform_lib/clean
 # Directory level rules for directory cross_platform_lib
 
 # Recursive "all" directory target.
-cross_platform_lib/all: cross_platform_lib/CMakeFiles/test_main_executable.dir/all
 cross_platform_lib/all: cross_platform_lib/src/all
+cross_platform_lib/all: cross_platform_lib/test/all
 .PHONY : cross_platform_lib/all
 
 # Recursive "preinstall" directory target.
 cross_platform_lib/preinstall: cross_platform_lib/src/preinstall
+cross_platform_lib/preinstall: cross_platform_lib/test/preinstall
 .PHONY : cross_platform_lib/preinstall
 
 # Recursive "clean" directory target.
-cross_platform_lib/clean: cross_platform_lib/CMakeFiles/test_main_executable.dir/clean
 cross_platform_lib/clean: cross_platform_lib/src/clean
+cross_platform_lib/clean: cross_platform_lib/test/clean
 .PHONY : cross_platform_lib/clean
 
 #=============================================================================
@@ -109,6 +110,74 @@ cross_platform_lib/src/clean: cross_platform_lib/src/CMakeFiles/cross_platform_l
 .PHONY : cross_platform_lib/src/clean
 
 #=============================================================================
+# Directory level rules for directory cross_platform_lib/test
+
+# Recursive "all" directory target.
+cross_platform_lib/test/all: cross_platform_lib/test/CMakeFiles/test_main_executable.dir/all
+cross_platform_lib/test/all: cross_platform_lib/test/gtest/all
+.PHONY : cross_platform_lib/test/all
+
+# Recursive "preinstall" directory target.
+cross_platform_lib/test/preinstall: cross_platform_lib/test/gtest/preinstall
+.PHONY : cross_platform_lib/test/preinstall
+
+# Recursive "clean" directory target.
+cross_platform_lib/test/clean: cross_platform_lib/test/CMakeFiles/test_main_executable.dir/clean
+cross_platform_lib/test/clean: cross_platform_lib/test/gtest/clean
+.PHONY : cross_platform_lib/test/clean
+
+#=============================================================================
+# Directory level rules for directory cross_platform_lib/test/gtest
+
+# Recursive "all" directory target.
+cross_platform_lib/test/gtest/all: cross_platform_lib/test/gtest/googlemock/all
+.PHONY : cross_platform_lib/test/gtest/all
+
+# Recursive "preinstall" directory target.
+cross_platform_lib/test/gtest/preinstall: cross_platform_lib/test/gtest/googlemock/preinstall
+.PHONY : cross_platform_lib/test/gtest/preinstall
+
+# Recursive "clean" directory target.
+cross_platform_lib/test/gtest/clean: cross_platform_lib/test/gtest/googlemock/clean
+.PHONY : cross_platform_lib/test/gtest/clean
+
+#=============================================================================
+# Directory level rules for directory cross_platform_lib/test/gtest/googlemock
+
+# Recursive "all" directory target.
+cross_platform_lib/test/gtest/googlemock/all: cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/all
+cross_platform_lib/test/gtest/googlemock/all: cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/all
+cross_platform_lib/test/gtest/googlemock/all: cross_platform_lib/test/gtest/googletest/all
+.PHONY : cross_platform_lib/test/gtest/googlemock/all
+
+# Recursive "preinstall" directory target.
+cross_platform_lib/test/gtest/googlemock/preinstall: cross_platform_lib/test/gtest/googletest/preinstall
+.PHONY : cross_platform_lib/test/gtest/googlemock/preinstall
+
+# Recursive "clean" directory target.
+cross_platform_lib/test/gtest/googlemock/clean: cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/clean
+cross_platform_lib/test/gtest/googlemock/clean: cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/clean
+cross_platform_lib/test/gtest/googlemock/clean: cross_platform_lib/test/gtest/googletest/clean
+.PHONY : cross_platform_lib/test/gtest/googlemock/clean
+
+#=============================================================================
+# Directory level rules for directory cross_platform_lib/test/gtest/googletest
+
+# Recursive "all" directory target.
+cross_platform_lib/test/gtest/googletest/all: cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/all
+cross_platform_lib/test/gtest/googletest/all: cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/all
+.PHONY : cross_platform_lib/test/gtest/googletest/all
+
+# Recursive "preinstall" directory target.
+cross_platform_lib/test/gtest/googletest/preinstall:
+.PHONY : cross_platform_lib/test/gtest/googletest/preinstall
+
+# Recursive "clean" directory target.
+cross_platform_lib/test/gtest/googletest/clean: cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/clean
+cross_platform_lib/test/gtest/googletest/clean: cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : cross_platform_lib/test/gtest/googletest/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/_CrossPlatformApi.dir
 
 # All Build rule for target.
@@ -120,7 +189,7 @@ CMakeFiles/_CrossPlatformApi.dir/all: cross_platform_lib/src/CMakeFiles/cross_pl
 
 # Build rule for subdir invocation for target.
 CMakeFiles/_CrossPlatformApi.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/_CrossPlatformApi.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 0
 .PHONY : CMakeFiles/_CrossPlatformApi.dir/rule
@@ -135,44 +204,18 @@ CMakeFiles/_CrossPlatformApi.dir/clean:
 .PHONY : CMakeFiles/_CrossPlatformApi.dir/clean
 
 #=============================================================================
-# Target rules for target cross_platform_lib/CMakeFiles/test_main_executable.dir
-
-# All Build rule for target.
-cross_platform_lib/CMakeFiles/test_main_executable.dir/all:
-	$(MAKE) $(MAKESILENT) -f cross_platform_lib/CMakeFiles/test_main_executable.dir/build.make cross_platform_lib/CMakeFiles/test_main_executable.dir/depend
-	$(MAKE) $(MAKESILENT) -f cross_platform_lib/CMakeFiles/test_main_executable.dir/build.make cross_platform_lib/CMakeFiles/test_main_executable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles --progress-num=6,7 "Built target test_main_executable"
-.PHONY : cross_platform_lib/CMakeFiles/test_main_executable.dir/all
-
-# Build rule for subdir invocation for target.
-cross_platform_lib/CMakeFiles/test_main_executable.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cross_platform_lib/CMakeFiles/test_main_executable.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 0
-.PHONY : cross_platform_lib/CMakeFiles/test_main_executable.dir/rule
-
-# Convenience name for target.
-test_main_executable: cross_platform_lib/CMakeFiles/test_main_executable.dir/rule
-.PHONY : test_main_executable
-
-# clean rule for target.
-cross_platform_lib/CMakeFiles/test_main_executable.dir/clean:
-	$(MAKE) $(MAKESILENT) -f cross_platform_lib/CMakeFiles/test_main_executable.dir/build.make cross_platform_lib/CMakeFiles/test_main_executable.dir/clean
-.PHONY : cross_platform_lib/CMakeFiles/test_main_executable.dir/clean
-
-#=============================================================================
 # Target rules for target cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir
 
 # All Build rule for target.
 cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/build.make cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/build.make cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles --progress-num=3,4,5 "Built target cross_platform_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles --progress-num=3,4,5,6 "Built target cross_platform_lib"
 .PHONY : cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/all
 
 # Build rule for subdir invocation for target.
 cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 0
 .PHONY : cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/rule
@@ -185,6 +228,141 @@ cross_platform_lib: cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/rul
 cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/clean:
 	$(MAKE) $(MAKESILENT) -f cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/build.make cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/clean
 .PHONY : cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/clean
+
+#=============================================================================
+# Target rules for target cross_platform_lib/test/CMakeFiles/test_main_executable.dir
+
+# All Build rule for target.
+cross_platform_lib/test/CMakeFiles/test_main_executable.dir/all: cross_platform_lib/src/CMakeFiles/cross_platform_lib.dir/all
+cross_platform_lib/test/CMakeFiles/test_main_executable.dir/all: cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/all
+cross_platform_lib/test/CMakeFiles/test_main_executable.dir/all: cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/all
+cross_platform_lib/test/CMakeFiles/test_main_executable.dir/all: cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/all
+cross_platform_lib/test/CMakeFiles/test_main_executable.dir/all: cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/CMakeFiles/test_main_executable.dir/build.make cross_platform_lib/test/CMakeFiles/test_main_executable.dir/depend
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/CMakeFiles/test_main_executable.dir/build.make cross_platform_lib/test/CMakeFiles/test_main_executable.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles --progress-num=15,16 "Built target test_main_executable"
+.PHONY : cross_platform_lib/test/CMakeFiles/test_main_executable.dir/all
+
+# Build rule for subdir invocation for target.
+cross_platform_lib/test/CMakeFiles/test_main_executable.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cross_platform_lib/test/CMakeFiles/test_main_executable.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 0
+.PHONY : cross_platform_lib/test/CMakeFiles/test_main_executable.dir/rule
+
+# Convenience name for target.
+test_main_executable: cross_platform_lib/test/CMakeFiles/test_main_executable.dir/rule
+.PHONY : test_main_executable
+
+# clean rule for target.
+cross_platform_lib/test/CMakeFiles/test_main_executable.dir/clean:
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/CMakeFiles/test_main_executable.dir/build.make cross_platform_lib/test/CMakeFiles/test_main_executable.dir/clean
+.PHONY : cross_platform_lib/test/CMakeFiles/test_main_executable.dir/clean
+
+#=============================================================================
+# Target rules for target cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir
+
+# All Build rule for target.
+cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/all: cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/build.make cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/depend
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/build.make cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles --progress-num=7,8 "Built target gmock"
+.PHONY : cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/all
+
+# Build rule for subdir invocation for target.
+cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 0
+.PHONY : cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/rule
+
+# Convenience name for target.
+gmock: cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/rule
+.PHONY : gmock
+
+# clean rule for target.
+cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/clean:
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/build.make cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/clean
+.PHONY : cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/clean
+
+#=============================================================================
+# Target rules for target cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir
+
+# All Build rule for target.
+cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/all: cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock.dir/all
+cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/all: cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/build.make cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/build.make cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles --progress-num=9,10 "Built target gmock_main"
+.PHONY : cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/all
+
+# Build rule for subdir invocation for target.
+cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 0
+.PHONY : cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/rule
+
+# Convenience name for target.
+gmock_main: cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/rule
+.PHONY : gmock_main
+
+# clean rule for target.
+cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/build.make cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/clean
+.PHONY : cross_platform_lib/test/gtest/googlemock/CMakeFiles/gmock_main.dir/clean
+
+#=============================================================================
+# Target rules for target cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir
+
+# All Build rule for target.
+cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/all: cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/build.make cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/build.make cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles --progress-num=13,14 "Built target gtest_main"
+.PHONY : cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/all
+
+# Build rule for subdir invocation for target.
+cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 0
+.PHONY : cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/rule
+
+# Convenience name for target.
+gtest_main: cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/rule
+.PHONY : gtest_main
+
+# clean rule for target.
+cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/build.make cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest_main.dir/clean
+
+#=============================================================================
+# Target rules for target cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir
+
+# All Build rule for target.
+cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/all:
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/build.make cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/depend
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/build.make cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles --progress-num=11,12 "Built target gtest"
+.PHONY : cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/all
+
+# Build rule for subdir invocation for target.
+cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build/CMakeFiles 0
+.PHONY : cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/rule
+
+# Convenience name for target.
+gtest: cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/rule
+.PHONY : gtest
+
+# clean rule for target.
+cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/build.make cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : cross_platform_lib/test/gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

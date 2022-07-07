@@ -65,6 +65,51 @@ CMAKE_BINARY_DIR = /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_a
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/Cellar/cmake/3.20.3/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -116,44 +161,6 @@ depend:
 	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-cross_platform_lib/CMakeFiles/test_main_executable.dir/rule:
-	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cross_platform_lib/CMakeFiles/test_main_executable.dir/rule
-.PHONY : cross_platform_lib/CMakeFiles/test_main_executable.dir/rule
-
-# Convenience name for target.
-test_main_executable: cross_platform_lib/CMakeFiles/test_main_executable.dir/rule
-.PHONY : test_main_executable
-
-# fast build rule for target.
-test_main_executable/fast:
-	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build && $(MAKE) $(MAKESILENT) -f cross_platform_lib/CMakeFiles/test_main_executable.dir/build.make cross_platform_lib/CMakeFiles/test_main_executable.dir/build
-.PHONY : test_main_executable/fast
-
-test/test_main.o: test/test_main.cc.o
-.PHONY : test/test_main.o
-
-# target to build an object file
-test/test_main.cc.o:
-	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build && $(MAKE) $(MAKESILENT) -f cross_platform_lib/CMakeFiles/test_main_executable.dir/build.make cross_platform_lib/CMakeFiles/test_main_executable.dir/test/test_main.cc.o
-.PHONY : test/test_main.cc.o
-
-test/test_main.i: test/test_main.cc.i
-.PHONY : test/test_main.i
-
-# target to preprocess a source file
-test/test_main.cc.i:
-	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build && $(MAKE) $(MAKESILENT) -f cross_platform_lib/CMakeFiles/test_main_executable.dir/build.make cross_platform_lib/CMakeFiles/test_main_executable.dir/test/test_main.cc.i
-.PHONY : test/test_main.cc.i
-
-test/test_main.s: test/test_main.cc.s
-.PHONY : test/test_main.s
-
-# target to generate assembly for a file
-test/test_main.cc.s:
-	cd /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/project/python/cross_platform_lib/cmake_build && $(MAKE) $(MAKESILENT) -f cross_platform_lib/CMakeFiles/test_main_executable.dir/build.make cross_platform_lib/CMakeFiles/test_main_executable.dir/test/test_main.cc.s
-.PHONY : test/test_main.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,11 +168,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... test_main_executable"
-	@echo "... test/test_main.o"
-	@echo "... test/test_main.i"
-	@echo "... test/test_main.s"
 .PHONY : help
 
 

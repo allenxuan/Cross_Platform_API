@@ -540,6 +540,7 @@ CMakeFiles/_CrossPlatformApi.dir/Users/bytedance/Desktop/ClionProject/cross_mobl
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/external_layer/cross_platform_api.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/internal_layer/model.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/common_layer/data.h \
+  /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/internal_layer/macros.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/internal_layer/model_operator.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/external_layer/model_external.h \
   /Users/bytedance/Desktop/ClionProject/cross_moblie_platform_api/src/../include/common_layer/callback.h \
