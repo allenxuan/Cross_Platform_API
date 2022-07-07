@@ -44,6 +44,14 @@ public class Data {
     this(CrossPlatformApiJNI.new_Data(), true);
   }
 
+  public void setType(DataType value) {
+    CrossPlatformApiJNI.Data_type_set(swigCPtr, this, value.swigValue());
+  }
+
+  public DataType getType() {
+    return DataType.swigToEnum(CrossPlatformApiJNI.Data_type_get(swigCPtr, this));
+  }
+
   public void setA_data(String value) {
     CrossPlatformApiJNI.Data_a_data_set(swigCPtr, this, value);
   }

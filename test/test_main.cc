@@ -80,6 +80,12 @@ namespace unit_test {
         EXPECT_EQ(v5, 8.8f);
     }
 
+    TEST_F(UnitTest, Enums) {
+        auto aDataChild = std::make_shared<cross_platform_common::DataChild>();
+        aDataChild->type = cross_platform_common::DataType::kType2;
+        auto aDataGrandChild = std::make_shared<cross_platform_common::DataGrandChild>();
+        aDataGrandChild->type = cross_platform_common::DataType::kType3;
+    }
 }
 
 

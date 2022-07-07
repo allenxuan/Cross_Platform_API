@@ -17,7 +17,7 @@ namespace cross_platform_external {
     public:
         ApiCenter();
 
-        ~ApiCenter() {};
+        ~ApiCenter() = default;
 
         void registerModelCallback(const std::shared_ptr<cross_platform_common::ModelCallback> &callback);
 

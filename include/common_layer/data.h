@@ -9,12 +9,20 @@
 #include <internal_layer/macros.h>
 
 namespace cross_platform_common {
+    enum DataType {
+        kType1 = 1,
+        kType2 = 2,
+        kType3 = 3
+    };
+
     class Data {
     public:
         Data() = default;
 
         //non-inline non-pure virtual destructor as key function.
         VIRTUAL_DESTRUCTOR_DEC(Data)
+
+        DataType type = DataType::kType1;
 
         std::string a_data;
 

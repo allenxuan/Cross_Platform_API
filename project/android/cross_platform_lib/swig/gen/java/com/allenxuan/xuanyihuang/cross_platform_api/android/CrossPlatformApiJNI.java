@@ -108,6 +108,8 @@ public class CrossPlatformApiJNI {
   public final static native void delete_DataSharedPtrPair(long jarg1);
   public final static native long new_Data();
   public final static native void delete_Data(long jarg1);
+  public final static native void Data_type_set(long jarg1, Data jarg1_, int jarg2);
+  public final static native int Data_type_get(long jarg1, Data jarg1_);
   public final static native void Data_a_data_set(long jarg1, Data jarg1_, String jarg2);
   public final static native String Data_a_data_get(long jarg1, Data jarg1_);
   public final static native long new_DataChild();

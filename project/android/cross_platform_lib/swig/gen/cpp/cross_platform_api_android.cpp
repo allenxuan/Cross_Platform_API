@@ -3595,6 +3595,40 @@ SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_andr
 }
 
 
+SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_Data_1type_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
+  cross_platform_common::DataType arg2 ;
+  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  cross_platform_common::Data > **)&jarg1;
+  arg1 = (cross_platform_common::Data *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (cross_platform_common::DataType)jarg2; 
+  if (arg1) (arg1)->type = arg2;
+}
+
+
+SWIGEXPORT jint JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_Data_1type_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
+  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+  cross_platform_common::DataType result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  cross_platform_common::Data > **)&jarg1;
+  arg1 = (cross_platform_common::Data *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (cross_platform_common::DataType) ((arg1)->type);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void JNICALL Java_com_allenxuan_xuanyihuang_cross_1platform_1api_android_CrossPlatformApiJNI_Data_1a_1data_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
   std::string *arg2 = 0 ;
