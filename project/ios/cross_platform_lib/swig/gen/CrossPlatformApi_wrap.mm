@@ -780,7 +780,7 @@ void Objc_CrossPlatformApi_delete_DataVec(void * imarg1)
   delete arg1;
 }
 
-void * Objc_CrossPlatformApi_new_DataSharePtrVec()
+void * Objc_CrossPlatformApi_new_DataSharedPtrVec()
 {
   void * imresult = 0 ;
   std::vector< std::shared_ptr< cross_platform_common::Data > > *result = 0 ;
@@ -790,7 +790,7 @@ void * Objc_CrossPlatformApi_new_DataSharePtrVec()
   return imresult;
 }
 
-unsigned long Objc_CrossPlatformApi_DataSharePtrVec_size(void * imarg1)
+unsigned long Objc_CrossPlatformApi_DataSharedPtrVec_size(void * imarg1)
 {
   std::vector< std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::vector< std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   unsigned long imresult = 0 ;
@@ -802,7 +802,7 @@ unsigned long Objc_CrossPlatformApi_DataSharePtrVec_size(void * imarg1)
   return imresult;
 }
 
-unsigned long Objc_CrossPlatformApi_DataSharePtrVec_capacity(void * imarg1)
+unsigned long Objc_CrossPlatformApi_DataSharedPtrVec_capacity(void * imarg1)
 {
   std::vector< std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::vector< std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   unsigned long imresult = 0 ;
@@ -814,7 +814,7 @@ unsigned long Objc_CrossPlatformApi_DataSharePtrVec_capacity(void * imarg1)
   return imresult;
 }
 
-void Objc_CrossPlatformApi_DataSharePtrVec_reserve(void * imarg1, unsigned long imarg2)
+void Objc_CrossPlatformApi_DataSharedPtrVec_reserve(void * imarg1, unsigned long imarg2)
 {
   std::vector< std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::vector< std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   std::vector< std::shared_ptr< cross_platform_common::Data > >::size_type arg2 ;
@@ -824,7 +824,7 @@ void Objc_CrossPlatformApi_DataSharePtrVec_reserve(void * imarg1, unsigned long 
   (arg1)->reserve(arg2);
 }
 
-BOOL Objc_CrossPlatformApi_DataSharePtrVec_isEmpty(void * imarg1)
+BOOL Objc_CrossPlatformApi_DataSharedPtrVec_isEmpty(void * imarg1)
 {
   std::vector< std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::vector< std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   BOOL imresult = 0 ;
@@ -836,7 +836,7 @@ BOOL Objc_CrossPlatformApi_DataSharePtrVec_isEmpty(void * imarg1)
   return imresult;
 }
 
-void Objc_CrossPlatformApi_DataSharePtrVec_clear(void * imarg1)
+void Objc_CrossPlatformApi_DataSharedPtrVec_clear(void * imarg1)
 {
   std::vector< std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::vector< std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   
@@ -844,7 +844,7 @@ void Objc_CrossPlatformApi_DataSharePtrVec_clear(void * imarg1)
   (arg1)->clear();
 }
 
-void Objc_CrossPlatformApi_DataSharePtrVec_add(void * imarg1, void* imarg2)
+void Objc_CrossPlatformApi_DataSharedPtrVec_add(void * imarg1, void* imarg2)
 {
   std::vector< std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::vector< std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   std::vector< std::shared_ptr< cross_platform_common::Data > >::value_type *arg2 = 0 ;
@@ -855,7 +855,7 @@ void Objc_CrossPlatformApi_DataSharePtrVec_add(void * imarg1, void* imarg2)
   (arg1)->push_back((std::vector< std::shared_ptr< cross_platform_common::Data > >::value_type const &)*arg2);
 }
 
-void* Objc_CrossPlatformApi_DataSharePtrVec_get(void * imarg1, int imarg2)
+void* Objc_CrossPlatformApi_DataSharedPtrVec_get(void * imarg1, int imarg2)
 {
   std::vector< std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::vector< std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   int arg2 ;
@@ -874,7 +874,7 @@ void* Objc_CrossPlatformApi_DataSharePtrVec_get(void * imarg1, int imarg2)
   return imresult;
 }
 
-void Objc_CrossPlatformApi_DataSharePtrVec_set(void * imarg1, int imarg2, void* imarg3)
+void Objc_CrossPlatformApi_DataSharedPtrVec_set(void * imarg1, int imarg2, void* imarg3)
 {
   std::vector< std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::vector< std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   int arg2 ;
@@ -892,7 +892,7 @@ void Objc_CrossPlatformApi_DataSharePtrVec_set(void * imarg1, int imarg2, void* 
   }
 }
 
-void Objc_CrossPlatformApi_delete_DataSharePtrVec(void * imarg1)
+void Objc_CrossPlatformApi_delete_DataSharedPtrVec(void * imarg1)
 {
   std::vector< std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::vector< std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   
@@ -1082,7 +1082,7 @@ void Objc_CrossPlatformApi_delete_DataMap(void * imarg1)
   delete arg1;
 }
 
-void * Objc_CrossPlatformApi_new_DataSharePtrMap__SWIG_0()
+void * Objc_CrossPlatformApi_new_DataSharedPtrMap__SWIG_0()
 {
   void * imresult = 0 ;
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *result = 0 ;
@@ -1092,7 +1092,7 @@ void * Objc_CrossPlatformApi_new_DataSharePtrMap__SWIG_0()
   return imresult;
 }
 
-void * Objc_CrossPlatformApi_new_DataSharePtrMap__SWIG_1(void * imarg1)
+void * Objc_CrossPlatformApi_new_DataSharedPtrMap__SWIG_1(void * imarg1)
 {
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = 0 ;
   void * imresult = 0 ;
@@ -1108,7 +1108,7 @@ void * Objc_CrossPlatformApi_new_DataSharePtrMap__SWIG_1(void * imarg1)
   return imresult;
 }
 
-unsigned int Objc_CrossPlatformApi_DataSharePtrMap_size(void * imarg1)
+unsigned int Objc_CrossPlatformApi_DataSharedPtrMap_size(void * imarg1)
 {
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   unsigned int imresult = 0 ;
@@ -1120,7 +1120,7 @@ unsigned int Objc_CrossPlatformApi_DataSharePtrMap_size(void * imarg1)
   return imresult;
 }
 
-BOOL Objc_CrossPlatformApi_DataSharePtrMap_empty(void * imarg1)
+BOOL Objc_CrossPlatformApi_DataSharedPtrMap_empty(void * imarg1)
 {
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   BOOL imresult = 0 ;
@@ -1132,7 +1132,7 @@ BOOL Objc_CrossPlatformApi_DataSharePtrMap_empty(void * imarg1)
   return imresult;
 }
 
-void Objc_CrossPlatformApi_DataSharePtrMap_clear(void * imarg1)
+void Objc_CrossPlatformApi_DataSharedPtrMap_clear(void * imarg1)
 {
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   
@@ -1140,7 +1140,7 @@ void Objc_CrossPlatformApi_DataSharePtrMap_clear(void * imarg1)
   (arg1)->clear();
 }
 
-void* Objc_CrossPlatformApi_DataSharePtrMap_get(void * imarg1, NSString* imarg2)
+void* Objc_CrossPlatformApi_DataSharedPtrMap_get(void * imarg1, NSString* imarg2)
 {
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   std::string *arg2 = 0 ;
@@ -1167,7 +1167,7 @@ void* Objc_CrossPlatformApi_DataSharePtrMap_get(void * imarg1, NSString* imarg2)
   return imresult;
 }
 
-void Objc_CrossPlatformApi_DataSharePtrMap_set(void * imarg1, NSString* imarg2, void* imarg3)
+void Objc_CrossPlatformApi_DataSharedPtrMap_set(void * imarg1, NSString* imarg2, void* imarg3)
 {
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   std::string *arg2 = 0 ;
@@ -1188,7 +1188,7 @@ void Objc_CrossPlatformApi_DataSharePtrMap_set(void * imarg1, NSString* imarg2, 
   std_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__set__SWIG(arg1,(std::string const &)*arg2,(std::shared_ptr< cross_platform_common::Data > const &)*arg3);
 }
 
-void Objc_CrossPlatformApi_DataSharePtrMap_del(void * imarg1, NSString* imarg2)
+void Objc_CrossPlatformApi_DataSharedPtrMap_del(void * imarg1, NSString* imarg2)
 {
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   std::string *arg2 = 0 ;
@@ -1211,7 +1211,7 @@ void Objc_CrossPlatformApi_DataSharePtrMap_del(void * imarg1, NSString* imarg2)
   }
 }
 
-BOOL Objc_CrossPlatformApi_DataSharePtrMap_has_key(void * imarg1, NSString* imarg2)
+BOOL Objc_CrossPlatformApi_DataSharedPtrMap_has_key(void * imarg1, NSString* imarg2)
 {
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   std::string *arg2 = 0 ;
@@ -1233,7 +1233,7 @@ BOOL Objc_CrossPlatformApi_DataSharePtrMap_has_key(void * imarg1, NSString* imar
   return imresult;
 }
 
-NSString* Objc_CrossPlatformApi_DataSharePtrMap_get_key(void * imarg1, unsigned int imarg2)
+NSString* Objc_CrossPlatformApi_DataSharedPtrMap_get_key(void * imarg1, unsigned int imarg2)
 {
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   unsigned int arg2 ;
@@ -1252,7 +1252,7 @@ NSString* Objc_CrossPlatformApi_DataSharePtrMap_get_key(void * imarg1, unsigned 
   return imresult;
 }
 
-void Objc_CrossPlatformApi_delete_DataSharePtrMap(void * imarg1)
+void Objc_CrossPlatformApi_delete_DataSharedPtrMap(void * imarg1)
 {
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   
@@ -1485,6 +1485,57 @@ void Objc_CrossPlatformApi_delete_DataSharedPtrPair(void * imarg1)
   delete arg1;
 }
 
+void * Objc_CrossPlatformApi_new_Data()
+{
+  void * imresult = 0 ;
+  cross_platform_common::Data *result = 0 ;
+  
+  result = (cross_platform_common::Data *)new cross_platform_common::Data();
+  
+  imresult = result ? new std::shared_ptr<  cross_platform_common::Data >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_delete_Data(void * imarg1)
+{
+  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
+  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_common::Data > *)imarg1;
+  arg1 = (cross_platform_common::Data *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+void Objc_CrossPlatformApi_Data_type_set(void * imarg1, int imarg2)
+{
+  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
+  cross_platform_common::DataType arg2 ;
+  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_common::Data > *)imarg1;
+  arg1 = (cross_platform_common::Data *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (cross_platform_common::DataType)imarg2; 
+  if (arg1) (arg1)->type = arg2;
+}
+
+int Objc_CrossPlatformApi_Data_type_get(void * imarg1)
+{
+  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
+  int imresult = 0 ;
+  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+  cross_platform_common::DataType result;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_common::Data > *)imarg1;
+  arg1 = (cross_platform_common::Data *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (cross_platform_common::DataType) ((arg1)->type);
+  imresult = (int)result; 
+  return imresult;
+}
+
 void Objc_CrossPlatformApi_Data_a_data_set(void * imarg1, NSString* imarg2)
 {
   cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
@@ -1521,27 +1572,132 @@ NSString* Objc_CrossPlatformApi_Data_a_data_get(void * imarg1)
   return imresult;
 }
 
-void * Objc_CrossPlatformApi_new_Data()
+void * Objc_CrossPlatformApi_new_DataChild()
 {
   void * imresult = 0 ;
-  cross_platform_common::Data *result = 0 ;
+  cross_platform_common::DataChild *result = 0 ;
   
-  result = (cross_platform_common::Data *)new cross_platform_common::Data();
+  result = (cross_platform_common::DataChild *)new cross_platform_common::DataChild();
   
-  imresult = result ? new std::shared_ptr<  cross_platform_common::Data >(result SWIG_NO_NULL_DELETER_1) : 0;
+  imresult = result ? new std::shared_ptr<  cross_platform_common::DataChild >(result SWIG_NO_NULL_DELETER_1) : 0;
   
   return imresult;
 }
 
-void Objc_CrossPlatformApi_delete_Data(void * imarg1)
+void Objc_CrossPlatformApi_delete_DataChild(void * imarg1)
 {
-  cross_platform_common::Data *arg1 = (cross_platform_common::Data *) 0 ;
-  std::shared_ptr< cross_platform_common::Data > *smartarg1 = 0 ;
+  cross_platform_common::DataChild *arg1 = (cross_platform_common::DataChild *) 0 ;
+  std::shared_ptr< cross_platform_common::DataChild > *smartarg1 = 0 ;
   
   
-  smartarg1 = (std::shared_ptr<  cross_platform_common::Data > *)imarg1;
-  arg1 = (cross_platform_common::Data *)(smartarg1 ? smartarg1->get() : 0); 
+  smartarg1 = (std::shared_ptr<  cross_platform_common::DataChild > *)imarg1;
+  arg1 = (cross_platform_common::DataChild *)(smartarg1 ? smartarg1->get() : 0); 
   (void)arg1; delete smartarg1;
+}
+
+void* Objc_CrossPlatformApi_DataChild_DynamicCast(void* imarg1)
+{
+  std::shared_ptr< cross_platform_common::Data > *arg1 = 0 ;
+  void* imresult = 0 ;
+  std::shared_ptr< cross_platform_common::Data > tempnull1 ;
+  std::shared_ptr< cross_platform_common::DataChild > result;
+  
+  arg1 = imarg1 ? (std::shared_ptr< cross_platform_common::Data > *)imarg1 : &tempnull1; 
+  result = cross_platform_common::DataChild::DynamicCast((std::shared_ptr< cross_platform_common::Data > const &)*arg1);
+  imresult = result ? new std::shared_ptr< cross_platform_common::DataChild >(result) : 0; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_DataChild_a_child_data_set(void * imarg1, BOOL imarg2)
+{
+  cross_platform_common::DataChild *arg1 = (cross_platform_common::DataChild *) 0 ;
+  bool arg2 ;
+  std::shared_ptr< cross_platform_common::DataChild > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_common::DataChild > *)imarg1;
+  arg1 = (cross_platform_common::DataChild *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = imarg2 != NO; 
+  if (arg1) (arg1)->a_child_data = arg2;
+}
+
+BOOL Objc_CrossPlatformApi_DataChild_a_child_data_get(void * imarg1)
+{
+  cross_platform_common::DataChild *arg1 = (cross_platform_common::DataChild *) 0 ;
+  BOOL imresult = 0 ;
+  std::shared_ptr< cross_platform_common::DataChild > *smartarg1 = 0 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_common::DataChild > *)imarg1;
+  arg1 = (cross_platform_common::DataChild *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (bool) ((arg1)->a_child_data);
+  imresult = (result) ? YES : NO; 
+  return imresult;
+}
+
+void * Objc_CrossPlatformApi_new_DataGrandChild()
+{
+  void * imresult = 0 ;
+  cross_platform_common::DataGrandChild *result = 0 ;
+  
+  result = (cross_platform_common::DataGrandChild *)new cross_platform_common::DataGrandChild();
+  
+  imresult = result ? new std::shared_ptr<  cross_platform_common::DataGrandChild >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_delete_DataGrandChild(void * imarg1)
+{
+  cross_platform_common::DataGrandChild *arg1 = (cross_platform_common::DataGrandChild *) 0 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_common::DataGrandChild > *)imarg1;
+  arg1 = (cross_platform_common::DataGrandChild *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+void* Objc_CrossPlatformApi_DataGrandChild_DynamicCast(void* imarg1)
+{
+  std::shared_ptr< cross_platform_common::Data > *arg1 = 0 ;
+  void* imresult = 0 ;
+  std::shared_ptr< cross_platform_common::Data > tempnull1 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > result;
+  
+  arg1 = imarg1 ? (std::shared_ptr< cross_platform_common::Data > *)imarg1 : &tempnull1; 
+  result = cross_platform_common::DataGrandChild::DynamicCast((std::shared_ptr< cross_platform_common::Data > const &)*arg1);
+  imresult = result ? new std::shared_ptr< cross_platform_common::DataGrandChild >(result) : 0; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_DataGrandChild_a_grand_child_data_set(void * imarg1, float imarg2)
+{
+  cross_platform_common::DataGrandChild *arg1 = (cross_platform_common::DataGrandChild *) 0 ;
+  float arg2 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_common::DataGrandChild > *)imarg1;
+  arg1 = (cross_platform_common::DataGrandChild *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (float)imarg2; 
+  if (arg1) (arg1)->a_grand_child_data = arg2;
+}
+
+float Objc_CrossPlatformApi_DataGrandChild_a_grand_child_data_get(void * imarg1)
+{
+  cross_platform_common::DataGrandChild *arg1 = (cross_platform_common::DataGrandChild *) 0 ;
+  float imresult = 0 ;
+  std::shared_ptr< cross_platform_common::DataGrandChild > *smartarg1 = 0 ;
+  float result;
+  
+  
+  smartarg1 = (std::shared_ptr<  cross_platform_common::DataGrandChild > *)imarg1;
+  arg1 = (cross_platform_common::DataGrandChild *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (float) ((arg1)->a_grand_child_data);
+  imresult = (float)result; 
+  return imresult;
 }
 
 void Objc_CrossPlatformApi_Model_a_uint64_set(void * imarg1, unsigned long long imarg2)
@@ -1636,7 +1792,7 @@ NSString* Objc_CrossPlatformApi_Model_a_string_get(void * imarg1)
   return imresult;
 }
 
-void Objc_CrossPlatformApi_Model_a_vector_set(void * imarg1, void * imarg2)
+void Objc_CrossPlatformApi_Model_a_string_vector_set(void * imarg1, void * imarg2)
 {
   cross_platform_external::Model *arg1 = (cross_platform_external::Model *) 0 ;
   std::vector< std::string > *arg2 = (std::vector< std::string > *) 0 ;
@@ -1646,10 +1802,10 @@ void Objc_CrossPlatformApi_Model_a_vector_set(void * imarg1, void * imarg2)
   smartarg1 = (std::shared_ptr<  cross_platform_external::Model > *)imarg1;
   arg1 = (cross_platform_external::Model *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (std::vector< std::string > *)imarg2; 
-  if (arg1) (arg1)->a_vector = *arg2;
+  if (arg1) (arg1)->a_string_vector = *arg2;
 }
 
-void * Objc_CrossPlatformApi_Model_a_vector_get(void * imarg1)
+void * Objc_CrossPlatformApi_Model_a_string_vector_get(void * imarg1)
 {
   cross_platform_external::Model *arg1 = (cross_platform_external::Model *) 0 ;
   void * imresult = 0 ;
@@ -1659,7 +1815,7 @@ void * Objc_CrossPlatformApi_Model_a_vector_get(void * imarg1)
   
   smartarg1 = (std::shared_ptr<  cross_platform_external::Model > *)imarg1;
   arg1 = (cross_platform_external::Model *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (std::vector< std::string > *)& ((arg1)->a_vector);
+  result = (std::vector< std::string > *)& ((arg1)->a_string_vector);
   imresult = (void *)result; 
   return imresult;
 }

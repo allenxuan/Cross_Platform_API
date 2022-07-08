@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "bash root = $PWD"
+
 swig_i="android_api.i"
 swig_root_dir="gen"
 swig_cpp_out_dir="gen/cpp"
@@ -15,6 +17,8 @@ echo $swig_include_dir
 rm -rf ${swig_root_dir}
 mkdir -p ${swig_cpp_out_dir}
 mkdir -p ${swig_java_out_dir}
+
+echo "swig command = swig -c++ -java -doxygen ${swig_include_dir} -package ${android_package} -outdir ${swig_java_out_dir} -o ${swig_cpp_out_dir}/${swig_cpp_out_file_name} ${swig_i}"
 
 swig -c++ -java \
   -doxygen \

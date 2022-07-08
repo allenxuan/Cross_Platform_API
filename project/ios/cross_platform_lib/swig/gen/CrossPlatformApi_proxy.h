@@ -18,21 +18,6 @@
 extern "C" {
 #endif
 
-__attribute__ ((visibility("default"))) @interface Data_OC : NSObject
-{
-    void *swigCPtr;
-    BOOL swigCMemOwn;
-}
--(void*)getCptr;
--(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
--(void)setA_data: (NSString*)value;
--(NSString*)getA_data;
--(id)init;
-
--(void)dealloc;
-
-@end
-
 __attribute__ ((visibility("default"))) @interface StrVec_OC : NSObject
 {
 	void *swigCPtr;
@@ -49,6 +34,29 @@ __attribute__ ((visibility("default"))) @interface StrVec_OC : NSObject
 -(void)add: (NSString*)x;
 -(NSString*)get: (int)i;
 -(void)set: (int)i val: (NSString*)val;
+
+-(void)dealloc;
+
+@end
+
+typedef NS_ENUM(NSInteger, DataType_OC) {
+  kType1 = 1,
+  kType2 = 2,
+  kType3 = 3
+};
+
+__attribute__ ((visibility("default"))) @interface Data_OC : NSObject
+{
+    void *swigCPtr;
+    BOOL swigCMemOwn;
+}
+-(void*)getCptr;
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
+-(id)init;
+-(void)setType: (enum DataType_OC)value;
+-(enum DataType_OC)getType;
+-(void)setA_data: (NSString*)value;
+-(NSString*)getA_data;
 
 -(void)dealloc;
 
@@ -75,7 +83,7 @@ __attribute__ ((visibility("default"))) @interface DataVec_OC : NSObject
 
 @end
 
-__attribute__ ((visibility("default"))) @interface DataSharePtrVec_OC : NSObject
+__attribute__ ((visibility("default"))) @interface DataSharedPtrVec_OC : NSObject
 {
 	void *swigCPtr;
 	BOOL swigCMemOwn;
@@ -118,7 +126,7 @@ __attribute__ ((visibility("default"))) @interface DataMap_OC : NSObject
 
 @end
 
-__attribute__ ((visibility("default"))) @interface DataSharePtrMap_OC : NSObject
+__attribute__ ((visibility("default"))) @interface DataSharedPtrMap_OC : NSObject
 {
 	void *swigCPtr;
 	BOOL swigCMemOwn;
@@ -126,7 +134,7 @@ __attribute__ ((visibility("default"))) @interface DataSharePtrMap_OC : NSObject
 -(void*)getCptr;
 -(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
 -(id)init;
--(id)initWithArg0: (DataSharePtrMap_OC*)arg0;
+-(id)initWithArg0: (DataSharedPtrMap_OC*)arg0;
 -(unsigned int)size;
 -(BOOL)empty;
 -(void)clear;
@@ -178,6 +186,31 @@ __attribute__ ((visibility("default"))) @interface DataSharedPtrPair_OC : NSObje
 
 @end
 
+
+__attribute__ ((visibility("default"))) @interface DataChild_OC : Data_OC
+-(void*)getCptr;
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
+-(id)init;
++(DataChild_OC*)DynamicCast: (Data_OC*)data;
+-(void)setA_child_data: (BOOL)value;
+-(BOOL)getA_child_data;
+
+-(void)dealloc;
+
+@end
+
+__attribute__ ((visibility("default"))) @interface DataGrandChild_OC : DataChild_OC
+-(void*)getCptr;
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
+-(id)init;
++(DataGrandChild_OC*)DynamicCast: (Data_OC*)data;
+-(void)setA_grand_child_data: (float)value;
+-(float)getA_grand_child_data;
+
+-(void)dealloc;
+
+@end
+
 __attribute__ ((visibility("default"))) @interface Model_OC : NSObject
 {
 	void *swigCPtr;
@@ -191,8 +224,8 @@ __attribute__ ((visibility("default"))) @interface Model_OC : NSObject
 -(float)getA_float;
 -(void)setA_string: (NSString*)value;
 -(NSString*)getA_string;
--(void)setA_vector: (StrVec_OC*)value;
--(StrVec_OC*)getA_vector;
+-(void)setA_string_vector: (StrVec_OC*)value;
+-(StrVec_OC*)getA_string_vector;
 -(id)init;
 
 -(void)dealloc;
@@ -245,12 +278,12 @@ __attribute__ ((visibility("default"))) @interface ApiCenter_OC : NSObject
 -(StrVec_OC*)getStringVector;
 -(void)setDataVector: (DataVec_OC*)data_vector;
 -(DataVec_OC*)getDataVectorRef;
--(void)setDataSharedPtrVector: (DataSharePtrVec_OC*)data_shared_ptr_vector;
--(DataSharePtrVec_OC*)getDataSharedPtrVector;
+-(void)setDataSharedPtrVector: (DataSharedPtrVec_OC*)data_shared_ptr_vector;
+-(DataSharedPtrVec_OC*)getDataSharedPtrVector;
 -(void)setDataMap: (DataMap_OC*)data_map;
 -(DataMap_OC*)getDataMapRef;
--(void)setDataSharedPtrMap: (DataSharePtrMap_OC*)a_data_shared_ptr_map;
--(DataSharePtrMap_OC*)getDataSharedPtrMap;
+-(void)setDataSharedPtrMap: (DataSharedPtrMap_OC*)a_data_shared_ptr_map;
+-(DataSharedPtrMap_OC*)getDataSharedPtrMap;
 -(void)setDataPair: (DataPair_OC*)a_data_pair;
 -(DataPair_OC*)getDataPairRef;
 -(void)setDataSharedPtrPair: (DataSharedPtrPair_OC*)a_data_shared_ptr_pair;

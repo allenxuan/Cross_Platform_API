@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "bash root = $PWD"
+
 swig_i="ios_api.i"
 swig_root_dir="gen"
 swig_cpp_out_dir="gen"
@@ -17,6 +19,8 @@ mkdir -p ${swig_oc_out_dir}
 #echo ${swig_oc_out_dir}
 #echo "${swig_cpp_out_dir}/${swig_cpp_out_file_name}"
 #echo ${swig_i}
+
+echo "swig command = swig -c++ -objc -doxygen -oc-class-suffix ${swig_include_dir} -outdir ${swig_oc_out_dir} -o ${swig_cpp_out_dir}/${swig_cpp_out_file_name} ${swig_i}"
 
 swig -c++ -objc \
   -doxygen \

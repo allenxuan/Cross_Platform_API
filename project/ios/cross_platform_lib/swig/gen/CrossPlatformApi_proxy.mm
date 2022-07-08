@@ -176,7 +176,7 @@
 @end
 
 
-@implementation DataSharePtrVec_OC
+@implementation DataSharedPtrVec_OC
 -(void*)getCptr
 {
 	return swigCPtr;
@@ -192,7 +192,7 @@
 
 -(id)init
 {
- 	self = [self initWithCptr:Objc_CrossPlatformApi_new_DataSharePtrVec() swigOwnCObject:YES]; 
+ 	self = [self initWithCptr:Objc_CrossPlatformApi_new_DataSharedPtrVec() swigOwnCObject:YES]; 
 	;
 	return self;
 
@@ -200,37 +200,37 @@
 
 -(unsigned long)size
 {
-    return Objc_CrossPlatformApi_DataSharePtrVec_size([self getCptr]); 
+    return Objc_CrossPlatformApi_DataSharedPtrVec_size([self getCptr]); 
 }
 
 -(unsigned long)capacity
 {
-    return Objc_CrossPlatformApi_DataSharePtrVec_capacity([self getCptr]); 
+    return Objc_CrossPlatformApi_DataSharedPtrVec_capacity([self getCptr]); 
 }
 
 -(void)reserve: (unsigned long)n
 {
-    Objc_CrossPlatformApi_DataSharePtrVec_reserve([self getCptr], n);
+    Objc_CrossPlatformApi_DataSharedPtrVec_reserve([self getCptr], n);
 }
 
 -(BOOL)isEmpty
 {
-    return Objc_CrossPlatformApi_DataSharePtrVec_isEmpty([self getCptr]); 
+    return Objc_CrossPlatformApi_DataSharedPtrVec_isEmpty([self getCptr]); 
 }
 
 -(void)clear
 {
-    Objc_CrossPlatformApi_DataSharePtrVec_clear([self getCptr]);
+    Objc_CrossPlatformApi_DataSharedPtrVec_clear([self getCptr]);
 }
 
 -(void)add: (Data_OC*)x
 {
-    Objc_CrossPlatformApi_DataSharePtrVec_add([self getCptr], [x getCptr]);
+    Objc_CrossPlatformApi_DataSharedPtrVec_add([self getCptr], [x getCptr]);
 }
 
 -(Data_OC*)get: (int)i
 {
-    void* cPtr = Objc_CrossPlatformApi_DataSharePtrVec_get([self getCptr], i);
+    void* cPtr = Objc_CrossPlatformApi_DataSharedPtrVec_get([self getCptr], i);
 	Data_OC* ret = nil;
 	if(cPtr) {
 		ret = [[Data_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
@@ -240,7 +240,7 @@
 
 -(void)set: (int)i val: (Data_OC*)val
 {
-    Objc_CrossPlatformApi_DataSharePtrVec_set([self getCptr], i, [val getCptr]);
+    Objc_CrossPlatformApi_DataSharedPtrVec_set([self getCptr], i, [val getCptr]);
 }
 
 
@@ -251,7 +251,7 @@
 
 		if (swigCMemOwn) 
 		{
-			Objc_CrossPlatformApi_delete_DataSharePtrVec((void*)swigCPtr);
+			Objc_CrossPlatformApi_delete_DataSharedPtrVec((void*)swigCPtr);
 			swigCMemOwn = NO;
 		}
 		swigCPtr = NULL;
@@ -354,7 +354,7 @@
 @end
 
 
-@implementation DataSharePtrMap_OC
+@implementation DataSharedPtrMap_OC
 -(void*)getCptr
 {
 	return swigCPtr;
@@ -370,15 +370,15 @@
 
 -(id)init
 {
- 	self = [self initWithCptr:Objc_CrossPlatformApi_new_DataSharePtrMap__SWIG_0() swigOwnCObject:YES]; 
+ 	self = [self initWithCptr:Objc_CrossPlatformApi_new_DataSharedPtrMap__SWIG_0() swigOwnCObject:YES]; 
 	;
 	return self;
 
 }
 
--(id)initWithArg0: (DataSharePtrMap_OC*)arg0
+-(id)initWithArg0: (DataSharedPtrMap_OC*)arg0
 {
- 	self = [self initWithCptr:Objc_CrossPlatformApi_new_DataSharePtrMap__SWIG_1([arg0 getCptr]) swigOwnCObject:YES]; 
+ 	self = [self initWithCptr:Objc_CrossPlatformApi_new_DataSharedPtrMap__SWIG_1([arg0 getCptr]) swigOwnCObject:YES]; 
 	;
 	return self;
 
@@ -386,22 +386,22 @@
 
 -(unsigned int)size
 {
-    return Objc_CrossPlatformApi_DataSharePtrMap_size([self getCptr]); 
+    return Objc_CrossPlatformApi_DataSharedPtrMap_size([self getCptr]); 
 }
 
 -(BOOL)empty
 {
-    return Objc_CrossPlatformApi_DataSharePtrMap_empty([self getCptr]); 
+    return Objc_CrossPlatformApi_DataSharedPtrMap_empty([self getCptr]); 
 }
 
 -(void)clear
 {
-    Objc_CrossPlatformApi_DataSharePtrMap_clear([self getCptr]);
+    Objc_CrossPlatformApi_DataSharedPtrMap_clear([self getCptr]);
 }
 
 -(Data_OC*)get: (NSString*)key
 {
-    void* cPtr = Objc_CrossPlatformApi_DataSharePtrMap_get([self getCptr], key);
+    void* cPtr = Objc_CrossPlatformApi_DataSharedPtrMap_get([self getCptr], key);
 	Data_OC* ret = nil;
 	if(cPtr) {
 		ret = [[Data_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
@@ -411,22 +411,22 @@
 
 -(void)set: (NSString*)key x: (Data_OC*)x
 {
-    Objc_CrossPlatformApi_DataSharePtrMap_set([self getCptr], key, [x getCptr]);
+    Objc_CrossPlatformApi_DataSharedPtrMap_set([self getCptr], key, [x getCptr]);
 }
 
 -(void)del: (NSString*)key
 {
-    Objc_CrossPlatformApi_DataSharePtrMap_del([self getCptr], key);
+    Objc_CrossPlatformApi_DataSharedPtrMap_del([self getCptr], key);
 }
 
 -(BOOL)has_key: (NSString*)key
 {
-    return Objc_CrossPlatformApi_DataSharePtrMap_has_key([self getCptr], key); 
+    return Objc_CrossPlatformApi_DataSharedPtrMap_has_key([self getCptr], key); 
 }
 
 -(NSString*)get_key: (unsigned int)idx
 {
-    return Objc_CrossPlatformApi_DataSharePtrMap_get_key([self getCptr], idx); 
+    return Objc_CrossPlatformApi_DataSharedPtrMap_get_key([self getCptr], idx); 
 }
 
 
@@ -437,7 +437,7 @@
 
 		if (swigCMemOwn) 
 		{
-			Objc_CrossPlatformApi_delete_DataSharePtrMap((void*)swigCPtr);
+			Objc_CrossPlatformApi_delete_DataSharedPtrMap((void*)swigCPtr);
 			swigCMemOwn = NO;
 		}
 		swigCPtr = NULL;
@@ -623,6 +623,24 @@
 	return self;
 }
 
+-(id)init
+{
+ 	self = [self initWithCptr:Objc_CrossPlatformApi_new_Data() swigOwnCObject:YES]; 
+	;
+	return self;
+
+}
+
+-(void)setType: (enum DataType_OC)value
+{
+    Objc_CrossPlatformApi_Data_type_set([self getCptr], (int)value);
+}
+
+-(enum DataType_OC)getType
+{
+  return (enum DataType_OC)Objc_CrossPlatformApi_Data_type_get([self getCptr]); 
+}
+
 -(void)setA_data: (NSString*)value
 {
     Objc_CrossPlatformApi_Data_a_data_set([self getCptr], value);
@@ -633,12 +651,60 @@
     return Objc_CrossPlatformApi_Data_a_data_get([self getCptr]); 
 }
 
+
+-(void)dealloc{
+   if (swigCPtr != NULL) {
+		;
+
+		if (swigCMemOwn) {
+			Objc_CrossPlatformApi_delete_Data((void*)swigCPtr);
+			swigCMemOwn = NO;
+		}
+		swigCPtr = NULL;
+	} 
+}
+
+@end
+
+
+@implementation DataChild_OC
+- (void*)getCptr 
+{
+	return swigCPtr;
+}
+
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject 
+{
+	self = [super initWithCptr:cptr swigOwnCObject:ownCObject];
+	return self;
+}
+
 -(id)init
 {
- 	self = [self initWithCptr:Objc_CrossPlatformApi_new_Data() swigOwnCObject:YES]; 
+ 	self = [self initWithCptr:Objc_CrossPlatformApi_new_DataChild() swigOwnCObject:YES]; 
 	;
 	return self;
 
+}
+
++(DataChild_OC*)DynamicCast: (Data_OC*)data
+{
+    void* cPtr = Objc_CrossPlatformApi_DataChild_DynamicCast([data getCptr]);
+	DataChild_OC* ret = nil;
+	if(cPtr) {
+		ret = [[DataChild_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
+	}
+	return ret; 
+}
+
+-(void)setA_child_data: (BOOL)value
+{
+    Objc_CrossPlatformApi_DataChild_a_child_data_set([self getCptr], value);
+}
+
+-(BOOL)getA_child_data
+{
+    return Objc_CrossPlatformApi_DataChild_a_child_data_get([self getCptr]); 
 }
 
 
@@ -647,7 +713,63 @@
 		;
 
 		if (swigCMemOwn) {
-			Objc_CrossPlatformApi_delete_Data((void*)swigCPtr);
+			Objc_CrossPlatformApi_delete_DataChild((void*)swigCPtr);
+			swigCMemOwn = NO;
+		}
+		swigCPtr = NULL;
+	} 
+}
+
+@end
+
+
+@implementation DataGrandChild_OC
+- (void*)getCptr 
+{
+	return swigCPtr;
+}
+
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject 
+{
+	self = [super initWithCptr:cptr swigOwnCObject:ownCObject];
+	return self;
+}
+
+-(id)init
+{
+ 	self = [self initWithCptr:Objc_CrossPlatformApi_new_DataGrandChild() swigOwnCObject:YES]; 
+	;
+	return self;
+
+}
+
++(DataGrandChild_OC*)DynamicCast: (Data_OC*)data
+{
+    void* cPtr = Objc_CrossPlatformApi_DataGrandChild_DynamicCast([data getCptr]);
+	DataGrandChild_OC* ret = nil;
+	if(cPtr) {
+		ret = [[DataGrandChild_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
+	}
+	return ret; 
+}
+
+-(void)setA_grand_child_data: (float)value
+{
+    Objc_CrossPlatformApi_DataGrandChild_a_grand_child_data_set([self getCptr], value);
+}
+
+-(float)getA_grand_child_data
+{
+    return Objc_CrossPlatformApi_DataGrandChild_a_grand_child_data_get([self getCptr]); 
+}
+
+
+-(void)dealloc{
+   if (swigCPtr != NULL) {
+		;
+
+		if (swigCMemOwn) {
+			Objc_CrossPlatformApi_delete_DataGrandChild((void*)swigCPtr);
 			swigCMemOwn = NO;
 		}
 		swigCPtr = NULL;
@@ -701,14 +823,14 @@
     return Objc_CrossPlatformApi_Model_a_string_get([self getCptr]); 
 }
 
--(void)setA_vector: (StrVec_OC*)value
+-(void)setA_string_vector: (StrVec_OC*)value
 {
-    Objc_CrossPlatformApi_Model_a_vector_set([self getCptr], [value getCptr]);
+    Objc_CrossPlatformApi_Model_a_string_vector_set([self getCptr], [value getCptr]);
 }
 
--(StrVec_OC*)getA_vector
+-(StrVec_OC*)getA_string_vector
 {
-    void* cPtr = Objc_CrossPlatformApi_Model_a_vector_get([self getCptr]);
+    void* cPtr = Objc_CrossPlatformApi_Model_a_string_vector_get([self getCptr]);
 	StrVec_OC* ret = nil;
 	if(cPtr) {
 	ret = [[StrVec_OC alloc] initWithCptr:cPtr swigOwnCObject:NO];
@@ -915,17 +1037,17 @@
 	return ret; 
 }
 
--(void)setDataSharedPtrVector: (DataSharePtrVec_OC*)data_shared_ptr_vector
+-(void)setDataSharedPtrVector: (DataSharedPtrVec_OC*)data_shared_ptr_vector
 {
     Objc_CrossPlatformApi_ApiCenter_setDataSharedPtrVector([self getCptr], [data_shared_ptr_vector getCptr]);
 }
 
--(DataSharePtrVec_OC*)getDataSharedPtrVector
+-(DataSharedPtrVec_OC*)getDataSharedPtrVector
 {
     void* cPtr = Objc_CrossPlatformApi_ApiCenter_getDataSharedPtrVector([self getCptr]);
-	DataSharePtrVec_OC* ret = nil;
+	DataSharedPtrVec_OC* ret = nil;
 	if(cPtr) {
-		ret = [[DataSharePtrVec_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
+		ret = [[DataSharedPtrVec_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
 	}
 	return ret; 
 }
@@ -945,17 +1067,17 @@
 	return ret; 
 }
 
--(void)setDataSharedPtrMap: (DataSharePtrMap_OC*)a_data_shared_ptr_map
+-(void)setDataSharedPtrMap: (DataSharedPtrMap_OC*)a_data_shared_ptr_map
 {
     Objc_CrossPlatformApi_ApiCenter_setDataSharedPtrMap([self getCptr], [a_data_shared_ptr_map getCptr]);
 }
 
--(DataSharePtrMap_OC*)getDataSharedPtrMap
+-(DataSharedPtrMap_OC*)getDataSharedPtrMap
 {
     void* cPtr = Objc_CrossPlatformApi_ApiCenter_getDataSharedPtrMap([self getCptr]);
-	DataSharePtrMap_OC* ret = nil;
+	DataSharedPtrMap_OC* ret = nil;
 	if(cPtr) {
-		ret = [[DataSharePtrMap_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
+		ret = [[DataSharedPtrMap_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
 	}
 	return ret; 
 }
