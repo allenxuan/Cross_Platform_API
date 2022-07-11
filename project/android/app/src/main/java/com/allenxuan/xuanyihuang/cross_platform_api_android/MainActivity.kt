@@ -106,6 +106,10 @@ class MainActivity : AppCompatActivity() {
         apiCenter.setDataSharedPtrMap(dataSharedPtrMap)
         val a_data_shared_ptr_map = apiCenter.dataSharedPtrMap
 
+        val dataSharedPtrUnorderedMap = DataSharePtrUnorderedMap()
+        apiCenter.setDataSharedPtrUnorderedMap(dataSharedPtrUnorderedMap)
+        val a_data_shared_ptr_unordered_map = apiCenter.dataSharedPtrUnorderedMap
+
         val dataPair = DataPair()
         apiCenter.setDataPair(dataPair)
         val a_data_pair = apiCenter.dataPairRef

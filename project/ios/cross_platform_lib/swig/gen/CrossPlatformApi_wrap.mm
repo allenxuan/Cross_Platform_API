@@ -339,6 +339,11 @@ SWIGINTERN void SWIG_ObjcException(int code, const char *msg) {
 #include <algorithm>
 #include <stdexcept>
 
+
+#include <unordered_map>
+#include <algorithm>
+#include <stdexcept>
+
 SWIGINTERN std::vector< std::string >::const_reference std_vector_Sl_std_string_Sg__get__SWIG(std::vector< std::string > *self,int i){
                 int size = int(self->size());
                 if (i>=0 && i<size)
@@ -442,6 +447,34 @@ SWIGINTERN bool std_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common
             }
 SWIGINTERN std::string const &std_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__get_key__SWIG(std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *self,unsigned int idx){
                 for (std::map<std::string,std::shared_ptr< cross_platform_common::Data > >::const_iterator i = self->begin(); i != self->end(); i++) {
+                    if (idx-- == 0)
+                        return i->first;
+                }
+                throw std::out_of_range("key index out of range");
+            }
+SWIGINTERN std::shared_ptr< cross_platform_common::Data > const &std_unordered_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__get__SWIG(std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *self,std::string const &key){
+                std::unordered_map<std::string,std::shared_ptr< cross_platform_common::Data > >::iterator i = self->find(key);
+                if (i != self->end())
+                    return i->second;
+                else
+                    throw std::out_of_range("key not found");
+            }
+SWIGINTERN void std_unordered_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__set__SWIG(std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *self,std::string const &key,std::shared_ptr< cross_platform_common::Data > const &x){
+                (*self)[key] = x;
+            }
+SWIGINTERN void std_unordered_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__del__SWIG(std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *self,std::string const &key){
+                std::unordered_map<std::string,std::shared_ptr< cross_platform_common::Data > >::iterator i = self->find(key);
+                if (i != self->end())
+                    self->erase(i);
+                else
+                    throw std::out_of_range("key not found");
+            }
+SWIGINTERN bool std_unordered_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__has_key__SWIG(std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *self,std::string const &key){
+                std::unordered_map<std::string,std::shared_ptr< cross_platform_common::Data > >::iterator i = self->find(key);
+                return i != self->end();
+            }
+SWIGINTERN std::string const &std_unordered_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__get_key__SWIG(std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *self,unsigned int idx){
+                for (std::unordered_map<std::string,std::shared_ptr< cross_platform_common::Data > >::const_iterator i = self->begin(); i != self->end(); i++) {
                     if (idx-- == 0)
                         return i->first;
                 }
@@ -1257,6 +1290,184 @@ void Objc_CrossPlatformApi_delete_DataSharedPtrMap(void * imarg1)
   std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
   
   arg1 = (std::map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg1; 
+  delete arg1;
+}
+
+void * Objc_CrossPlatformApi_new_DataSharedPtrUnorderedMap__SWIG_0()
+{
+  void * imresult = 0 ;
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *result = 0 ;
+  
+  result = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)new std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > >();
+  imresult = (void *)result; 
+  return imresult;
+}
+
+void * Objc_CrossPlatformApi_new_DataSharedPtrUnorderedMap__SWIG_1(void * imarg1)
+{
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = 0 ;
+  void * imresult = 0 ;
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *result = 0 ;
+  
+  arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg1;
+  if (!arg1) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > const & reference is null");
+    return 0;
+  } 
+  result = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)new std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > >((std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > const &)*arg1);
+  imresult = (void *)result; 
+  return imresult;
+}
+
+unsigned int Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_size(void * imarg1)
+{
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
+  unsigned int imresult = 0 ;
+  unsigned int result;
+  
+  arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg1; 
+  result = (unsigned int)((std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > const *)arg1)->size();
+  imresult = (unsigned int)result; 
+  return imresult;
+}
+
+BOOL Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_empty(void * imarg1)
+{
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
+  BOOL imresult = 0 ;
+  bool result;
+  
+  arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg1; 
+  result = (bool)((std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > const *)arg1)->empty();
+  imresult = (result) ? YES : NO; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_clear(void * imarg1)
+{
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
+  
+  arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg1; 
+  (arg1)->clear();
+}
+
+void* Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_get(void * imarg1, NSString* imarg2)
+{
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
+  std::string *arg2 = 0 ;
+  void* imresult = 0 ;
+  std::shared_ptr< cross_platform_common::Data > *result = 0 ;
+  
+  arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg1; 
+  
+  std::string arg2_str;
+  if(!imarg2) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "null string reference");
+  } else {
+    arg2_str.assign([imarg2 UTF8String]);
+    arg2 = &arg2_str;
+  }
+  
+  try {
+    result = (std::shared_ptr< cross_platform_common::Data > *) &std_unordered_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__get__SWIG(arg1,(std::string const &)*arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_ObjcThrowException(SWIG_ObjcIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  imresult = *result ? new std::shared_ptr< cross_platform_common::Data >(*result) : 0; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_set(void * imarg1, NSString* imarg2, void* imarg3)
+{
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
+  std::string *arg2 = 0 ;
+  std::shared_ptr< cross_platform_common::Data > *arg3 = 0 ;
+  std::shared_ptr< cross_platform_common::Data > tempnull3 ;
+  
+  arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg1; 
+  
+  std::string arg2_str;
+  if(!imarg2) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "null string reference");
+  } else {
+    arg2_str.assign([imarg2 UTF8String]);
+    arg2 = &arg2_str;
+  }
+  
+  arg3 = imarg3 ? (std::shared_ptr< cross_platform_common::Data > *)imarg3 : &tempnull3; 
+  std_unordered_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__set__SWIG(arg1,(std::string const &)*arg2,(std::shared_ptr< cross_platform_common::Data > const &)*arg3);
+}
+
+void Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_del(void * imarg1, NSString* imarg2)
+{
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
+  std::string *arg2 = 0 ;
+  
+  arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg1; 
+  
+  std::string arg2_str;
+  if(!imarg2) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "null string reference");
+  } else {
+    arg2_str.assign([imarg2 UTF8String]);
+    arg2 = &arg2_str;
+  }
+  
+  try {
+    std_unordered_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__del__SWIG(arg1,(std::string const &)*arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_ObjcThrowException(SWIG_ObjcIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+}
+
+BOOL Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_has_key(void * imarg1, NSString* imarg2)
+{
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
+  std::string *arg2 = 0 ;
+  BOOL imresult = 0 ;
+  bool result;
+  
+  arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg1; 
+  
+  std::string arg2_str;
+  if(!imarg2) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "null string reference");
+  } else {
+    arg2_str.assign([imarg2 UTF8String]);
+    arg2 = &arg2_str;
+  }
+  
+  result = (bool)std_unordered_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__has_key__SWIG(arg1,(std::string const &)*arg2);
+  imresult = (result) ? YES : NO; 
+  return imresult;
+}
+
+NSString* Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_get_key(void * imarg1, unsigned int imarg2)
+{
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
+  unsigned int arg2 ;
+  NSString* imresult = 0 ;
+  std::string *result = 0 ;
+  
+  arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg1; 
+  arg2 = (unsigned int)imarg2; 
+  try {
+    result = (std::string *) &std_unordered_map_Sl_std_string_Sc_std_shared_ptr_Sl_cross_platform_common_Data_Sg__Sg__get_key__SWIG(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_ObjcThrowException(SWIG_ObjcIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  imresult = [NSString stringWithUTF8String: result->c_str()]; 
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_delete_DataSharedPtrUnorderedMap(void * imarg1)
+{
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *) 0 ;
+  
+  arg1 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg1; 
   delete arg1;
 }
 
@@ -2226,6 +2437,36 @@ void * Objc_CrossPlatformApi_ApiCenter_getDataSharedPtrMap(void * imarg1)
   result = (arg1)->getDataSharedPtrMap();
   
   temp = new std::map< std::string,std::shared_ptr< cross_platform_common::Data > >((const std::map< std::string,std::shared_ptr< cross_platform_common::Data > > &)result); 
+  imresult = (void *)temp;
+  
+  return imresult;
+}
+
+void Objc_CrossPlatformApi_ApiCenter_setDataSharedPtrUnorderedMap(void * imarg1, void * imarg2)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *arg2 = 0 ;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  arg2 = (std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *)imarg2;
+  if (!arg2) {
+    SWIG_ObjcThrowException(SWIG_ObjcNullPointerException, "std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > const & reference is null");
+    return ;
+  } 
+  (arg1)->setDataSharedPtrUnorderedMap((std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > const &)*arg2);
+}
+
+void * Objc_CrossPlatformApi_ApiCenter_getDataSharedPtrUnorderedMap(void * imarg1)
+{
+  cross_platform_external::ApiCenter *arg1 = (cross_platform_external::ApiCenter *) 0 ;
+  void * imresult = 0 ;
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > *temp ;
+  std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > result;
+  
+  arg1 = (cross_platform_external::ApiCenter *)imarg1; 
+  result = (arg1)->getDataSharedPtrUnorderedMap();
+  
+  temp = new std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > >((const std::unordered_map< std::string,std::shared_ptr< cross_platform_common::Data > > &)result); 
   imresult = (void *)temp;
   
   return imresult;

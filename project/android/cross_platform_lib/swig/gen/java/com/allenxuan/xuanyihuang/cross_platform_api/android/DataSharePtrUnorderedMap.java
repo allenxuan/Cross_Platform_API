@@ -8,16 +8,16 @@
 
 package com.allenxuan.xuanyihuang.cross_platform_api.android;
 
-public class DataSharePtrMap extends java.util.AbstractMap<String, Data> {
+public class DataSharePtrUnorderedMap extends java.util.AbstractMap<String, Data> {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  protected DataSharePtrMap(long cPtr, boolean cMemoryOwn) {
+  protected DataSharePtrUnorderedMap(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(DataSharePtrMap obj) {
+  protected static long getCPtr(DataSharePtrUnorderedMap obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -30,7 +30,7 @@ public class DataSharePtrMap extends java.util.AbstractMap<String, Data> {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        CrossPlatformApiJNI.delete_DataSharePtrMap(swigCPtr);
+        CrossPlatformApiJNI.delete_DataSharePtrUnorderedMap(swigCPtr);
       }
       swigCPtr = 0;
     }
@@ -124,12 +124,12 @@ public class DataSharePtrMap extends java.util.AbstractMap<String, Data> {
     return setToReturn;
   }
 
-  public DataSharePtrMap() {
-    this(CrossPlatformApiJNI.new_DataSharePtrMap__SWIG_0(), true);
+  public DataSharePtrUnorderedMap() {
+    this(CrossPlatformApiJNI.new_DataSharePtrUnorderedMap__SWIG_0(), true);
   }
 
-  public DataSharePtrMap(DataSharePtrMap other) {
-    this(CrossPlatformApiJNI.new_DataSharePtrMap__SWIG_1(DataSharePtrMap.getCPtr(other), other), true);
+  public DataSharePtrUnorderedMap(DataSharePtrUnorderedMap other) {
+    this(CrossPlatformApiJNI.new_DataSharePtrUnorderedMap__SWIG_1(DataSharePtrUnorderedMap.getCPtr(other), other), true);
   }
 
   static protected class Iterator {
@@ -154,69 +154,69 @@ public class DataSharePtrMap extends java.util.AbstractMap<String, Data> {
       if (swigCPtr != 0) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          CrossPlatformApiJNI.delete_DataSharePtrMap_Iterator(swigCPtr);
+          CrossPlatformApiJNI.delete_DataSharePtrUnorderedMap_Iterator(swigCPtr);
         }
         swigCPtr = 0;
       }
     }
   
-    private DataSharePtrMap.Iterator getNextUnchecked() {
-      return new DataSharePtrMap.Iterator(CrossPlatformApiJNI.DataSharePtrMap_Iterator_getNextUnchecked(swigCPtr, this), true);
+    private DataSharePtrUnorderedMap.Iterator getNextUnchecked() {
+      return new DataSharePtrUnorderedMap.Iterator(CrossPlatformApiJNI.DataSharePtrUnorderedMap_Iterator_getNextUnchecked(swigCPtr, this), true);
     }
   
-    private boolean isNot(DataSharePtrMap.Iterator other) {
-      return CrossPlatformApiJNI.DataSharePtrMap_Iterator_isNot(swigCPtr, this, DataSharePtrMap.Iterator.getCPtr(other), other);
+    private boolean isNot(DataSharePtrUnorderedMap.Iterator other) {
+      return CrossPlatformApiJNI.DataSharePtrUnorderedMap_Iterator_isNot(swigCPtr, this, DataSharePtrUnorderedMap.Iterator.getCPtr(other), other);
     }
   
     private String getKey() {
-      return CrossPlatformApiJNI.DataSharePtrMap_Iterator_getKey(swigCPtr, this);
+      return CrossPlatformApiJNI.DataSharePtrUnorderedMap_Iterator_getKey(swigCPtr, this);
     }
   
     private Data getValue() {
-      long cPtr = CrossPlatformApiJNI.DataSharePtrMap_Iterator_getValue(swigCPtr, this);
+      long cPtr = CrossPlatformApiJNI.DataSharePtrUnorderedMap_Iterator_getValue(swigCPtr, this);
       return (cPtr == 0) ? null : new Data(cPtr, true);
     }
   
     private void setValue(Data newValue) {
-      CrossPlatformApiJNI.DataSharePtrMap_Iterator_setValue(swigCPtr, this, Data.getCPtr(newValue), newValue);
+      CrossPlatformApiJNI.DataSharePtrUnorderedMap_Iterator_setValue(swigCPtr, this, Data.getCPtr(newValue), newValue);
     }
   
   }
 
   public boolean isEmpty() {
-    return CrossPlatformApiJNI.DataSharePtrMap_isEmpty(swigCPtr, this);
+    return CrossPlatformApiJNI.DataSharePtrUnorderedMap_isEmpty(swigCPtr, this);
   }
 
   public void clear() {
-    CrossPlatformApiJNI.DataSharePtrMap_clear(swigCPtr, this);
+    CrossPlatformApiJNI.DataSharePtrUnorderedMap_clear(swigCPtr, this);
   }
 
-  private DataSharePtrMap.Iterator find(String key) {
-    return new DataSharePtrMap.Iterator(CrossPlatformApiJNI.DataSharePtrMap_find(swigCPtr, this, key), true);
+  private DataSharePtrUnorderedMap.Iterator find(String key) {
+    return new DataSharePtrUnorderedMap.Iterator(CrossPlatformApiJNI.DataSharePtrUnorderedMap_find(swigCPtr, this, key), true);
   }
 
-  private DataSharePtrMap.Iterator begin() {
-    return new DataSharePtrMap.Iterator(CrossPlatformApiJNI.DataSharePtrMap_begin(swigCPtr, this), true);
+  private DataSharePtrUnorderedMap.Iterator begin() {
+    return new DataSharePtrUnorderedMap.Iterator(CrossPlatformApiJNI.DataSharePtrUnorderedMap_begin(swigCPtr, this), true);
   }
 
-  private DataSharePtrMap.Iterator end() {
-    return new DataSharePtrMap.Iterator(CrossPlatformApiJNI.DataSharePtrMap_end(swigCPtr, this), true);
+  private DataSharePtrUnorderedMap.Iterator end() {
+    return new DataSharePtrUnorderedMap.Iterator(CrossPlatformApiJNI.DataSharePtrUnorderedMap_end(swigCPtr, this), true);
   }
 
   private int sizeImpl() {
-    return CrossPlatformApiJNI.DataSharePtrMap_sizeImpl(swigCPtr, this);
+    return CrossPlatformApiJNI.DataSharePtrUnorderedMap_sizeImpl(swigCPtr, this);
   }
 
   private boolean containsImpl(String key) {
-    return CrossPlatformApiJNI.DataSharePtrMap_containsImpl(swigCPtr, this, key);
+    return CrossPlatformApiJNI.DataSharePtrUnorderedMap_containsImpl(swigCPtr, this, key);
   }
 
   private void putUnchecked(String key, Data value) {
-    CrossPlatformApiJNI.DataSharePtrMap_putUnchecked(swigCPtr, this, key, Data.getCPtr(value), value);
+    CrossPlatformApiJNI.DataSharePtrUnorderedMap_putUnchecked(swigCPtr, this, key, Data.getCPtr(value), value);
   }
 
-  private void removeUnchecked(DataSharePtrMap.Iterator itr) {
-    CrossPlatformApiJNI.DataSharePtrMap_removeUnchecked(swigCPtr, this, DataSharePtrMap.Iterator.getCPtr(itr), itr);
+  private void removeUnchecked(DataSharePtrUnorderedMap.Iterator itr) {
+    CrossPlatformApiJNI.DataSharePtrUnorderedMap_removeUnchecked(swigCPtr, this, DataSharePtrUnorderedMap.Iterator.getCPtr(itr), itr);
   }
 
 }

@@ -116,6 +116,17 @@ namespace cross_platform_external {
         return model_operator_->GetDataSharedPtrMap();
     }
 
+    void ApiCenter::setDataSharedPtrUnorderedMap(
+            const std::unordered_map<std::string, std::shared_ptr<cross_platform_common::Data>> &a_data_shared_ptr_unordered_map) {
+        model_operator_->SetDataSharedPtrUnorderedMap(a_data_shared_ptr_unordered_map);
+        OnFieldChange();
+    }
+
+    std::unordered_map<std::string, std::shared_ptr<cross_platform_common::Data>>
+    ApiCenter::getDataSharedPtrUnorderedMap() {
+        return model_operator_->GetDataSharedPtrUnorderedMap();
+    }
+
     void ApiCenter::setDataPair(const std::pair<std::string, cross_platform_common::Data> &a_data_pair) {
         model_operator_->SetDataPair(a_data_pair);
         OnFieldChange();

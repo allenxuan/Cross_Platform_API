@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <unordered_map>
 #include <utility>
 #include <common_layer/data.h>
 
@@ -29,6 +30,7 @@ namespace cross_platform_internal {
         std::vector<std::shared_ptr<cross_platform_common::Data>> a_data_share_ptr_vector;
         std::map<std::string, cross_platform_common::Data> a_data_map;
         std::map<std::string, std::shared_ptr<cross_platform_common::Data>> a_data_shared_ptr_map;
+        std::unordered_map<std::string, std::shared_ptr<cross_platform_common::Data>> a_data_shared_ptr_unordered_map;
         std::pair<std::string, cross_platform_common::Data> a_data_pair;
         std::pair<std::string, std::shared_ptr<cross_platform_common::Data>> a_data_shared_ptr_pair;
     };

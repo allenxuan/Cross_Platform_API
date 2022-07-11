@@ -148,6 +148,28 @@ __attribute__ ((visibility("default"))) @interface DataSharedPtrMap_OC : NSObjec
 
 @end
 
+__attribute__ ((visibility("default"))) @interface DataSharedPtrUnorderedMap_OC : NSObject
+{
+	void *swigCPtr;
+	BOOL swigCMemOwn;
+}
+-(void*)getCptr;
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject;
+-(id)init;
+-(id)initWithArg0: (DataSharedPtrUnorderedMap_OC*)arg0;
+-(unsigned int)size;
+-(BOOL)empty;
+-(void)clear;
+-(Data_OC*)get: (NSString*)key;
+-(void)set: (NSString*)key x: (Data_OC*)x;
+-(void)del: (NSString*)key;
+-(BOOL)has_key: (NSString*)key;
+-(NSString*)get_key: (unsigned int)idx;
+
+-(void)dealloc;
+
+@end
+
 __attribute__ ((visibility("default"))) @interface DataPair_OC : NSObject
 {
 	void *swigCPtr;
@@ -185,7 +207,6 @@ __attribute__ ((visibility("default"))) @interface DataSharedPtrPair_OC : NSObje
 -(void)dealloc;
 
 @end
-
 
 __attribute__ ((visibility("default"))) @interface DataChild_OC : Data_OC
 -(void*)getCptr;
@@ -284,6 +305,8 @@ __attribute__ ((visibility("default"))) @interface ApiCenter_OC : NSObject
 -(DataMap_OC*)getDataMapRef;
 -(void)setDataSharedPtrMap: (DataSharedPtrMap_OC*)a_data_shared_ptr_map;
 -(DataSharedPtrMap_OC*)getDataSharedPtrMap;
+-(void)setDataSharedPtrUnorderedMap: (DataSharedPtrUnorderedMap_OC*)a_data_shared_ptr_unordered_map;
+-(DataSharedPtrUnorderedMap_OC*)getDataSharedPtrUnorderedMap;
 -(void)setDataPair: (DataPair_OC*)a_data_pair;
 -(DataPair_OC*)getDataPairRef;
 -(void)setDataSharedPtrPair: (DataSharedPtrPair_OC*)a_data_shared_ptr_pair;

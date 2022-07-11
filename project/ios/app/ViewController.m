@@ -94,6 +94,10 @@
     [self.apiCenter setDataSharedPtrMap: dataSharedPtrMap];
     id a_data_shared_ptr_map = [self.apiCenter getDataSharedPtrMap];
     
+    DataSharedPtrUnorderedMap_OC *dataSharedPtrUnorderedMap = [DataSharedPtrUnorderedMap_OC new];
+    [self.apiCenter setDataSharedPtrUnorderedMap: dataSharedPtrUnorderedMap];
+    id a_data_shared_ptr_unordered_map = [self.apiCenter getDataSharedPtrUnorderedMap];
+    
     DataPair_OC *dataPair = [DataPair_OC new];
     [self.apiCenter setDataPair:dataPair];
     id a_data_pair = [self.apiCenter getDataPairRef];

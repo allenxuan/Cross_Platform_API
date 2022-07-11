@@ -447,6 +447,99 @@
 @end
 
 
+@implementation DataSharedPtrUnorderedMap_OC
+-(void*)getCptr
+{
+	return swigCPtr;
+}
+
+-(id)initWithCptr: (void*)cptr swigOwnCObject: (BOOL)ownCObject 
+{
+	swigCPtr = cptr;
+	swigCMemOwn = ownCObject;
+	self = [super init];
+	return self;
+}
+
+-(id)init
+{
+ 	self = [self initWithCptr:Objc_CrossPlatformApi_new_DataSharedPtrUnorderedMap__SWIG_0() swigOwnCObject:YES]; 
+	;
+	return self;
+
+}
+
+-(id)initWithArg0: (DataSharedPtrUnorderedMap_OC*)arg0
+{
+ 	self = [self initWithCptr:Objc_CrossPlatformApi_new_DataSharedPtrUnorderedMap__SWIG_1([arg0 getCptr]) swigOwnCObject:YES]; 
+	;
+	return self;
+
+}
+
+-(unsigned int)size
+{
+    return Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_size([self getCptr]); 
+}
+
+-(BOOL)empty
+{
+    return Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_empty([self getCptr]); 
+}
+
+-(void)clear
+{
+    Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_clear([self getCptr]);
+}
+
+-(Data_OC*)get: (NSString*)key
+{
+    void* cPtr = Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_get([self getCptr], key);
+	Data_OC* ret = nil;
+	if(cPtr) {
+		ret = [[Data_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
+	}
+	return ret; 
+}
+
+-(void)set: (NSString*)key x: (Data_OC*)x
+{
+    Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_set([self getCptr], key, [x getCptr]);
+}
+
+-(void)del: (NSString*)key
+{
+    Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_del([self getCptr], key);
+}
+
+-(BOOL)has_key: (NSString*)key
+{
+    return Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_has_key([self getCptr], key); 
+}
+
+-(NSString*)get_key: (unsigned int)idx
+{
+    return Objc_CrossPlatformApi_DataSharedPtrUnorderedMap_get_key([self getCptr], idx); 
+}
+
+
+-(void)dealloc{
+      if (swigCPtr != NULL) 
+	{
+		;
+
+		if (swigCMemOwn) 
+		{
+			Objc_CrossPlatformApi_delete_DataSharedPtrUnorderedMap((void*)swigCPtr);
+			swigCMemOwn = NO;
+		}
+		swigCPtr = NULL;
+	} 
+}
+
+@end
+
+
 @implementation DataPair_OC
 -(void*)getCptr
 {
@@ -1078,6 +1171,21 @@
 	DataSharedPtrMap_OC* ret = nil;
 	if(cPtr) {
 		ret = [[DataSharedPtrMap_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
+	}
+	return ret; 
+}
+
+-(void)setDataSharedPtrUnorderedMap: (DataSharedPtrUnorderedMap_OC*)a_data_shared_ptr_unordered_map
+{
+    Objc_CrossPlatformApi_ApiCenter_setDataSharedPtrUnorderedMap([self getCptr], [a_data_shared_ptr_unordered_map getCptr]);
+}
+
+-(DataSharedPtrUnorderedMap_OC*)getDataSharedPtrUnorderedMap
+{
+    void* cPtr = Objc_CrossPlatformApi_ApiCenter_getDataSharedPtrUnorderedMap([self getCptr]);
+	DataSharedPtrUnorderedMap_OC* ret = nil;
+	if(cPtr) {
+		ret = [[DataSharedPtrUnorderedMap_OC alloc] initWithCptr:cPtr swigOwnCObject:YES];
 	}
 	return ret; 
 }

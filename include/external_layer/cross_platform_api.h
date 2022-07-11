@@ -76,6 +76,10 @@ namespace cross_platform_external {
 
         std::map<std::string, std::shared_ptr<cross_platform_common::Data>> getDataSharedPtrMap();
 
+        void setDataSharedPtrUnorderedMap(const std::unordered_map<std::string, std::shared_ptr<cross_platform_common::Data>> &a_data_shared_ptr_unordered_map);
+
+        std::unordered_map<std::string, std::shared_ptr<cross_platform_common::Data>> getDataSharedPtrUnorderedMap();
+
         void setDataPair(const std::pair<std::string, cross_platform_common::Data> &a_data_pair);
 
         std::pair<std::string, cross_platform_common::Data> &getDataPairRef();

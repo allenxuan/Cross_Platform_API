@@ -100,6 +100,16 @@ namespace cross_platform_internal {
         return model_internal_->a_data_shared_ptr_map;
     }
 
+    void ModelOperator::SetDataSharedPtrUnorderedMap(
+            const std::unordered_map<std::string, std::shared_ptr<cross_platform_common::Data>> &a_data_shared_ptr_map) {
+        model_internal_->a_data_shared_ptr_unordered_map = a_data_shared_ptr_map;
+    }
+
+    std::unordered_map<std::string, std::shared_ptr<cross_platform_common::Data>>
+    ModelOperator::GetDataSharedPtrUnorderedMap() {
+        return model_internal_->a_data_shared_ptr_unordered_map;
+    }
+
     void ModelOperator::SetDataPair(const std::pair<std::string, cross_platform_common::Data> &a_data_pair) {
         model_internal_->a_data_pair = a_data_pair;
     }
