@@ -23,3 +23,13 @@ ProjectRoot
  └── third_party
 ```
 
+## SDK Layers
+**internal_layer**: Include core SDK logic, platform layers (Android/iOS/Linux/Mac/Python) cannot access it directly.  
+**external_layer**: Include interfaces meant to be exposed to platform layers (Android/iOS/Linux/Mac/Python). Use SWIG (https://swig.org/) to generate Java APIs, OC APIs, Python APIs, etc., on top of the C++ header files.   
+**common_layer**: Include both core SDK logic and interfaces meant to be exposed to platform layers.
+
+# How to run application demos ?
+## Android Demo
+## iOS Demo
+## Python Demo
+
