@@ -9,7 +9,7 @@ ProjectRoot
  │   |── common_layer
  │   |── external_layer
  │   └── internal_layer
- ├── project(SDK multi-platform projects)
+ ├── project(SDK multi-platform projects and corresponding application demos)
  │   |── android
  │   |── ios
  │   |── linux (missing implementaion, use C++ api is enough)
@@ -22,3 +22,4 @@ ProjectRoot
  ├── test(unit test)
  └── third_party
 ```
+
