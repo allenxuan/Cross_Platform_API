@@ -33,8 +33,14 @@ Include interfaces meant to be exposed to platform layers (Android/iOS/Linux/Mac
 **common_layer**:  
 Include both core SDK logic and interfaces meant to be exposed to platform layers.
 
-# How to run application demos ?
+# Run application demos
 ## Android Demo
+### ensure an official version of SWIG is install
+```shell
+brew install swig
+```
+## run the pre-written SWIG script to generate Java APIs and related C++ binding code.
+
 ## iOS Demo
 ## Python Demo
 
